@@ -29,16 +29,24 @@ CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
-I will implement user authentication in Rails.  Sign in / sign up will occur on the root page in a Rails View.  Successful sign in / sign up takes users to the root Backbone Page, which will house a new project form and links to projects based on criteria.  This entails an Index Project Composite View with New Project Subviews as well as Project By Category Subviews.
+### Phase 1: User Authentication, Project Creation (~1 day)
+Root page will be a Backbone page with a header for project discovery, creation, Sign in, and Sign up. (Body will eventually contain search category and criteria - defaulted to everything at first)
+
+Sign in and sign up will both be rails views on separate pages.
+
+Successful sign in / sign up takes users back to the root Backbone Page.
+
+Start link will take user to a backbone new project form.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+### Phase 2: Viewing homepage with search query results (1 day)
+
+I will design the homepage to allow the user to show all projects by category (tbd) and subcategory (magic, popularity, newest, end date, most funded). The homepage will consist of the header, a composite view display the current search criteria, as well as an empty div for the 3 subcategories: staff picks, most popular, and closest to end date.
+
+To do so, I will first create a project model and collection in Backbone.
+
+Changing categories on the right will fire off a search query, and will result in swapping subviews based on the results of the query.
 
 [Details][phase-two]
 
