@@ -4,7 +4,10 @@ window.CashCow = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    this.root$El = $('#content');
+    var cashCowRouter = new CashCow.Routers.Router({
+      root$El = this.root$El;
+    });
   }
 };
 

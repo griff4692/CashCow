@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
 gem 'backbone-on-rails'
+gem 'pg'
 
 # gem 'pg', '0.12.2'
 gem 'sass-rails', '~> 5.0'
