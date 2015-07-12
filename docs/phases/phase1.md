@@ -8,9 +8,10 @@
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* ProjectsController (index, create, new, show)
+* API::ProjectsController (all resources)
 
 ### Views
+* header helper (put into application views)
 * users/new.html.erb
 * session/new.html.erb
 * api/projects/index.jbuilder.json
@@ -24,9 +25,6 @@
 * Projects
 
 ### Views
-* projects/index.js [composite root page]
-* projects/subcategory_index.js [subview]
-
-* projects/new.js [only view on page]
+* projects/new.js [only view on this url page '/#/projects/new')
 
 ## Gems/Libraries

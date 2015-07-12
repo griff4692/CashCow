@@ -4,26 +4,20 @@
 ### Models
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
 
 ### Views
-* blogs/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+
 
 ### Collections
-* Blogs
-* Posts
+
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* projects/root_view.js [house section tags for new project form, and 2  subcategories]
+* projects/show.js
+     ~ (local booleans in template for full or partial view, TBD)
 
 ## Gems/Libraries
+* custom JQUERY plug-in to handle header search queries with links to project show page

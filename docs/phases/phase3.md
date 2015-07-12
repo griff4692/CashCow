@@ -1,4 +1,4 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Discover pages for projects by criteria
 
 ## Rails
 ### Models
@@ -13,9 +13,9 @@
 ### Collections
 
 ### Views
-* PostForm
+* projects/discover.js [composite view of #/discover page]
+  ~ url for page will look like /#/projects/discover/?query=criteria
+* projects/index.js [by category, subview of discover]
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown
+* write plug-in for scrolling through thumbnails

@@ -1,13 +1,13 @@
-# Phase 4: User Feeds
+# Phase 4: Project Page: backing and following
 
 ## Rails
 ### Models
+* Follow
+* Backing
 
 ### Controllers
-Api::PostsController (feed)
 
 ### Views
-posts/feed.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,6 +15,6 @@ posts/feed.json.jbuilder
 ### Collections
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* add listeners to follow and backing actions on projects/show view.
 
 ## Gems/Libraries
