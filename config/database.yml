@@ -77,9 +77,3 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: cash-cow_production
-  username: cash-cow
-  password: <%= ENV['CASH-COW_DATABASE_PASSWORD'] %>
