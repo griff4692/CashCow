@@ -17,7 +17,7 @@ CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
 - [ ] Navigate to profile to view created, backed, and starred projects
 - [ ] Reward backers
 - [ ] Real-time querying
-- [ ] Browse projects by category and sub-criteria
+- [ ] Browse projects by category and sub-criteriaf
 
 ## Design Docs
 * [View Wireframes][views]
