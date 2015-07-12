@@ -12,6 +12,7 @@ gem 'ejs'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 # gem 'turbolinks'
+gem 'newrelic_rpm'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

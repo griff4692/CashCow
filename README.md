@@ -13,11 +13,10 @@ CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
 - [ ] Create sessions (log in)
 - [ ] Create projects
 - [ ] Back projects
-- [ ] Star / follow projects
+- [ ] Follow projects
 - [ ] Navigate to profile to view created, backed, and starred projects
-- [ ] Reward backers
-- [ ] Real-time querying
-- [ ] Browse projects by category and sub-criteriaf
+- [ ] Dynamic querying
+- [ ] Browse projects by category and sub-criteria (with scrolling feature)
 
 ## Design Docs
 * [View Wireframes][views]
@@ -84,12 +83,13 @@ Now that users can back, create, and follow projects, I can create a complete pr
 [Details][phase-five]
 
 ### Phase 6: CSS (2-3 days)
-- [ ] Improve and finetune CSS
+- [ ] Improve and fine-tune CSS
 - [ ] Fine tune everything before moving on to bonus features
 
-### Bonus Features (TBD)
+### Bonus Features (4-5 Days ~ no priority to ordering)
 - [ ] Implement rewards and suggested donations (based on rewards)
-- [ ] Creation of 'funds' based on investment criteria
+- [ ] Add Omni Auth (3rd party sign in - ie 'sign in with Google')
+- [ ] Creation of 'funds' based on investment criteria (likely too ambitious)
 - [ ] Implement funding timeline chart on project show pages!
 - [ ] Multiple sessions/session management
 - [ ] Custom project urls
@@ -100,4 +100,4 @@ Now that users can back, create, and follow projects, I can create a complete pr
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-[phase-six]: TBD.md
+[phase-six]: Bonus features TBD
