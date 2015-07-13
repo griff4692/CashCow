@@ -1,26 +1,26 @@
 # View Wireframes
 
-## New Session
-![new-session]
+## Log In
+![log-in]
 
-## Feed Show (landing page)
-![feed-show]
+## New User
+![new-user]
 
-## Blog Show
+## Root Page
 ![blog-show]
 
-## Post Show
+## Discover
 ![post-show]
 
-## Post Form
-![post-form]
+## Profile Page
+![profile-page]
 
-## Search Results
-![search-results]
+## Project Page
+![project-page]
 
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+[log-in]: ./wireframes/1-log-in.png
+[new-user]: ./wireframes/2-new-user.png
+[root-page]: ./wireframes/3-root-page.png
+[discover]: ./wireframes/4-discover.png
+[profile-page]: ./wireframes/5-profile-page.png
+[project-page]: ./wireframes/6-project-page.png
