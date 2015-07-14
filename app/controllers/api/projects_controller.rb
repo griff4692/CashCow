@@ -1,7 +1,10 @@
 class Api::ProjectsController < ApplicationController
-	# def new
-	# 	@project = Project.new
-	# end
+	before_action :require_signed_in, except: :show
+
+	def index
+		@projects = Project.all
+		render :index
+	end
 
 	def create
 		@project = current_user.projects.new(project_params)
@@ -31,6 +34,10 @@ class Api::ProjectsController < ApplicationController
 
 	def project_params
 		params.require(:project).permit(:category, :title, :description, :deadline, :goal, :image_url)
+	end
+
+	def require_signed_in
+		redirect_to new_session_url unless signed_in?
 	end
 
 end

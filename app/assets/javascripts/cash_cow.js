@@ -4,14 +4,13 @@ window.CashCow = {
   Views: {},
   Routers: {},
   initialize: function() {
-    this.root$El = $('#content');
+    CashCow.Collections.Projects = new CashCow.Collections.Projects([]);
+    CashCow.Collections.Projects.fetch();
+
     var cashCowRouter = new CashCow.Routers.Router({
-      root$El: this.root$El
+      root$el: $('#content'),
+      collection: CashCow.Collections.Projects
     });
     Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  // CashCow.initialize();
-});

@@ -7,7 +7,8 @@
 		Project.create(user_id: user.id, title: title+j.to_s,
 			description: 'project',
 			goal: 100+j,
-			deadline: Date.new(2015, 10, 1)
+			deadline: Date.new(2015, 10, 1),
+			image_url: 'random_image_avatar.com'
 		)
 	end
 end

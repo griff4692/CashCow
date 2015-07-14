@@ -170,7 +170,6 @@ DEPENDENCIES
   binding_of_caller
   byebug
   coffee-rails (~> 4.1.0)
-  ejs
   jbuilder (~> 2.0)
   jquery-rails
   newrelic_rpm
