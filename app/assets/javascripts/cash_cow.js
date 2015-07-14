@@ -6,11 +6,12 @@ window.CashCow = {
   initialize: function() {
     this.root$El = $('#content');
     var cashCowRouter = new CashCow.Routers.Router({
-      root$El = this.root$El;
+      root$El: this.root$El
     });
+    Backbone.history.start();
   }
 };
 
 $(document).ready(function(){
-  CashCow.initialize();
+  // CashCow.initialize();
 });

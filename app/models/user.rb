@@ -20,9 +20,16 @@ class User < ActiveRecord::Base
 
 	after_initialize :ensure_session_token
 
+	has_many :projects,
+		class_name: "Project",
+		foreign_key: :user_id,
+		primary_key: :id,
+		inverse_of: :user,
+		dependent: :destroy
+
 	def self.find_by_credentials(email, password)
 		user = User.find_by_email(email)
-
+		return nil unless user
 		user.is_password?(password) ? user : nil
 	end
 

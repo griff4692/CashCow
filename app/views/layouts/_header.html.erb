@@ -1,0 +1,10 @@
+<% if current_user %>
+	<form action='<%= session_url %>' method="post">
+		<%= form_auth %>
+		<input type="hidden" name="_method" value="delete">
+		<button>Log Out!</button>
+	</form>
+<% else %>
+	<%= link_to "Sign Up!", new_user_url %>
+	<%= link_to "Sign In!", new_session_url %>
+<% end %>
