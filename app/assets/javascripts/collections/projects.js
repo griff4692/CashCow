@@ -2,12 +2,34 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 	url: '/api/projects',
 	model: CashCow.Models.Project,
 
-	filterBy: function (category) {},
+	groupedModelsArr: function () {
+		return _.groupBy(this.models, function (model) {
+			return model.get('category');
+		});
+	},
 
-	orderBy: function (category) {},
+	// takes either none, or grouped value
+	myOrderBy: function (rankFlavor, filterByCategory) {
+		var toSort;
 
-	primoBy: function (category) {
-		(this.models) ? this.models[0] : -1;
+		if (filterByCategory === 'none') {
+			toSort = this.models;
+		} else {
+			toSort = this.groupedModelsArr()['filterByCategory'];
+		}
+
+		return _.sortBy(toSort, function (model) {
+			return model.get(rankFlavor)
+		})
+	},
+
+	primoBy: function (rankFlavor, filterByCategory) {
+		if (filterByCategory === 'none' ||
+			this.groupedModelsArr['filterByCategory'].length > 0) {
+			return this.myOrderBy(rankFlavor, filterByCategory)[0];
+		} else {
+			return nil;
+		}
 	},
 
 	getOrFetch: function (id) {
