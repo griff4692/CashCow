@@ -223,3 +223,25 @@
 [07/14/15 08:05:46 -0400 Apps-Mac-mini-16.local (8936)] INFO : Installing Rails 4 view instrumentation
 [07/14/15 08:05:46 -0400 Apps-Mac-mini-16.local (8936)] INFO : Installing Rails 4 Error instrumentation
 [07/14/15 08:05:46 -0400 Apps-Mac-mini-16.local (8936)] INFO : Finished instrumentation
+[07/14/15 08:32:56 -0400 Apps-Mac-mini-16.local (8628)] INFO : Starting Agent shutdown
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Starting the New Relic agent in "development" environment.
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Environment: development
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Dispatcher: webrick
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Application: development
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing ActiveJob instrumentation
+[07/14/15 08:33:04 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing ActiveRecord 4 instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Net instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing deferred Rack instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Rack::Builder middleware instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Rails 3+ middleware instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Rails 4 Controller instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Rails 4 view instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Installing Rails 4 Error instrumentation
+[07/14/15 08:33:05 -0400 Apps-Mac-mini-16.local (9566)] INFO : Finished instrumentation
+[07/14/15 08:33:06 -0400 Apps-Mac-mini-16.local (9566)] INFO : Doing deferred dependency-detection before Rack startup
+[07/14/15 08:33:10 -0400 Apps-Mac-mini-16.local (9566)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/14/15 08:33:10 -0400 Apps-Mac-mini-16.local (9566)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
