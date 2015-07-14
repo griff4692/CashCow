@@ -9,21 +9,27 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 		this.projList = this.$('.featured-projects');
 
 		this.listenTo(this.collection, "sync", this.generatePrimoSubViews);
+
+		this.primoCategories = ['days_left'];
 	},
 
 	generatePrimoSubViews: function () {
+		this.render();
+
 		var that = this;
 
-		debugger;
-		that.projCategories.forEach(function (category) {
-			var primoModel = that.collection.primoBy(category)
+		that.primoCategories.forEach(function (primoCategory) {
+			var primoModel = that.collection.primoBy(primoCategory, 'none')
+
 			if (primoModel !== -1) {
 				var primoView = new CashCow.Views.ProjectShow({
-					model: primoView,
+					model: primoModel,
 					collection: that.collection,
+					primoCategory: primoCategory,
 					format: "highlight"
-				})
-				that.addSubview(that.projList, primoView);
+				});
+
+				that.addSubview('.featured-projects', primoView);
 			}
 		});
 

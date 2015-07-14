@@ -25,10 +25,13 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 
 	primoBy: function (rankFlavor, filterByCategory) {
 		if (filterByCategory === 'none' ||
-			this.groupedModelsArr['filterByCategory'].length > 0) {
+		 		(this.groupedModelsArr['filterByCategory'] &&
+					this.groupedModelsArr['filterByCategory'].length > 0))
+		{
 			return this.myOrderBy(rankFlavor, filterByCategory)[0];
+
 		} else {
-			return nil;
+			return -1;
 		}
 	},
 
