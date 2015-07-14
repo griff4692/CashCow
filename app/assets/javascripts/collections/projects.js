@@ -6,8 +6,8 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 
 	orderBy: function (category) {},
 
-	primo: function (category) {
-		this.models ? this.models[0] : -1;
+	primoBy: function (category) {
+		(this.models) ? this.models[0] : -1;
 	},
 
 	getOrFetch: function (id) {

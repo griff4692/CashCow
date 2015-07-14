@@ -51,7 +51,6 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 			},
 
 			error: function (model, error, options) {
-				debugger;
 				that.modelErrors = error.responseJSON;
 				that.renderErrors();
 			}
