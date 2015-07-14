@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-	def new; end
+	def new
+		@user = User.new
+	end
 
 	def create
 		@user = User.find_by_credentials(
@@ -8,6 +10,7 @@ class SessionsController < ApplicationController
 
 		if @user
 			sign_in!(@user)
+			flash[:notice] = "You successfully signed in!"
 			redirect_to new_user_url
 		else
 			flash.now[:errors] = ["Invalid email and/or password"]

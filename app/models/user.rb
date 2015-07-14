@@ -14,7 +14,7 @@
 class User < ActiveRecord::Base
 	attr_reader :password
 
-	validates :email, :password, :session_token, presence: true
+	validates :email, :session_token, presence: true
 	validates :password, length: { minimum: 5, allow_nil: true }
 	validates :email, uniqueness: true
 

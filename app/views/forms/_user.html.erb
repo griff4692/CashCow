@@ -1,0 +1,26 @@
+<% if type == 'new_user' %>
+	<% header = "Sign Up!" %>
+	<% action = '/users' %>
+	<% method = 'post' %>
+<% elsif type == 'new_session' %>
+	<% header = "Sign In!" %>
+	<% action = '/session' %>
+	<% method = 'post' %>
+<% end %>
+
+<h1><%= header %></h1>
+
+<form action='<%= action %>' method='post'>
+	<input type="hidden" name="_method" value="<%= method %>">
+  <%= form_auth %>
+  <label>Email<br>
+    <input name="user[email]" type="text" value=<%= user.email %>><br>
+  </label><br>
+  <label>Password<br>
+    <input name="user[password]" type="password" value=""><br>
+  </label><br>
+	<label>Image URL<br>
+		<input name="user[image_url]" type="text" value=<%= user.image_url %>><br>
+	</label><br>
+	<button>Submit</button>
+</form>

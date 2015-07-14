@@ -1,15 +1,1 @@
-<h1>Sign Up</h1>
-
-<form action="/users" method="post">
-  <%= form_auth %>
-  <label>Email<br>
-    <input name="user[email]" type="text"><br>
-  </label><br>
-  <label>Password<br>
-    <input name="user[password]" type="password"><br>
-  </label><br>
-	<label>Image URL<br>
-		<input name="user[image_url]" type="text"><br>
-	</label><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
+<%= render 'forms/user', user: @user, type: 'new_user' %>
