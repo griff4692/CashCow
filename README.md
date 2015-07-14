@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://TBD.herokuapp.com
+[heroku]: http://cash-cow.herokuapp.com
 
 ## Minimum Viable Product
 CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
