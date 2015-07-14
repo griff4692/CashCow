@@ -1,0 +1,50 @@
+<br>
+<label>Category:
+	<select class="category" name="category">
+		<option value="Art"
+		<% if (model.escape('category') === "Art") { %>
+			<%= "selected" %>
+		<% } %>
+		>
+			Art
+		</option>
+		<option value="Music"
+			<% if (model.escape('category') === "Music") { %>
+				<%= "selected" %>
+			<% } %>
+		>
+			Music
+		</option>
+		<option value="Philanthropy"
+			<% if (model.escape('category') === "Philanthropy") { %>
+				<%= "selected" %>
+			<% } %>
+			>
+			Philanthropy
+		</option>
+	</select>
+</label>
+<br>
+<label>Title:
+	<input type="text" name="title", val="<%= model.escape('title') %>">
+</label>
+<br>
+<label>Description:
+	<textarea name="description" rows="8" cols="40">
+		<%= model.escape('description') %>
+	</textarea>
+</label>
+<br>
+<label> Deadline:
+	<input type="date" name="deadline">
+</label>
+<br>
+<label> Funding Goal:
+	<input type="integer" name="goal">
+</label>
+<br>
+<label> Project Picture: [TBD]
+	<input type="text" name="image_url">
+</label>
+<br>
+<button class="start-proj">Create New Project!</button>

@@ -1,6 +1,14 @@
-CashCow.Collections.Projects = Backbone.Model.extend({
+CashCow.Collections.Projects = Backbone.Collection.extend({
 	url: '/api/projects',
 	model: CashCow.Models.Project,
+
+	filterBy: function (category) {},
+
+	orderBy: function (category) {},
+
+	primo: function (category) {
+		this.models ? this.models[0] : -1;
+	},
 
 	getOrFetch: function (id) {
 		var project = this.get(id);

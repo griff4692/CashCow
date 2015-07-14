@@ -3,14 +3,13 @@ class Api::ProjectsController < ApplicationController
 
 	def index
 		@projects = Project.all
-		render :index
+		render 'index'
 	end
 
 	def create
 		@project = current_user.projects.new(project_params)
-
 		if @project.save
-			render :show
+			render 'show'
 		else
 			render json: @project.errors.full_messages, status: :unprocessable_entity
 		end
@@ -18,7 +17,6 @@ class Api::ProjectsController < ApplicationController
 
 	def show
 		@project = Project.find(params[:id])
-
 		render :show
 	end
 

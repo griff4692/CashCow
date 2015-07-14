@@ -1,21 +1,29 @@
 CashCow.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.root$el = options.root$el;
-    this.collection = options.collection
+    this.collection = options.collection;
+    this.collection.fetch();
+    this.projCategories = ["Art", "Music", "Philanthropy"];
   },
 
   routes: {
-    "": "root",
-    "projects/new": "newProject"
+    "": "projRoot",
+    "projects/new": "projectNew"
   },
 
-  root: function () {
-    alert('back at root')
-    // this._swapView(newProjView);
+  projRoot: function () {
+    var rootView = new CashCow.Views.ProjectRoot({
+      collection: this.collection,
+      projCategories: this.projCategories
+    });
+
+    this._swapView(rootView);
   },
 
-  newProject: function () {
-    var newProjView = new CashCow.Views.ProjectNew ({
+  projectNew: function () {
+    var newProj = new CashCow.Models.Project();
+    var newProjView = new CashCow.Views.ProjectForm ({
+      model: newProj,
       collection: this.collection
     });
     this._swapView(newProjView);

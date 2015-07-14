@@ -36,6 +36,7 @@ class Project < ActiveRecord::Base
 	private
 
 	def deadline_must_be_in_future
+		return unless deadline
 		if deadline < Date.tomorrow
 			errors.add(:deadline, "Cannot be in the future")
 		end
