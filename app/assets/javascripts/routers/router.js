@@ -20,7 +20,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
   discover: function (category, order) {
     var category = category || "all";
-    var order = order || "none";
+    var order = order || "days_left";
 
     var discoverView = new CashCow.Views.Discover({
       collection: this.collection,

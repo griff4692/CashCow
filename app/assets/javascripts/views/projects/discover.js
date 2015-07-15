@@ -32,29 +32,39 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
   tagName: 'discover',
 
   render: function () {
+    var that = this;
+
+    that.resetSubviews();
+
     var content = this.template({
       projCategories: this.projCategories,
       orderCategories: this.orderCategories,
       currentCategory: this.currentCategory,
       order: this.currentOrder
     });
+
     this.$el.html(content);
 
-    var that = this;
-
-    this.collection.sortAndOrder(
-      this.currentOrder,
-      this.currentCategory
-    ).forEach(function (project) {
-      var projDetailView = new CashCow.Views.ProjectShow({
-        model: project,
-        collection: that.collection,
-        format: 'detail',
+    if (this.collection.models.length > 0) {
+                          // console.log(this.collection.sortAndOrder(
+                          //   this.currentOrder,
+                          //   this.currentCategory
+                          // ).length);
+      this.collection.sortAndOrder(
+        this.currentOrder,
+        this.currentCategory
+      ).forEach(function (project) {
+        var projDetailView = new CashCow.Views.ProjectShow({
+          model: project,
+          collection: that.collection,
+          format: 'detail',
+        });
+        that.addSubview('.discover-result', projDetailView);
       });
-      that.addSubview('.discover-result', projDetailView);
-    });
 
-    this.attachSubviews();
+      this.attachSubviews();
+    }
+
     return this;
   }
 })

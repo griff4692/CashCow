@@ -4,7 +4,7 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 
 	groupedModelsArr: function (sortAttr) {
 		return _.groupBy(this.models, function (model) {
-			return model.get('sortAttr');
+			return model.get(sortAttr);
 		});
 	},
 
@@ -15,7 +15,7 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		if (filter === 'All') {
 			filtered = this.models;
 		} else {
-			filtered = this.groupedModelsArr()['filter'];
+			filtered = this.groupedModelsArr('category')[filter];
 		}
 
 		if(sortAttr === 'none') {
@@ -38,7 +38,7 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		if (direction==='asc') {
 			primoIndex = 0;
 		} else {
-			primoIndex = orderedList.length - 1;
+			primoIndex = resultArr.length - 1;
 		}
 
 		return resultArr[primoIndex];
