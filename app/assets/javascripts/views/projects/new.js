@@ -54,7 +54,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		this.model.save({}, {
 			success: function () {
 				that.collection.add(that.model, { merge: true} );
-				that.$error$el.empty();
+				that.$errorEl.empty();
 				Backbone.history.navigate('', { trigger: true } );
 			},
 

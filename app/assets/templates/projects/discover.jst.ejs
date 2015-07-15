@@ -1,0 +1,33 @@
+<section class='discover-toggle'>
+   <label>Category
+     <select class="category-choice" name="category">
+       <% projCategories.forEach(function (category) { %>
+           <option value='<%= category %>'
+            <% if(category === currentCategory) { %>
+              <%= "selected" %>
+            <% } %>>
+             <%= category %>
+           </option>
+       <% }) %>
+     </select>
+   </label>
+   <br>
+   <label>Sort By:
+     <select class="order-choice" name="order">
+       <% $.each(function (category) { %>
+           <option value='<%= category %>'
+            <% if(category === currentCategory) { %>
+              <%= "selected" %>
+            <% } %>>
+             <%= category %>
+           </option>
+       <% }) %>
+     </select>
+   </label>
+</section>
+
+<section class='discover-result'>
+  <ul class=discover-list>
+
+  </ul>
+</section>
