@@ -74,8 +74,40 @@
    font-size: 30px;
  }
 
- header.nav {
+ header.nav-bar {
    display: block;
    width: 900px;
-   
+   border: 1px solid #eee;
+   margin: auto;
+ }
+
+ ul.logo-discovery {
+   float: left;
+ }
+
+ .logo {
+   color: limegreen;
+ }
+
+ ul.logo-discovery > li {
+   float: left;
+   margin: 5px;
+ }
+
+ ul.user-menu {
+   float: right;
+   margin; 5px;
+ }
+
+ #content {
+   display: block;
+   width: 900px;
+   border: 1px solid #eee;
+   border-top: none;
+   min-height: 450px;
+   margin: auto;
+ }
+
+ #proj-errors {
+   color: red;
  }

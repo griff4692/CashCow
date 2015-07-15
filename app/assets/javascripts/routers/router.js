@@ -1,6 +1,7 @@
 CashCow.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.root$el = options.root$el;
+    this.$projErrors = $('#proj-errors');
     this.collection = options.collection;
     this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
@@ -24,7 +25,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var newProj = new CashCow.Models.Project();
     var newProjView = new CashCow.Views.ProjectForm ({
       model: newProj,
-      collection: this.collection
+      collection: this.collection,
+      $projErrors: this.$projErrors
     });
     this._swapView(newProjView);
   },

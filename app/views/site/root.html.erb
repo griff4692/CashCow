@@ -1,5 +1,3 @@
-<h1>Cash Cow!</h1>
-
 <section id="proj-errors">
 </section>
 
@@ -8,7 +6,8 @@
 </main>
 
 <script type="text/javascript">
-  CashCow.currentUserId = <%= current_user.try(:id) || "null" %>;
+  CashCow.currentUserId = <%= current_user.try(:id) || -1 %>;
+
  	$(document).ready(function(){
  		CashCow.initialize();
  	});

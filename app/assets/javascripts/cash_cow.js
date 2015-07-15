@@ -13,3 +13,7 @@ window.CashCow = {
     Backbone.history.start();
   }
 };
+
+window.CashCow.isSignedIn = function () {
+  return (window.CashCow.currentUserId !== -1)
+};

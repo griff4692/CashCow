@@ -7,10 +7,10 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		"click button": "submit"
 	},
 
-	initialize: function () {
+	initialize: function (options) {
 		this.modelErrors = [];
+		this.$projErrors = options.$projErrors;
 		this.listenTo(this.model, "sync", this.render);
-
 		this.$errorEl = $('#proj-errors');
 	},
 
@@ -42,6 +42,14 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		this.model.set(formData);
 
 		var that = this;
+
+		if(! CashCow.isSignedIn()) {
+			var $a = $('<a>');
+			$a.attr('href', '/session/new');
+			$a.text("You must be signed in fool!");
+			this.$projErrors.html($a);
+			return;
+		}
 
 		this.model.save({}, {
 			success: function () {
