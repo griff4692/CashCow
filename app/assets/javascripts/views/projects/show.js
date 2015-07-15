@@ -14,22 +14,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	tagName: 'li',
 
 	template: JST['projects/show'],
-		// function () {
-		// 	if (this.format === 'highlight') {
-		// 		return JST['projects/show_highlights'];
-		// 	} else if (this.format === 'detail') {
-		// 		return JST['projects/show_details'];
-		// 	}
-		// },
-	//
-	// render: function () {
-	// 	var content = _.result(this, this.template)({
-	// 		model: this.model,
-	// 		catToHighlight: this.catToHighlight
-	// 	});
-	// 	this.$el.html(content);
-	// 	return this;
-	// }
 
 	render: function () {
 			var content = this.template({

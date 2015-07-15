@@ -132,3 +132,31 @@
   float: left;
   display: block;
 }
+
+/*
+footer
+*/
+footer {
+  width: 900px;
+  margin: auto;
+}
+
+footer .footer-menu {
+  float: left;
+  display: block;
+}
+
+.footer a {
+  margin: 5px;
+}
+
+footer .footer-menu > li {
+  display: block;
+  margin: 0px 5px;
+  float: left
+}
+
+footer .footer-contact {
+  float: right;
+  display: block;
+}

@@ -40,16 +40,12 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
       projCategories: this.projCategories,
       orderCategories: this.orderCategories,
       currentCategory: this.currentCategory,
-      order: this.currentOrder
+      currentOrder: this.currentOrder
     });
 
     this.$el.html(content);
 
     if (this.collection.models.length > 0) {
-                          // console.log(this.collection.sortAndOrder(
-                          //   this.currentOrder,
-                          //   this.currentCategory
-                          // ).length);
       this.collection.sortAndOrder(
         this.currentOrder,
         this.currentCategory

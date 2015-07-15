@@ -16,7 +16,7 @@
      <select class="order-choice" name="order">
        <% $.each(orderCategories, function (category, value) { %>
            <option value='<%= category %>'
-            <% if(category === currentCategory) { %>
+            <% if(category === currentOrder) { %>
               <%= "selected" %>
             <% } %>>
              <%= category %>
