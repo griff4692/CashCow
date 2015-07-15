@@ -15,11 +15,25 @@ CashCow.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "projRoot",
     "projects/new": "projectNew",
-    "projects/discover/:category": "discover"
+    "projects/discover/:category": "discover",
+    "projects/:id": "show"
+  },
+
+  show: function (id) {
+    var model = this.collection.getOrFetch(id);
+
+    var showView = new CashCow.Views.ProjectShow({
+      model: model,
+      collection: this.collection,
+      format: 'detail'
+    })
+
+    this._swapView(showView);
   },
 
   discover: function (category, order) {
     var category = category || "all";
+    // fix that!
     var order = order || "days_left";
 
     var discoverView = new CashCow.Views.Discover({

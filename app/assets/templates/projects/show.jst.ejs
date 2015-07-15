@@ -13,5 +13,7 @@
   </label>
 
 <% } else { %>
-  <%= model.escape('title') %>
+  <a href="/#/projects/<%= model.id %>">
+    <%= model.escape('title') %>
+  </a>
 <% } %>
