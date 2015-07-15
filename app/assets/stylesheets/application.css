@@ -111,3 +111,16 @@
  #proj-errors {
    color: red;
  }
+
+.featured-projects {
+  position: relative;
+  margin: 20px;
+  width: 2700px;
+}
+
+.featured-projects > li {
+  display: absolute;
+  width: 900px;
+  float: left;
+  display: block;
+}

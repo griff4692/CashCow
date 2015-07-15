@@ -23,16 +23,21 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		})
 	},
 
-	primoBy: function (rankFlavor, filterByCategory) {
+	primoBy: function (rankFlavor, filterByCategory, direction) {
+		var primo = -1;
+
 		if (filterByCategory === 'none' ||
 		 		(this.groupedModelsArr['filterByCategory'] &&
 					this.groupedModelsArr['filterByCategory'].length > 0))
 		{
-			return this.myOrderBy(rankFlavor, filterByCategory)[0];
-
-		} else {
-			return -1;
+			var orderedList = this.myOrderBy(rankFlavor, filterByCategory);
+			if (direction==='asc') {
+				primo = orderedList[0];
+			} else {
+				primo = orderedList[orderedList.length - 1]
+			}
 		}
+		return primo;
 	},
 
 	getOrFetch: function (id) {

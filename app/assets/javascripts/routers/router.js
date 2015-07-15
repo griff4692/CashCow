@@ -28,14 +28,15 @@ CashCow.Routers.Router = Backbone.Router.extend({
       collection: this.collection,
       $projErrors: this.$projErrors
     });
+
     this._swapView(newProjView);
   },
 
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
+    this.$projErrors.empty();
     this.root$el.html(view.render().$el);
-
   }
 
 });

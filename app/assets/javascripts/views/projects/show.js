@@ -6,6 +6,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.format = options.format;
 	},
 
+	tagName: 'li',
+
 	template: JST['projects/show_highlights'],
 
 	// function () {
