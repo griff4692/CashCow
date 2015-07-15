@@ -38,6 +38,17 @@ class User < ActiveRecord::Base
 		through: :follows,
 		source: :project
 
+	has_many :backings,
+		class_name: "Backing",
+		foreign_key: :user_id,
+		primary_key: :id,
+		dependent: :destroy,
+		inverse_of: :backer
+
+	has_many :backed_projects,
+		through: :backings,
+		source: :project
+
 	def self.find_by_credentials(email, password)
 		user = User.find_by_email(email)
 		return nil unless user

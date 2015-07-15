@@ -40,6 +40,17 @@ class Project < ActiveRecord::Base
 		through: :follows,
 		source: :follower
 
+	has_many :backings,
+		class_name: "Backing",
+		foreign_key: :project_id,
+		primary_key: :id,
+		dependent: :destroy,
+		inverse_of: :project
+
+		has_many :backers,
+			through: :backings,
+			source: :backer
+
 	def days_left
 		(self.deadline - Date.tomorrow).to_i
 	end

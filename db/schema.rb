@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715214258) do
+ActiveRecord::Schema.define(version: 20150715222334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backings", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "project_id", null: false
+    t.integer  "amount",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "backings", ["project_id"], name: "index_backings_on_project_id", using: :btree
+  add_index "backings", ["user_id", "project_id"], name: "index_backings_on_user_id_and_project_id", unique: true, using: :btree
+  add_index "backings", ["user_id"], name: "index_backings_on_user_id", using: :btree
 
   create_table "follows", force: :cascade do |t|
     t.integer "user_id",    null: false
