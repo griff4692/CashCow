@@ -73,3 +73,9 @@
    font-family: sans-serif;
    font-size: 30px;
  }
+
+ header.nav {
+   display: block;
+   width: 900px;
+   
+ }

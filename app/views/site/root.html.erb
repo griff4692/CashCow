@@ -8,6 +8,7 @@
 </main>
 
 <script type="text/javascript">
+  CashCow.currentUserId = <%= current_user.try(:id) || "null" %>;
  	$(document).ready(function(){
  		CashCow.initialize();
  	});

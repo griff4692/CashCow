@@ -25,5 +25,8 @@ class ApplicationController < ActionController::Base
 
   def require_signed_in!
     redirect_to new_session_url unless signed_in?
+    # status 401
+    # array with errors
+    # render text with errors
   end
 end

@@ -8,10 +8,10 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 	},
 
 	initialize: function () {
-		this.listenTo(this.model, "sync", this.render);
-		this.listenTo(this.modelErrors, "add remove", this.renderErrors);
-		this.$error$el = $('#proj-errors');
 		this.modelErrors = [];
+		this.listenTo(this.model, "sync", this.render);
+
+		this.$errorEl = $('#proj-errors');
 	},
 
 	renderErrors: function () {
@@ -24,7 +24,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 			$errorsList.append($newLi);
 		})
 
-		this.$error$el.html($errorsList);
+		this.$errorEl.html($errorsList);
 	},
 
 	render: function () {

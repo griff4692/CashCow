@@ -4,11 +4,11 @@ window.CashCow = {
   Views: {},
   Routers: {},
   initialize: function() {
-    CashCow.Collections.Projects = new CashCow.Collections.Projects();
+    CashCow.Collections.projects = new CashCow.Collections.Projects();
 
     var cashCowRouter = new CashCow.Routers.Router({
       root$el: $('#content'),
-      collection: CashCow.Collections.Projects
+      collection: CashCow.Collections.projects
     });
     Backbone.history.start();
   }

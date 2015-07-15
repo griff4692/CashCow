@@ -1,12 +1,22 @@
-<%= link_to "Start", "/#/projects/new" %>
-
-<% if current_user %>
-	<form action='<%= session_url %>' method="post">
-		<%= form_auth %>
-		<input type="hidden" name="_method" value="delete">
-		<button>Log Out!</button>
-	</form>
-<% else %>
-	<%= link_to "Sign Up!", new_user_url %>
-	<%= link_to "Sign In!", new_session_url %>
-<% end %>
+<header class='nav-bar group'>
+	<ul class='logo-discovery'>
+		<li class='logo'>
+			<%= link_to "Start", "/#/projects/new" %>
+		</li>
+		<li>
+			<%= link_to "Start", "/#/projects/new" %>
+		</li>
+	</ul>
+	<ul class='user-menu'>
+		<% if current_user %>
+			<form action='<%= session_url %>' method="post">
+				<%= form_auth %>
+				<input type="hidden" name="_method" value="delete">
+				<button>Log Out!</button>
+			</form>
+		<% else %>
+			<%= link_to "Sign Up!", new_user_url %>
+			<%= link_to "Sign In!", new_session_url %>
+		<% end %>
+	</ul>
+</header>
