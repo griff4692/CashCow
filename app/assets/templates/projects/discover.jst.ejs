@@ -14,7 +14,7 @@
    <br>
    <label>Sort By:
      <select class="order-choice" name="order">
-       <% $.each(function (category) { %>
+       <% $.each(orderCategories, function (category, value) { %>
            <option value='<%= category %>'
             <% if(category === currentCategory) { %>
               <%= "selected" %>
