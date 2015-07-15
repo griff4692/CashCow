@@ -1,5 +1,5 @@
 class Api::ProjectsController < ApplicationController
-	before_action :require_signed_in, except: :show
+	before_action :require_signed_in, except: [:show, :index]
 
 	def index
 		@projects = Project.all
