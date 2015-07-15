@@ -1,15 +1,11 @@
 <%= model.escape('title') %>
 
+<a href="#discover">
+  See All <%= model.escape('category') %>
+</a>
+
 <%= model.escape('description') %>
 
-<label>Days Left:
-  <%= model.escape('days_left') %>
-</label>
-
-<label>Days Gone By:
-  <%= model.escape('days_gone_by') %>
-</label>
-
-<label>Goal:
-  <%= model.escape('goal') %>
+<label> <%= catToHighlight %>
+  <%= model.escape(catToHighlight) %>
 </label>

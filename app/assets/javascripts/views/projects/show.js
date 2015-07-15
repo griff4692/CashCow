@@ -20,7 +20,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 
 	render: function () {
 		var content = this.template({
-			model: this.model
+			model: this.model,
+			catToHighlight: this.catToHighlight
 		});
 		this.$el.html(content);
 		return this;

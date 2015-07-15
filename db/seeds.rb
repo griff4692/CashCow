@@ -11,7 +11,7 @@
 
 		Project.create(
 			user_id: user.id,
-			title: title+j.to_s + " regarding " + category,
+			title: title+j.to_s,
 			description: 'project',
 			category: category,
 			goal: rand(100),
