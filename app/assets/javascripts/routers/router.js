@@ -19,13 +19,13 @@ CashCow.Routers.Router = Backbone.Router.extend({
   },
 
   discover: function (category, order) {
-    var category = category || "All";
+    var category = category || "all";
     var order = order || "none";
 
     var discoverView = new CashCow.Views.Discover({
       collection: this.collection,
 
-      projCategories: this.projCategories,
+      projCategories: ["All"].concat(this.projCategories),
       orderCategories: this.orderCategories,
 
       currentCategory: category,

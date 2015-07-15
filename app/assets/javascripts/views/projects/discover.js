@@ -22,7 +22,13 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
     });
     this.$el.html(content);
 
-    // generate appropriate subview below
+    var toShowProjects = this.collection;
+
+    if (this.currentCategory !== 'All') {
+      toShowProjects = this.collection.groupedModelsArr['category']
+    };
+
+
 
     this.attachSubviews();
 

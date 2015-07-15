@@ -1,6 +1,6 @@
 CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	initialize: function (options) {
-		this.catToHighlight = options.primoCategory;
+		this.catToHighlight = options.orderCategory;
 		this.model = options.model;
 		this.collection = options.collection;
 		this.format = options.format;

@@ -108,8 +108,12 @@
    margin: auto;
  }
 
- #proj-errors {
+ #proj-errors, .user-errors {
    color: red;
+ }
+
+ .notice {
+   color: limegreen;
  }
 
 .featured-projects {
