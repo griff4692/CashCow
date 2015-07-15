@@ -16,7 +16,7 @@
 			category: category,
 			goal: rand(100),
 			deadline: Date.new(randYear.sample, randMonth.sample, 1),
-			image_url: 'random_image_avatar.com'
+			image_url: 'http://41.media.tumblr.com/b6e166c8b2adc00adbdcf3290ddb7658/tumblr_mlpmilKm5p1qkodk4o1_1280.jpg'
 		)
 	end
 end

@@ -1,0 +1,20 @@
+<% if(type==='highlight') { %>
+
+  <%= model.escape('title') %>
+
+
+  <a href="#discover">
+    See More <%= catToHighlight %>
+  </a>
+
+  <%= model.escape('description') %>
+
+  <label> <%= catToHighlight %>
+    <%= model.escape(catToHighlight) %>
+  </label>
+
+<% } else { %>
+  <p>
+    Hello From Detail Show!
+  </p>
+<% } %>
