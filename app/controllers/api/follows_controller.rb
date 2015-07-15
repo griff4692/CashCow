@@ -13,8 +13,13 @@ class FollowsController < ApplicationController
 
   def destroy
     @follow = Follow.get(id)
-    @follow.destroy();
-    render json: "Successful destroy"
+    if @follow
+      @follow.destroy();
+      render json: "Successful destroy"
+    else
+      render json: "Project doesn't exist!", status: :unprocessable_entity
+    end
+
   end
 
   private

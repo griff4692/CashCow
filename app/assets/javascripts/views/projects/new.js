@@ -33,12 +33,25 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		});
 
 		this.$el.html(content);
+
+		this.$('.datepicker').datepicker({
+			yearRange: "2015:2020",
+			monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" ],
+			minDate: 1,
+			showAnim: "fold"
+		});
+
 		return this;
 	},
 
 	submit: function () {
 		event.preventDefault();
 		var formData = this.$el.serializeJSON();
+
+		// var dateSelected = this.$('.datepicker').datepicker("getDate");
+		// 
+		// formData.deadline = dateSelected;
+
 		this.model.set(formData);
 
 		var that = this;
