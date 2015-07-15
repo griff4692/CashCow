@@ -29,6 +29,17 @@ class Project < ActiveRecord::Base
 		primary_key: :id,
 		inverse_of: :projects
 
+	has_many :follows,
+    class_name: "Follow",
+    foreign_key: :project_id,
+    primary_key: :id,
+    inverse_of: :project,
+		dependent: :destroy
+
+	has_many :followers,
+		through: :follows,
+		source: :follower
+
 	def days_left
 		(self.deadline - Date.tomorrow).to_i
 	end

@@ -27,6 +27,17 @@ class User < ActiveRecord::Base
 		inverse_of: :user,
 		dependent: :destroy
 
+	has_many :follows,
+    class_name: "Follow",
+    foreign_key: :user_id,
+    primary_key: :id,
+    inverse_of: :user,
+		dependent: :destroy
+
+	has_many :followed_projects,
+		through: :follows,
+		source: :project
+
 	def self.find_by_credentials(email, password)
 		user = User.find_by_email(email)
 		return nil unless user
