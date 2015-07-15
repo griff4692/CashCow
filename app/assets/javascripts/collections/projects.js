@@ -2,42 +2,46 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 	url: '/api/projects',
 	model: CashCow.Models.Project,
 
-	groupedModelsArr: function () {
+	groupedModelsArr: function (sortAttr) {
 		return _.groupBy(this.models, function (model) {
-			return model.get('category');
+			return model.get('sortAttr');
 		});
 	},
 
 	// takes either none, or grouped value
-	myOrderBy: function (rankFlavor, filterByCategory) {
-		var toSort;
+	sortAndOrder: function (sortAttr, filter) {
+		var filtered;
 
-		if (filterByCategory === 'none') {
-			toSort = this.models;
+		if (filter === 'All') {
+			filtered = this.models;
 		} else {
-			toSort = this.groupedModelsArr()['filterByCategory'];
+			filtered = this.groupedModelsArr()['filter'];
 		}
 
-		return _.sortBy(toSort, function (model) {
-			return model.get(rankFlavor)
+		if(sortAttr === 'none') {
+			return filtered;
+		}
+
+		return _.sortBy(filtered, function (model) {
+			return model.get(sortAttr)
 		})
 	},
 
-	primoBy: function (rankFlavor, filterByCategory, direction) {
-		var primo = -1;
+	primoBy: function (sortAttr, filter, direction) {
+		var primoIndex;
+		var resultArr = this.sortAndOrder(sortAttr, filter);
 
-		if (filterByCategory === 'none' ||
-		 		(this.groupedModelsArr['filterByCategory'] &&
-					this.groupedModelsArr['filterByCategory'].length > 0))
-		{
-			var orderedList = this.myOrderBy(rankFlavor, filterByCategory);
-			if (direction==='asc') {
-				primo = orderedList[0];
-			} else {
-				primo = orderedList[orderedList.length - 1]
-			}
+		if (resultArr.length === 0) {
+			return -1;
 		}
-		return primo;
+
+		if (direction==='asc') {
+			primoIndex = 0;
+		} else {
+			primoIndex = orderedList.length - 1;
+		}
+
+		return resultArr[primoIndex];
 	},
 
 	getOrFetch: function (id) {

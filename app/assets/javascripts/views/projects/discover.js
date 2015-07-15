@@ -6,9 +6,27 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
     this.projCategories = options.projCategories;
     this.orderCategories = options.orderCategories;
     this.currentCategory = options.currentCategory;
-    this.order = options.order;
+    this.currentOrder = options.order;
+
+    this.$discoverToggle = this.$('.discover-toggle');
+    this.$discoverResult = this.$('.discover-result');
 
     this.listenTo(this.collection, "sync", this.render)
+  },
+
+  events: {
+    "change .category-choice": "changeCategory",
+    "change .order-choice": "changeOrder"
+  },
+
+  changeCategory: function (event) {
+    this.currentCategory = $(event.currentTarget).val();
+    this.render();
+  },
+
+  changeOrder: function (event) {
+    this.currentOrder = $(event.currentTarget).val();
+    this.render();
   },
 
   tagName: 'discover',
@@ -18,20 +36,25 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
       projCategories: this.projCategories,
       orderCategories: this.orderCategories,
       currentCategory: this.currentCategory,
-      order: this.order
+      order: this.currentOrder
     });
     this.$el.html(content);
 
-    var toShowProjects = this.collection;
+    var that = this;
 
-    if (this.currentCategory !== 'All') {
-      toShowProjects = this.collection.groupedModelsArr['category']
-    };
-
-
+    this.collection.sortAndOrder(
+      this.currentOrder,
+      this.currentCategory
+    ).forEach(function (project) {
+      var projDetailView = new CashCow.Views.ProjectShow({
+        model: project,
+        collection: that.collection,
+        format: 'detail',
+      });
+      that.addSubview('.discover-result', projDetailView);
+    });
 
     this.attachSubviews();
-
     return this;
   }
 })

@@ -19,7 +19,7 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 		var that = this;
 
 		$.each(that.orderCategories, function (primoCategory, direction) {
-			var primoModel = that.collection.primoBy(primoCategory, 'none', direction)
+			var primoModel = that.collection.sortAndOrder(primoCategory, 'none', direction)
 
 			if (primoModel !== -1) {
 				var primoView = new CashCow.Views.ProjectShow({
