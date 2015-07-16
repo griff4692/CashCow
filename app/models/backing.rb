@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: backings
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  project_id :integer          not null
+#  amount     :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Backing < ActiveRecord::Base
   validates :backer, :project, :amount, presence: true
   validates :amount, numericality: { only_integer: true }

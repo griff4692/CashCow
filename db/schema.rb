@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 20150715222334) do
     t.text     "description", null: false
     t.integer  "goal",        null: false
     t.date     "deadline",    null: false
-    t.string   "image_url",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_url"
   end
 
   add_index "projects", ["title"], name: "index_projects_on_title", unique: true, using: :btree

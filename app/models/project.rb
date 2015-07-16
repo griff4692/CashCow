@@ -8,10 +8,10 @@
 #  title       :string           not null
 #  description :text             not null
 #  goal        :integer          not null
-#  deadline    :datetime         not null
-#  image_url   :string           not null
+#  deadline    :date             not null
 #  created_at  :datetime
 #  updated_at  :datetime
+#  image_url   :string
 #
 
 class Project < ActiveRecord::Base

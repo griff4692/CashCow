@@ -19,7 +19,7 @@
 
  html, body, header, nav, h1, a,
  ul, li, strong, main, button, i,
- section, img, div, h2, p, form,
+ section, img, div, h2, h3, p, form,
  fieldset, label, textarea,
  span, article, section,
  footer, time, small {
@@ -36,7 +36,7 @@
    background: transparent;
  }
 
- ul {
+ li {
    list-style: none;
  }
 
@@ -123,15 +123,39 @@
 
 .featured-projects {
   position: relative;
-  margin: 20px;
   width: 2700px;
 }
 
 .featured-projects > li {
-  display: absolute;
+  position: relative;
   width: 900px;
   float: left;
   display: block;
+}
+
+.featured-projects .highlight {
+  position: absolute;
+  color: white;
+  font-weight: 900;
+  left: 350px;
+}
+
+.featured-projects .highlight-category {
+  top: 100px;
+}
+
+.featured-projects .highlight-title {
+  top: 150px;
+}
+
+.featured-projects .proj-button {
+  top: 200px;
+  display: block;
+  padding: 5px;
+  background: limegreen;
+  border: 1px solid limegreen;
+  border-radius: 5px;
+
 }
 
 /*

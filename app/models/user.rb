@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
     class_name: "Follow",
     foreign_key: :user_id,
     primary_key: :id,
-    inverse_of: :user,
+    inverse_of: :follower,
 		dependent: :destroy
 
 	has_many :followed_projects,

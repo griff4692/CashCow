@@ -1,19 +1,23 @@
 <% if(type==='highlight') { %>
 
-  <%= model.escape('title') %>
+  <img src="<%= model.escape('image_url') %>" alt="Project Picture">
 
-  <a href="#discover">
-    See More <%= catToHighlight %>
+  <h1 class='highlight highlight-category'>
+    Most <%= catToHighlight %>
+  </h1>
+
+  <h3 class='highlight higlight-title'>
+    <%= model.escape('title') %>
+  </h3>
+
+  <a class='highlight proj-button' href="/#/projects/<%= model.id %>">
+    View This Project
   </a>
-
-  <%= model.escape('description') %>
-
-  <label> <%= catToHighlight %>
-    <%= model.escape(catToHighlight) %>
-  </label>
 
 <% } else { %>
   <a href="/#/projects/<%= model.id %>">
     <%= model.escape('title') %>
   </a>
+  <%= model.escape('category') %>
+  <%= model.escape('description') %>
 <% } %>

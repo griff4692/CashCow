@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: follows
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  project_id :integer          not null
+#
+
 class Follow < ActiveRecord::Base
   validates :follower, :project, presence: true
 

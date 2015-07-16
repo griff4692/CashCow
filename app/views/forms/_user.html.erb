@@ -1,9 +1,9 @@
 <% if type == 'new_user' %>
-	<% header = "Sign Up!" %>
+	<% header = "Sign Up" %>
 	<% action = '/users' %>
 	<% method = 'post' %>
 <% elsif type == 'new_session' %>
-	<% header = "Sign In!" %>
+	<% header = "Sign In" %>
 	<% action = '/session' %>
 	<% method = 'post' %>
 <% end %>
@@ -19,8 +19,16 @@
   <label>Password<br>
     <input name="user[password]" type="password" value=""><br>
   </label><br>
+	<label>First Name<br>
+		<input name="user[fname]" type="text" value=<%= user.fname %>><br>
+	</label><br>
+	<label>Password<br>
+		<input name="user[lname]" type="text" value=<%= user.lname %>><br>
+	</label><br>
 	<label>Image URL<br>
 		<input name="user[image_url]" type="text" value=<%= user.image_url %>><br>
 	</label><br>
 	<button>Submit</button>
 </form>
+
+<a href="#"> <%= header %> with Twitter	</a>

@@ -49,7 +49,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		var formData = this.$el.serializeJSON();
 
 		// var dateSelected = this.$('.datepicker').datepicker("getDate");
-		// 
+		//
 		// formData.deadline = dateSelected;
 
 		this.model.set(formData);

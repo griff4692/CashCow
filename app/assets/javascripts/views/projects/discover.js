@@ -53,7 +53,7 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
         var projDetailView = new CashCow.Views.ProjectShow({
           model: project,
           collection: that.collection,
-          format: 'detail',
+          format: 'thumbnail',
         });
         that.addSubview('.discover-result', projDetailView);
       });
