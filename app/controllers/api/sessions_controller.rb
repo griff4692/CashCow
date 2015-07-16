@@ -1,7 +1,11 @@
-class SessionsController < ApplicationController
-	def new
-		@user = User.new
-	end
+class Api::SessionsController < ApplicationController
+	def show
+    if current_user
+      render :show
+    else
+      render json: {}
+    end
+  end
 
 	def create
 		@user = User.find_by_credentials(
@@ -15,17 +19,13 @@ class SessionsController < ApplicationController
 		else
 			flash.now[:errors] = ["Invalid email and/or password"]
 			@user = User.new
-			render :new
+      head :unprocessable_entity
 		end
 	end
 
-	# rather than redirect, just in JSON
-	# destroy
-	# show action with current user 
-
 	def destroy
 		sign_out!
-		redirect_to root_url
+	  render json: {}
 	end
 
 	def omniauth

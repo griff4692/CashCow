@@ -1,0 +1,34 @@
+<ul class='logo-discovery group'>
+	<li class='logo'>
+		<a href="#">
+			Insert LOGO
+		</a>
+	</li>
+	<li class='nav-link'>
+		 <a href="/#/projects/discover/All">
+			 Discover
+		 </a>
+	</li>
+	<li class='nav-link'>
+		<a href="/#/projects/new">
+			Start
+		</a>
+	</li>
+</ul>
+<ul class='user-menu'>
+	<% if (currentUser) { %>
+		<li class='profile-dropdown'>
+			<a href="#/users/<%= currentUser.id %>">
+				<img src="<%= currentUser.image_url %>" alt="ProfPic">
+			</a>
+		</li>
+		<li>
+			<a id='sign-out-link' href="#blankspace">
+				Sign Out <%= currentUser.fname %>
+			</a>
+		</li>
+	<% } else { %>
+		<a href="/#/session/new">Sign In</a>
+		<a href="/#/users/new">Sign Up</a>
+	<% } %>
+</ul>

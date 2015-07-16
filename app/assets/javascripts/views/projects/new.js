@@ -34,13 +34,6 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 		this.$el.html(content);
 
-		this.$('.datepicker').datepicker({
-			yearRange: "2015:2020",
-			monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" ],
-			minDate: 1,
-			showAnim: "fold"
-		});
-
 		return this;
 	},
 
@@ -48,21 +41,9 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		event.preventDefault();
 		var formData = this.$el.serializeJSON();
 
-		// var dateSelected = this.$('.datepicker').datepicker("getDate");
-		//
-		// formData.deadline = dateSelected;
-
 		this.model.set(formData);
 
 		var that = this;
-
-		if(! CashCow.isSignedIn()) {
-			var $a = $('<a>');
-			$a.attr('href', '/session/new');
-			$a.text("You must be signed in fool!");
-			this.$projErrors.html($a);
-			return;
-		}
 
 		this.model.save({}, {
 			success: function () {

@@ -1,6 +1,7 @@
-class UsersController < ApplicationController
-	def new
-		@user = User.new
+class Api::UsersController < ApplicationController
+	def index
+		@users = User.all
+		render :index
 	end
 
 	def create
