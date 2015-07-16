@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     resources :backings, only: [:create, :update, :destroy]
     resources :follows, only: [:create, :destroy]
   end
+
+  get "/auth/:provider/callback", to: "sessions#omniauth"
+
 end

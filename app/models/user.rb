@@ -59,6 +59,26 @@ class User < ActiveRecord::Base
 		user.is_password?(password) ? user : nil
 	end
 
+	def self.find_or_create_by_auth_hash(auth_hash)
+		user = User.find_by(
+			provider: auth_hash[:provider],
+			uid: auth_hash[:uid])
+
+		unless user
+			user = User.create!(
+						provider: auth_hash[:provider],
+						uid: auth_hash[:uid],
+						fname: auth_hash[:info][:name].split.first,
+						lname: auth_hash[:info][:name].split.last,
+						email: "cash_cow@cash-cow.com",
+						password: SecureRandom::urlsafe_base64,
+						image_url: auth_hash[:profile_image_url]
+						)
+		end
+
+		user
+	end
+
 	def password=(password)
 		@password = password
 		self.password_digest = BCrypt::Password.create(password)
