@@ -18,7 +18,11 @@ class SessionsController < ApplicationController
 			render :new
 		end
 	end
-	
+
+	# rather than redirect, just in JSON
+	# destroy
+	# show action with current user 
+
 	def destroy
 		sign_out!
 		redirect_to root_url
