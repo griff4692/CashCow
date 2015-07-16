@@ -13,7 +13,6 @@ window.CashCow = {
 
     this.header = new CashCow.Views.Header({
       el: "#header",
-      // logoPath: asset_path('logo.png')
     })
 
     var cashCowRouter = new CashCow.Routers.Router({
@@ -24,3 +23,7 @@ window.CashCow = {
     Backbone.history.start();
   }
 };
+
+$(document).ready(function(){
+  CashCow.initialize();
+});

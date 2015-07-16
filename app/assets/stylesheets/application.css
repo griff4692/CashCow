@@ -104,6 +104,14 @@
    margin: 5px;
  }
 
+ ul.user-menu > li {
+   display: block;
+   margin-left: 5px;
+   float: left;
+   max-height: 50px;
+   overflow: hidden;
+ }
+
  #content {
    display: block;
    width: 900px;

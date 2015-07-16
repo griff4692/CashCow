@@ -9,7 +9,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.modelErrors = [];
-		this.$projErrors = options.$projErrors;
+		this.$projErrors = options.$errors;
 		this.listenTo(this.model, "sync", this.render);
 		this.$errorEl = $('#proj-errors');
 	},

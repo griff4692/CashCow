@@ -5,10 +5,13 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 
 	initialize: function (options) {
 		this.collection = options.collection;
+		this.collection.fetch();
+
 		this.projCategories = options.projCategories;
 		this.orderCategories = options.orderCategories;
 
 		this.projList = this.$('.featured-projects');
+		this.generatePrimoSubViews();
 
 		this.listenTo(this.collection, "sync", this.generatePrimoSubViews);
 	},

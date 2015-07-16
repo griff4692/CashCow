@@ -1,5 +1,5 @@
 class Api::ProjectsController < ApplicationController
-	
+
 	def index
 		@projects = Project.all
 		render 'index'
@@ -30,7 +30,9 @@ class Api::ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:category, :title, :description, :deadline, :goal, :image_url)
+		params.require(:project).permit(
+		:category, :title, :description,
+		:deadline, :goal, :image_url)
 	end
 
 end

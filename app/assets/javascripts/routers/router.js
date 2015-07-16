@@ -1,9 +1,8 @@
 CashCow.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.root$el = options.root$el;
-    this.$projErrors = $('#proj-errors');
+    this.$errors = $('errors');
     this.collection = options.collection;
-    this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
     this.orderCategories = {
       'days_left': 'asc',
@@ -16,7 +15,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "": "projRoot",
+    "": "root",
     "projects/new": "projectNew",
     "projects/discover/:category": "projDiscover",
     "projects/:id": "projShow",
@@ -25,11 +24,23 @@ CashCow.Routers.Router = Backbone.Router.extend({
     "users/:id": "userProfile"
   },
 
+  root: function () {
+    // debugger;
+    var rootView = new CashCow.Views.ProjectRoot({
+      collection: this.collection,
+      projCategories: this.projCategories,
+      orderCategories: this.orderCategories
+    });
+
+    this._swapView(rootView);
+  },
+
   userNew: function(){
     if (!this._requireSignedOut()) { return; }
 
     var model = new this.usersCollection.model();
-    var formView = new CasCow.Views.UsersForm({
+
+    var formView = new CashCow.Views.UserForm({
       collection: this.collection,
       model: model
     });
@@ -40,17 +51,19 @@ CashCow.Routers.Router = Backbone.Router.extend({
     if (!this._requireSignedOut(callback)) { return; }
 
     var signInView = new CashCow.Views.SignIn({
-      callback: callback
+      callback: callback,
+      $errors: this.$errors
     });
     this._swapView(signInView);
   },
 
   userProfile: function (id) {
-    var callback = this.show.bind(this, id);
-    if(!this.requireSignedIn(callback)) { return; }
+    var callback = this.userProfile.bind(this, id);
+
+    if(!this._requireSignedIn(callback)) { return; }
 
     var model = this.usersCollection.getOrFetch(id);
-    var profileView = CashCow.Views.UserProfile({
+    var profileView = new CashCow.Views.UserProfile({
       model: model
     });
 
@@ -112,16 +125,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this._swapView(discoverView);
   },
 
-  projRoot: function () {
-    var rootView = new CashCow.Views.ProjectRoot({
-      collection: this.collection,
-      projCategories: this.projCategories,
-      orderCategories: this.orderCategories
-    });
-
-    this._swapView(rootView);
-  },
-
   projectNew: function () {
     var callback = this.projectNew.bind(this);
     if(!this._requireSignedIn(callback)) { return; }
@@ -130,7 +133,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var newProjView = new CashCow.Views.ProjectForm ({
       model: newProj,
       collection: this.collection,
-      $projErrors: this.$projErrors
+      $errors: this.$errors
     });
 
     this._swapView(newProjView);
@@ -139,7 +142,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
-    this.$projErrors.empty();
+    this.$errors.empty();
     this.root$el.html(view.render().$el);
   }
 

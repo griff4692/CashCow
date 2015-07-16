@@ -1,16 +1,8 @@
 <header id='header'>
 </header>
 
-<section id="proj-errors">
+<section id="errors">
 </section>
 
 <main id="content">
 </main>
-
-<script type="text/javascript">
-  CashCow.currentUserId = <%= current_user.try(:id) || -1 %>;
-
- 	$(document).ready(function(){
- 		CashCow.initialize();
- 	});
-</script>

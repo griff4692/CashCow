@@ -1026,3 +1026,47 @@
 [07/16/15 12:47:55 -0400 Apps-Mac-mini-12.local (7333)] INFO : Doing deferred dependency-detection before Rack startup
 [07/16/15 12:47:59 -0400 Apps-Mac-mini-12.local (7333)] ERROR : Invalid license key, please contact support@newrelic.com
 [07/16/15 12:47:59 -0400 Apps-Mac-mini-12.local (7333)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/16/15 16:52:04 -0400 Apps-Mac-mini-12.local (7333)] INFO : Starting Agent shutdown
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Starting the New Relic agent in "development" environment.
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Environment: development
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Dispatcher: webrick
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Application: development
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing ActiveJob instrumentation
+[07/16/15 16:52:20 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing ActiveRecord 4 instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Net instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing deferred Rack instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Rack::Builder middleware instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Rails 3+ middleware instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Rails 4 Controller instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Rails 4 view instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Installing Rails 4 Error instrumentation
+[07/16/15 16:52:21 -0400 Apps-Mac-mini-12.local (9531)] INFO : Finished instrumentation
+[07/16/15 16:52:22 -0400 Apps-Mac-mini-12.local (9531)] INFO : Doing deferred dependency-detection before Rack startup
+[07/16/15 16:52:55 -0400 Apps-Mac-mini-12.local (9531)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/16/15 16:52:55 -0400 Apps-Mac-mini-12.local (9531)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/16/15 17:22:29 -0400 Apps-Mac-mini-12.local (9531)] INFO : Starting Agent shutdown
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Starting the New Relic agent in "development" environment.
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Environment: development
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Dispatcher: webrick
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Application: development
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing ActiveJob instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing ActiveRecord 4 instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Net instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing deferred Rack instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Rack::Builder middleware instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Rails 3+ middleware instrumentation
+[07/16/15 17:22:42 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Rails 4 Controller instrumentation
+[07/16/15 17:22:43 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Rails 4 view instrumentation
+[07/16/15 17:22:43 -0400 Apps-Mac-mini-12.local (9856)] INFO : Installing Rails 4 Error instrumentation
+[07/16/15 17:22:43 -0400 Apps-Mac-mini-12.local (9856)] INFO : Finished instrumentation
+[07/16/15 17:22:43 -0400 Apps-Mac-mini-12.local (9856)] INFO : Doing deferred dependency-detection before Rack startup
+[07/16/15 17:22:45 -0400 Apps-Mac-mini-12.local (9856)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/16/15 17:22:45 -0400 Apps-Mac-mini-12.local (9856)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

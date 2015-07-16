@@ -16,7 +16,7 @@
 	</li>
 </ul>
 <ul class='user-menu'>
-	<% if (currentUser) { %>
+	<% if (currentUser.isSignedIn()) { %>
 		<li class='profile-dropdown'>
 			<a href="#/users/<%= currentUser.id %>">
 				<img src="<%= currentUser.image_url %>" alt="ProfPic">

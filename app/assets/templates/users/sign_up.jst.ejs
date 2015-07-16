@@ -1,1 +1,43 @@
-Hi From Sign up
+<h1>Sign Up</h1>
+
+<p>
+	<a href="/auth/twitter"> Sign Up with Twitter?	</a>
+</p>
+
+<form class='sign-up'>
+
+  <label>
+    First Name
+    <input type="text" name="user[fname]"
+           value="<%= user.escape("fname") %>">
+  </label>
+
+  <br>
+
+  <label>
+    Last Name
+    <input type="text" name="user[lname]"
+           value="<%= user.escape("lname") %>">
+  </label>
+
+  <br>
+
+  <label>
+    Email
+    <input type="email" name="user[email]"
+           value="<%= user.escape("email") %>">
+  </label>
+
+  <br>
+
+  <label>
+    Password
+    <input type="password" name="user[password]"
+           value="<%= user.escape("password") %>">
+  </label>
+
+  <br>
+
+  <button>Create Account</button>
+
+</form>
