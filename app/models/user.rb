@@ -9,12 +9,16 @@
 #  image_url       :string
 #  created_at      :datetime
 #  updated_at      :datetime
+#  fname           :string
+#  lname           :string
+#  provider        :string
+#  uid             :string
 #
 
 class User < ActiveRecord::Base
 	attr_reader :password
 
-	validates :email, :session_token, presence: true
+	validates :email, :fname, :lname, :session_token, presence: true
 	validates :password, length: { minimum: 5, allow_nil: true }
 	validates :email, uniqueness: true
 

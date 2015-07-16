@@ -1,5 +1,12 @@
+fnames = ["Bertha", "Patty", "Griffin", "Pablo", "Quincy", "Kristaps"]
+lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
+
 10.times do |i|
-	user = User.create(email: "griff4692" + i.to_s, password: 'pablo40b')
+	user = User.create(
+		fname: fnames.sample,
+		lname: lnames.sample,
+		email: "griff4692" + i.to_s,
+		password: 'pablo40b')
 
 	title = "title" + i.to_s
 	categories = ["Art", "Philanthropy", "Music"]

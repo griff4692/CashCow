@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'newrelic_rpm'
 
 gem 'figaro'
+gem 'omniauth-twitter'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
