@@ -72,7 +72,7 @@ class User < ActiveRecord::Base
 						lname: auth_hash[:info][:name].split.last,
 						email: "cash_cow@cash-cow.com",
 						password: SecureRandom::urlsafe_base64,
-						image_url: auth_hash[:profile_image_url]
+						image_url: auth_hash[:info][:image]
 						)
 		end
 
