@@ -18,6 +18,13 @@
   <a href="/#/projects/<%= model.id %>">
     <%= model.escape('title') %>
   </a>
+  <%= model.escape('title') %>
   <%= model.escape('category') %>
   <%= model.escape('description') %>
+  <% if (CashCow.currentUser.isSignedIn() &&
+    CashCow.currentUser.id !== model.user_id) { %>
+      <button class='follow' data-id='<%= model.id %>'>
+        Follow This Project
+      </button>
+  <% } %>
 <% } %>

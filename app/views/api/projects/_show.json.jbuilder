@@ -5,4 +5,6 @@ json.(project, :id, :user_id, :category,
 json.days_left project.days_left
 json.days_gone_by project.days_gone_by
 
-json.follows project.followers
+json.followers project.followers
+json.backers project.backers
+json.amountFunded project.amount_funded

@@ -13,6 +13,28 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 
 	tagName: 'li',
 
+	events: {
+		"click .follow": "handleFollow"
+	},
+
+	handleFollow: function (event) {
+		event.preventDefault();
+
+		var idToFollow = $(event.currentTarget).data('id');
+		var formData = {"follow[project_id]": idToFollow};
+
+		$.ajax({
+			url: 'api/follows',
+			type: "POST",
+			data: formData,
+			dataType: "json",
+			success: function(data) {
+				this.render;
+			}
+		});
+
+	},
+
 	template: JST['projects/show'],
 
 	render: function () {

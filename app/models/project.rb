@@ -55,6 +55,10 @@ class Project < ActiveRecord::Base
 		(self.deadline - Date.tomorrow).to_i
 	end
 
+	def amount_funded
+		self.backings.sum(:amount)
+	end
+
 	def days_gone_by
 		(Date.today - self.created_at.to_date).to_i
 	end

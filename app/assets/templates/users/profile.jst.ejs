@@ -1,1 +1,16 @@
-Hi From My Profile Page
+Profile Page
+
+<section class='created-projects'>
+  <h1>Created Projects</h1>
+  <%= user.createdProjects().length %>
+</section>
+
+<section class='backed-projects'>
+  <h1>Backed Projects</h1>
+  <%= user.backedProjects().length %>
+</section>
+
+<section class='followed-projects'>
+  <h1>Followed Projects</h1>
+  <%= user.followedProjects().length %>
+</section>

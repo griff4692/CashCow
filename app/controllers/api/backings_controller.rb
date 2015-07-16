@@ -1,4 +1,4 @@
-class BackingsController < ApplicationController
+class Api::BackingsController < ApplicationController
   before_action :require_signed_in!
 
   def create

@@ -8,7 +8,55 @@ CashCow.Models.User = Backbone.Model.extend({
   toJSON: function () {
     var json = { user: _.clone(this.attributes) };
     return json;
-  }
+  },
+
+  followedProjects: function () {
+     if (!this._followedProjects) {
+       this._followedProjects = new CashCow.Collections.Projects([])
+     }
+
+     return this._followedProjects;
+  },
+
+  backedProjects: function () {
+     if (!this._backedProjects) {
+       this._backedProjects = new CashCow.Collections.Projects([])
+     }
+
+     return this._backedProjects;
+  },
+
+  createdProjects: function () {
+     if (!this._createdProjects) {
+       this._createdProjects = new CashCow.Collections.Projects([])
+     }
+
+     return this._createdProjects;
+  },
+
+ parse: function (resp) {
+   if (resp.followedProjects) {
+     this.followedProjects().set(resp.followedProjects, { parse: true });
+    //  this.Projects().trigger('sync');
+     delete resp.followedProjects;
+   }
+   if (resp.backedProjects) {
+     this.backedProjects().set(resp.backedProjects, { parse: true });
+    //  this.backedProjects().trigger('sync');
+     delete resp.backedProjects;
+   }
+   if (resp.createdProjects) {
+     this.createdProjects().set(resp.createdProjects, { parse: true });
+    //  this.createdProjects().trigger('sync');
+     delete resp.createdProjects;
+   }
+
+   return resp;
+ }
+
+  // json.followedProjects user.followed_projects
+  // json.backedProjects user.backed_projects
+  // json.createdProjects user.projects
 });
 
 CashCow.Models.CurrentUser = CashCow.Models.User.extend({
