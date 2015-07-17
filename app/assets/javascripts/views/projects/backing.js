@@ -20,7 +20,23 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 
   submitBack: function(event) {
     event.preventDefault();
-    var data = $(event.currentTarget).serializeJSON()
+    var data = $(event.currentTarget).serializeJSON().backing;
+		data.project_id = this.model.id
+
+		data = { 'backing' : data};
+
+		var that = this;
+
+		$.ajax({
+			url: 'api/backings',
+			type: "POST",
+			data: data,
+			dataType: "json",
+			success: function(data) {
+				alert("You have successfully backed this project!")
+				Backbone.history.navigate('#/projects/' + that.model.id, { trigger: true } );
+			}
+		});
   }
 
 })

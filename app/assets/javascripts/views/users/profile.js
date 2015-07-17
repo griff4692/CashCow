@@ -8,6 +8,10 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync change", this.render);
   },
 
+  events: {
+    "click .delete-account": "deleteUser"
+  },
+
   template: JST['users/profile'],
 
   render: function(){
@@ -15,6 +19,20 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.$el.html(html);
 
     return this;
+  },
+
+  deleteUser: function (event) {
+    event.preventDefault();
+    var that = this;
+
+    that.model.destroy({
+      success: function () {
+        console.log("Successfully deleted account!")
+        that.model.clear();
+        CashCow.currentUser.clear();
+        Backbone.history.navigate('', { trigger: true } )
+      }
+    });
   }
 
 });

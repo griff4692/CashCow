@@ -3,6 +3,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this.root$el = options.root$el;
     this.$errors = $('errors');
     this.collection = options.collection;
+    this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
     this.orderCategories = {
       'days_left': 'asc',
@@ -11,7 +12,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     };
 
     this.usersCollection = options.usersCollection;
-    this.usersCollection.fetch();
+    // this.usersCollection.fetch();
   },
 
   routes: {
@@ -121,7 +122,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var category = category || "all";
     // fix this!
     var order = order || "days_left";
-
     var discoverView = new CashCow.Views.Discover({
       collection: this.collection,
 

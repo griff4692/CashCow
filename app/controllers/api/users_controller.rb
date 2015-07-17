@@ -21,6 +21,11 @@ class Api::UsersController < ApplicationController
 		end
 	end
 
+	def destroy
+		current_user.destroy!
+		render json: {msg: "Successfully Deleted Account"}
+	end
+
 	private
 
 	def user_params

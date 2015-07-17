@@ -10,7 +10,6 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
 
     this.$discoverToggle = this.$('.discover-toggle');
     this.$discoverResult = this.$('.discover-result');
-
     this.listenTo(this.collection, "sync", this.render);
   },
 

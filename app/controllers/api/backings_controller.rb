@@ -1,15 +1,18 @@
 class Api::BackingsController < ApplicationController
-  before_action :require_signed_in!
 
   def create
-  end
+    @backing = current_user.backings.new(backing_params)
 
-  def update
-
+    if @backing.save
+      render json: { msg: "Successfully backed project"}
+    else
+      render json: @backing.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def destroy
-
+    @backing.destroy!
+    render json: { msg: "Successfully removed your funding of this project.  Your account will be reimbursed!"}
   end
 
   def backing_params
