@@ -1819,3 +1819,10 @@
 [07/17/15 17:06:56 -0400 Apps-Mac-mini-22.local (6001)] INFO : Doing deferred dependency-detection before Rack startup
 [07/17/15 17:06:58 -0400 Apps-Mac-mini-22.local (6001)] ERROR : Invalid license key, please contact support@newrelic.com
 [07/17/15 17:06:58 -0400 Apps-Mac-mini-22.local (6001)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/17/15 18:22:33 -0400 Apps-Mac-mini-22.local (6001)] INFO : Starting Agent shutdown
+[07/17/15 18:22:33 -0400 Apps-Mac-mini-22.local (5933)] INFO : Starting Agent shutdown
+[07/17/15 18:22:33 -0400 Apps-Mac-mini-22.local (4921)] INFO : Starting Agent shutdown
+[07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (4520)] INFO : Starting Agent shutdown
+[07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (4520)] INFO : Unexpected frame in traced method stack: #<NewRelic::Agent::TracedMethodFrame:0x007fa0055e5ec8 @tag=:action_view, @start_time=2015-07-17 15:09:55 -0400, @children_time=11557.681659> expected to be #<NewRelic::Agent::TracedMethodFrame:0x007fa00596c380 @tag=:method_tracer, @start_time=1437160195.682194, @children_time=0, @name="Controller/api/projects/index">
+[07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (3097)] INFO : Starting Agent shutdown
+[07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (3097)] INFO : Unexpected frame in traced method stack: #<NewRelic::Agent::TracedMethodFrame:0x007f83cd916830 @tag=:action_view, @start_time=2015-07-17 14:14:39 -0400, @children_time=14874.206403999999> expected to be #<NewRelic::Agent::TracedMethodFrame:0x007f83d0071768 @tag=:method_tracer, @start_time=1437156879.168148, @children_time=0, @name="Controller/api/projects/index">
