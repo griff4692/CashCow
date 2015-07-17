@@ -54,9 +54,35 @@ class Project < ActiveRecord::Base
 	def days_left
 		(self.deadline - Date.tomorrow).to_i
 	end
+	
+	def followers_with_total
+		follows = self.follows.includes(:followers)
+		followers_with_total = {}
 
-	def amount_funded
-		self.backings.sum(:amount)
+		followers_with_total['total'] = follows.length
+		followers_with_total['followers'] = []
+
+		follows.each do |follow|
+			followers_with_total['followers'] << follow.follower
+		end
+
+		followers_with_total
+	end
+
+	def backers_with_amounts_and_total_funding
+		backings = self.backings.includes(:backer)
+
+		backers_with_amounts_and_total_funding = {}
+		backers_with_amounts_and_total_funding['total'] = 0
+		backers_with_amounts_and_total_funding['backers'] = []
+
+		backings.each do |backing|
+			backers_with_amounts_and_total_funding['total'] += backing.amount
+			backers_with_amounts_and_total_funding['backers'] <<
+			 [backing.backer, backing.amount, backing.created_at]
+		end
+
+		backers_with_amounts_and_total_funding
 	end
 
 	def days_gone_by

@@ -8,7 +8,9 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			this.catToHighlight = options.orderCategory;
 		};
 
-		this.listenTo(this.model, "sync", this.render)
+		this.listenTo(this.model, "sync", this.render);
+		this.listenTo(this.model.followers(), "change", this.render);
+		this.listenTo(this.model.backers(), "change", this.render);
 	},
 
 	tagName: 'li',
@@ -23,13 +25,16 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		var idToFollow = $(event.currentTarget).data('id');
 		var formData = {"follow[project_id]": idToFollow};
 
+		var that = this;
+
 		$.ajax({
 			url: 'api/follows',
 			type: "POST",
 			data: formData,
 			dataType: "json",
 			success: function(data) {
-				this.render;
+				that.model.followers().add(CashCow.currentUser);
+				CashCow.currentUser.followedProjects.add(that.model)
 			}
 		});
 	},

@@ -1,10 +1,16 @@
+#building the response through smart queries
+backings_info = project.backers_with_amounts_and_total_funding
+followers_info = project.followers_with_total
+
 json.(project, :id, :user_id, :category,
   :title, :description, :goal, :deadline,
   :created_at, :image_url, :updated_at)
 
 json.days_left project.days_left
-json.days_gone_by project.days_gone_by
+json.amount_funded backings_info[:total]
+num_followers = followers_info[:total]
 
-json.followers project.followers
-json.backers project.backers
-json.amountFunded project.amount_funded
+if include_details
+  json.followers followers_info[:followers]
+  json.backers_with_amounts followers_info[:backers]
+end
