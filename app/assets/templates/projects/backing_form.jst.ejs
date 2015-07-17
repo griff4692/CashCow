@@ -1,0 +1,18 @@
+<h1>Fund <%= model.escape('title') %> Project</h1>
+<br>
+<form>
+  <input type="text" name="backing[amount]" value=''>
+  <br>
+  <button class='button back-dat-up'>Back This Project!</button>
+  <br>
+</form>
+<br>
+<h3>
+  Here is a description of the Project
+</h3>
+<br>
+<p>
+  <%= model.escape('description') %>
+</p>
+<br>
+<a href="/#/projects/<%= model.id %>">Go to Project Page</a>

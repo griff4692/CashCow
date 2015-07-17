@@ -1,5 +1,5 @@
 CashCow.Views.ProjectForm = Backbone.View.extend({
-	template: JST["projects/form"],
+	template: JST["projects/new_form"],
 
 	tagName: 'form',
 

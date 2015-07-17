@@ -18,13 +18,32 @@
   <a href="/#/projects/<%= model.id %>">
     <%= model.escape('title') %>
   </a>
-  <%= model.escape('title') %>
   <%= model.escape('category') %>
   <%= model.escape('description') %>
+  <br>
   <% if (CashCow.currentUser.isSignedIn() &&
     CashCow.currentUser.id !== model.user_id) { %>
-      <button class='follow' data-id='<%= model.id %>'>
-        Follow This Project
-      </button>
+      <% if (CashCow.currentUser.followedProjects().where
+          ({id: model.id}).length===0) { %>
+          <button class='follow' data-id='<%= model.id %>'>
+            Follow This Project
+          </button>
+      <% } else { %>
+        <button class='follow' data-id='<%= model.id %>'>
+          Follow This Project
+        </button>
+        <br>
+      <% } %>
+      <% if (CashCow.currentUser.backedProjects().where
+          ({id: model.id}).length===0) { %>
+            <a class='fund' href='/#/projects/<%= model.id %>/back'>
+              Fund This Project
+            </a>
+      <% } else { %>
+        <a class='fund' href='/#/projects/<%= model.id %>/back'>
+          Adjust Your Funding Of This Project (<%= CashCow.currentUser.backedProjects().where({id: model.id}) %>)
+        </a>
+        <br>
+      <% } %>
   <% } %>
 <% } %>

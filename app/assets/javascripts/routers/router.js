@@ -19,13 +19,23 @@ CashCow.Routers.Router = Backbone.Router.extend({
     "projects/new": "projectNew",
     "projects/discover/:category": "projDiscover",
     "projects/:id": "projShow",
+    "projects/:id/back": "projBacking",
     "users/new": "userNew",
     "session/new": "userSignIn",
     "users/:id": "userProfile"
   },
 
+  projBacking: function (id) {
+    var project = this.collection.getOrFetch(id);
+
+    var backForm = new CashCow.Views.BackingForm({
+      model: project
+    });
+
+    this._swapView(backForm);
+  },
+
   root: function () {
-    // debugger;
     var rootView = new CashCow.Views.ProjectRoot({
       collection: this.collection,
       projCategories: this.projCategories,
