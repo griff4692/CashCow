@@ -20,3 +20,10 @@ CashCow.Collections.Users = Backbone.Collection.extend({
     return user;
   }
 });
+
+CashCow.Collections.Backers = CashCow.Collections.Users.extend({
+  url: 'na',
+  model: CashCow.Models.Backer,
+
+  comparator: 'amount'
+});

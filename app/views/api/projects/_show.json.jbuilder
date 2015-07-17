@@ -7,10 +7,12 @@ json.(project, :id, :user_id, :category,
   :created_at, :image_url, :updated_at)
 
 json.days_left project.days_left
-json.amount_funded backings_info[:total]
-num_followers = followers_info[:total]
+json.amount_funded backings_info['total']
+json.num_followers followers_info['total']
+json.num_backers backings_info['total']
+
 
 if include_details
-  json.followers followers_info[:followers]
-  json.backers_with_amounts followers_info[:backers]
+  json.followers followers_info['followers']
+  json.backers_with_amounts backings_info['backers']
 end

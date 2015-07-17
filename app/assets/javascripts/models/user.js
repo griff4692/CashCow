@@ -54,9 +54,14 @@ CashCow.Models.User = Backbone.Model.extend({
    return resp;
  }
 
-  // json.followedProjects user.followed_projects
-  // json.backedProjects user.backed_projects
-  // json.createdProjects user.projects
+});
+
+CashCow.Models.Backers = CashCow.Models.User.extend({
+  urlRoot: 'na',
+
+  backerWithAmount: function () {
+    this.fullName + " has backed the project for $" + this.amount
+  }
 });
 
 CashCow.Models.CurrentUser = CashCow.Models.User.extend({

@@ -12,7 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require jquery-ui
  */
 
  /* Reset */
@@ -77,7 +76,7 @@
 
  header.nav-bar {
    display: block;
-   width: 900px;
+   width: 958px;
    border: 1px solid #eee;
    margin: auto;
  }
@@ -96,29 +95,17 @@
 
  ul.logo-discovery > li {
    float: left;
-   margin: 5px;
- }
+  }
 
  ul.user-menu {
    float: right;
-   margin: 5px;
  }
 
  ul.user-menu > li {
    display: block;
-   margin-left: 5px;
    float: left;
    max-height: 50px;
    overflow: hidden;
- }
-
- #content {
-   display: block;
-   width: 900px;
-   border: 1px solid #eee;
-   border-top: none;
-   min-height: 450px;
-   margin: auto;
  }
 
  #proj-errors, .user-errors {
@@ -129,41 +116,56 @@
    color: limegreen;
  }
 
+ #content {
+   display: block;
+   width: 958px;
+   border: 1px solid #eee;
+   border-top: none;
+   min-height: 450px;
+   margin: auto;
+   overflow:hidden;
+ }
+
 .featured-projects {
-  position: relative;
-  width: 2700px;
+  width: 4800px;
 }
 
 .featured-projects > li {
   position: relative;
-  width: 900px;
+  width: 960px;
   float: left;
   display: block;
 }
 
-.featured-projects .highlight {
+.highlight-container {
   position: absolute;
+  display: block;
   color: white;
+  width: 200px;
+  margin: 0 auto;
   font-weight: 900;
-  left: 350px;
+  left: 50%;
+  top: 50%;
 }
 
-.featured-projects .highlight-category {
-  top: 100px;
+.featured-projects h1 {
+  display: block;
+  text-align: center;
 }
 
-.featured-projects .highlight-title {
-  top: 150px;
+.featured-projects h3 {
+  display: block;
+  text-align: center;
 }
 
 .featured-projects .proj-button {
   top: 200px;
   display: block;
+  text-align: center;
   padding: 5px;
   background: limegreen;
   border: 1px solid limegreen;
   border-radius: 5px;
-
 }
 
 /*

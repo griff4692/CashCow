@@ -1,7 +1,7 @@
 class Api::ProjectsController < ApplicationController
 
 	def index
-		@projects = Project.all
+		@projects = Project.includes(follows: :follower, backings: :backer).all
 		render 'index'
 	end
 
@@ -17,14 +17,6 @@ class Api::ProjectsController < ApplicationController
 	def show
 		@project = Project.find(params[:id])
 		render :show
-	end
-
-	def update
-
-	end
-
-	def destroy
-
 	end
 
 	private

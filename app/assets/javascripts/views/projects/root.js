@@ -19,19 +19,20 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 
 		var that = this;
 
-		$.each(that.orderCategories, function (primoCategory, direction) {
+		$.each(that.orderCategories, function (primoCategory, array) {
 			var primoModel = that.collection.primoBy(
 				primoCategory,
 				'All',
-				direction
+				array[0]
 			);
-
+			
 			if (primoModel !== -1) {
 				var primoView = new CashCow.Views.ProjectShow({
 					model: primoModel,
 					collection: that.collection,
 					orderCategory: primoCategory,
-					format: "highlight"
+					format: "highlight",
+					highlightTitle: array[1]
 				});
 
 				that.addSubview('.featured-projects', primoView);

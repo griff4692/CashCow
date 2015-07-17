@@ -1,23 +1,31 @@
 <% if(type==='highlight') { %>
-
   <img src="<%= model.escape('image_url') %>" alt="Project Picture">
 
-  <h1 class='highlight highlight-category'>
-    Most <%= catToHighlight %>
-  </h1>
+  <section class='higlight-container'>
+    <h1 class='highlight highlight-category'>
+       <%= higlightTitle %><%= model.escape(catToHighlight) %>
+    </h1>
+    <h3 class='highlight higlight-title'>
+      <%= model.escape('title') %>
+    </h3>
 
-  <h3 class='highlight higlight-title'>
-    <%= model.escape('title') %>
-  </h3>
-
-  <a class='highlight proj-button' href="/#/projects/<%= model.id %>">
-    View This Project
-  </a>
+    <a class='highlight proj-button' href="/#/projects/<%= model.id %>">
+      View This Project
+    </a>
+  </section>
 
 <% } else { %>
   <a href="/#/projects/<%= model.id %>">
     <%= model.escape('title') %>
   </a>
+  <% model.backers().models.forEach(function (backer) { %>
+    <%= backer.get('fname') %> gave $<%= backer.get('amount') %> on
+    <% var dateParts = backer.get('fund_date').split('-') %>
+    <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+  <% })%>
+  <% model.followers().models.forEach(function (follower) { %>
+    <%= follower.get('fname') %> is following this project
+  <% })%>
   <%= model.escape('category') %>
   <%= model.escape('description') %>
   <br>

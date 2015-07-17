@@ -1,8 +1,14 @@
 CashCow.Models.Project = Backbone.Model.extend({
+	// additional attributes from JBUILDER
+	// json.days_left project.days_left
+	// json.amount_funded backings_info['total']
+	// num_followers = followers_info['total']
+	// num_backers = backings_info['total']
+
 	urlRoot: '/api/projects',
 
 	toJSON: function () {
-		return {"project" : _.clone(this.attributes) }
+		return { "project" : _.clone(this.attributes) }
 	},
 
 	parse: function (resp) {
@@ -11,11 +17,21 @@ CashCow.Models.Project = Backbone.Model.extend({
 			delete resp.followers;
 		}
 
-		if (resp.backers) {
-			this.backers().set(resp.backers, { parse: true });
-			delete resp.backers;
-		}
+		if (resp.backers_with_amounts && resp.backers_with_amounts.length > 0) {
+			var toSet = [];
+			var userAttributes;
 
+			resp.backers_with_amounts.forEach(function (backer) {
+				userAttributes = backer[0];
+				userAttributes.amount = backer[1];
+				userAttributes.fund_date = backer[2];
+				toSet.push(userAttributes);
+			})
+
+			this.backers().set(toSet, { parse: true });
+
+			delete resp.backers_with_amounts;
+		}
 		return resp
 	},
 

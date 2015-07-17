@@ -23,7 +23,7 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
     var data = $(event.currentTarget).serializeJSON().backing;
 		data.project_id = this.model.id
 
-		data = { 'backing' : data};
+		data = { 'backing' : data };
 
 		var that = this;
 
@@ -35,7 +35,7 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 			success: function(data) {
 				alert("You have successfully backed this project!");
 				that.model.backers().add(CashCow.currentUser);
-				currentUser.backedProjects().add(that.model);
+				CashCow.currentUser.backedProjects().add(that.model);
 				Backbone.history.navigate('#/projects/' + that.model.id, { trigger: true } );
 			}
 		});
