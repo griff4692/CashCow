@@ -1,0 +1,38 @@
+<a href="/#/projects/<%= model.id %>">
+  <%= model.escape('title') %>
+</a>
+<% model.backers().models.forEach(function (backer) { %>
+  <%= backer.get('fname') %> gave $<%= backer.get('amount') %> on
+  <% var dateParts = backer.get('fund_date').split('-') %>
+  <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+<% })%>
+<% model.followers().models.forEach(function (follower) { %>
+  <%= follower.get('fname') %> is following this project
+<% })%>
+<%= model.escape('category') %>
+<%= model.escape('description') %>
+<br>
+<% if (CashCow.currentUser.isSignedIn()) { %>
+    <% if (CashCow.currentUser.followedProjects().where
+        ({id: model.id}).length===0) { %>
+        <button class='follow' data-id='<%= model.id %>'>
+          Follow This Project
+        </button>
+    <% } else { %>
+      <button class='follow' data-id='<%= model.id %>'>
+        Unfollow This Project
+      </button>
+      <br>
+    <% } %>
+    <% if (CashCow.currentUser.backedProjects().where
+        ({id: model.id}).length===0) { %>
+          <a class='fund' href='/#/projects/<%= model.id %>/back'>
+            Fund This Project
+          </a>
+    <% } else { %>
+      <a class='fund' href='/#/projects/<%= model.id %>/back'>
+        Adjust Your Funding Of This Project (<%= CashCow.currentUser.backedProjects().where({id: model.id}) %>)
+      </a>
+      <br>
+    <% } %>
+<% } %>

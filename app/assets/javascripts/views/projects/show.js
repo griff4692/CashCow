@@ -3,11 +3,12 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.model = options.model;
 		this.collection = options.collection;
 		this.format = options.format;
+		this.catToHighlight = "";
 		this.highlightTitle = "";
 
 		if (this.format === 'highlight') {
 			this.catToHighlight = options.orderCategory;
-			this.highlightTitle = options.highlightTitle
+			this.highlightTitle = options.highlightTitle;
 		};
 		this.listenTo(this.model, "sync", this.check);
 		this.listenTo(this.model, "sync", this.render);
@@ -19,10 +20,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 
 	events: {
 		"click .follow": "handleFollow"
-	},
-
-	check: function () {
-		// debugger
 	},
 
 	handleFollow: function (event) {
@@ -45,7 +42,15 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		});
 	},
 
-	template: JST['projects/show'],
+	template: function (options) {
+		if (this.format === 'highlight') {
+			return JST['projects/highlight'](options);
+		} else if (this.format === 'thumbnail') {
+			return JST['projects/thumbnail'](options);
+		} else {
+			return JST['projects/detail'](options);
+		}
+	},
 
 	render: function () {
 		var content = this.template({
