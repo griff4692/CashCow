@@ -1,33 +1,32 @@
 <section class='discover-toggle'>
-   <label>Category
-     <select class="category-choice" name="category">
-       <% projCategories.forEach(function (category) { %>
-           <option value='<%= category %>'
-            <% if(category === currentCategory) { %>
-              <%= "selected" %>
-            <% } %>>
-             <%= category %>
-           </option>
-       <% }) %>
-     </select>
-   </label>
-   <br>
-   <label>Sort By:
-     <select class="order-choice" name="order">
-       <% $.each(orderCategories, function (category, value) { %>
-           <option value='<%= category %>'
-            <% if(category === currentOrder) { %>
-              <%= "selected" %>
-            <% } %>>
-             <%= category %>
-           </option>
-       <% }) %>
-     </select>
-   </label>
+  <div class="selection group">
+    <label class='category'>
+      <select class="category-choice" name="category">
+        <% projCategories.forEach(function (category) { %>
+            <option value='<%= category %>'
+             <% if(category === currentCategory) { %>
+               <%= "selected" %>
+             <% } %>>
+              <%= category %>
+            </option>
+        <% }) %>
+      </select>
+    </label>
+    <label class='order'><strong id='discovery'>sorted by</strong>
+      <select class="order-choice" name="order">
+        <% $.each(orderCategories, function (category, value) { %>
+            <option value='<%= category %>'
+             <% if(category === currentOrder) { %>
+               <%= "selected" %>
+             <% } %>>
+              <%= category %>
+            </option>
+        <% }) %>
+      </select>
+    </label>
+  </div>
 </section>
 
-<section class='discover-result'>
-  <ul class=discover-list>
+<ul class='discover-result'>
 
-  </ul>
 </section>

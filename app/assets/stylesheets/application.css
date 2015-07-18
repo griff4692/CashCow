@@ -51,6 +51,8 @@
  input[type="email"],
  input[type="text"],
  textarea,
+ select,
+ option
  button {
    -webkit-appearance: none;
    display: inline-block;
@@ -227,7 +229,6 @@
    height: 998px;
    border: 1px solid #eee;
    border-top: none;
-   min-height: 500px;
    margin: auto;
    overflow:hidden;
    background: #f9fafb;
@@ -343,6 +344,45 @@ strong:hover {
   border: 1px solid #3caf6a;
   font-weight: 900;
 }
+
+/*
+discover page
+*/
+
+.discover-toggle {
+  background: green;
+  color: black;
+  font-size: 40px;
+  height: 300px;
+  display: block;
+  position: relative;
+}
+
+strong#discovery {
+  font-style: italic;
+  font-size: 32px;
+}
+
+.selection {
+  background: white;
+  float: left;
+  position: absolute;
+  height: 70px;
+  display: block;
+  top: 50%;
+  margin-top: -50px;
+  left: 25px;
+  font-size: 40px;
+}
+
+.order {
+  float: right;
+}
+
+.discover-result
+
+
+
 
 /*
 footer
