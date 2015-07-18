@@ -226,7 +226,7 @@
  #content {
    display: block;
    width: 958px;
-   height: 998px;
+   min-height: 998px;
    border: 1px solid #eee;
    border-top: none;
    margin: auto;
@@ -350,10 +350,11 @@ discover page
 */
 
 .discover-toggle {
-  background: green;
+  background: #2bde73;
+  border: 1px solid #2bde73;
   color: black;
   font-size: 40px;
-  height: 300px;
+  height: 299px;
   display: block;
   position: relative;
 }
@@ -365,6 +366,7 @@ strong#discovery {
 
 .selection {
   background: white;
+  border: 3px solid #3caf6a;
   float: left;
   position: absolute;
   height: 70px;
@@ -375,12 +377,70 @@ strong#discovery {
   font-size: 40px;
 }
 
+.selection:hover {
+  background: #3caf6a;
+  color: white;
+}
+
 .order {
   float: right;
 }
 
-.discover-result
+.discover-result {
+  margin-top: 25px;
+}
 
+.discover-result .thumbnail {
+  display: block;
+  position: relative;
+  float: left;
+  margin-left: 25px;
+  margin-bottom: 50px;
+  height: 446px;
+  width: 280px;
+  overflow: hidden;
+  border: 3px solid #eee;
+  border-radius: 15px;
+  box-shadow: 0 1px 0 0 #090;
+}
+
+.discover-result .thumbnail:nth-child(3n + 2) {
+  margin-right: 25px;
+}
+
+.discover-result .thumbnail:hover {
+  border: 3px solid #2bde73;
+  cursor: pointer;
+}
+
+.discover-result .thumbnail:active {
+  top: 4px;
+  box-shadow: none;
+}
+
+.thumbnail > *:not(img) {
+  margin-left: 10px;
+  color: black;
+  font-size: 16px;
+  font-weight: 700px;
+}
+
+.thumbnail-title {
+  font-weight: 900px;
+}
+
+
+.thumbnail-description {
+
+}
+
+.thumbnail-stats {
+
+}
+
+.thumbnail-stats {
+  float: left;
+}
 
 
 

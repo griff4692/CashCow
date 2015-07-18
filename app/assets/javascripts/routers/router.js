@@ -8,12 +8,9 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this.orderCategories = {
       days_left: ['asc', "Fewest Days Left"],
       amount_funded: ['asc', "Most Funded"],
-      num_backers: ['asc', "Most Backed"],
-      num_followers: ['asc', "Most Followed"],
-      goal: ['asc', "Most Ambitious Goal"]
+      num_backers: ['asc', "Most Pledged"],
+      num_followers: ['asc', "Most Followed"]
     };
-
-    this.usersCollection = options.usersCollection;
   },
 
   routes: {
@@ -50,7 +47,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
   userNew: function(){
     if (!this._requireSignedOut()) { return; }
 
-    var model = new this.usersCollection.model();
+    var model = new CashCow.Collections.users.model();
 
     var formView = new CashCow.Views.SignUp({
       collection: this.collection,
@@ -62,7 +59,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
   userSignIn: function(callback){
     if (!this._requireSignedOut(callback)) { return; }
 
-    var model = new this.usersCollection.model();
+    var model = new CashCow.Collections.users.model();
 
     var signInView = new CashCow.Views.SignIn({
       callback: callback,

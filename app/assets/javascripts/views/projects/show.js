@@ -1,6 +1,7 @@
 CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	initialize: function (options) {
 		this.model = options.model;
+		this.creator = CashCow.Collections.users.getOrFetch(this.model.get('user_id'));
 		this.collection = options.collection;
 		this.format = options.format;
 		this.catToHighlight = "";
@@ -10,7 +11,9 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			this.catToHighlight = options.orderCategory;
 			this.highlightTitle = options.highlightTitle;
 		};
+
 		this.listenTo(this.model, "sync", this.check);
+		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.model.followers(), "change", this.render);
 		this.listenTo(this.model.backers(), "change", this.render);
@@ -19,7 +22,12 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	tagName: 'li',
 
 	events: {
-		"click .follow": "handleFollow"
+		"click .follow": "handleFollow",
+		"click .thumbnail": "visitProj"
+	},
+
+	visitProj: function () {
+		Backbone.history.navigate('projects/' + this.model.id, { trigger: true } );
 	},
 
 	handleFollow: function (event) {
@@ -55,6 +63,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	render: function () {
 		var content = this.template({
 			model: this.model,
+			creator: this.creator,
 			type: this.format,
 			catToHighlight: this.catToHighlight,
 			higlightTitle: this.highlightTitle

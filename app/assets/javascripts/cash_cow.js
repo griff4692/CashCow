@@ -17,8 +17,7 @@ window.CashCow = {
 
     var cashCowRouter = new CashCow.Routers.Router({
       root$el: $('#content'),
-      collection: CashCow.Collections.projects,
-      usersCollection: CashCow.Collections.users
+      collection: CashCow.Collections.projects
     });
     Backbone.history.start();
   }

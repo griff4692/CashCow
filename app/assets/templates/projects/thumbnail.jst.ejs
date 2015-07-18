@@ -1,6 +1,28 @@
 <div class='thumbnail'>
-  <a href="/#/projects/<%= model.id %>">
+  <img src="<%= model.escape('image_url') %>" alt="ProjectPicture">
+  <div class="thumbnail-title">
     <%= model.escape('title') %>
-  </a>
+  </div>
+
+    <div class="thumbnail-name">
+      <%= creator.fullName() %>
+    </div>
+
+  <div class="thumbnail-description">
+    <%= model.escape('description') %>
+  </div>
+
+  <ul class="thumbnail-stats group">
+    <li>
+      <%= model.escape('goal') %>funded
+    </li>
+    <li>
+      <%= model.escape('funded_amount') %>pledged
+    </li>
+
+    <li>
+      <%= model.escape('days_left') %>days to go
+    </li>
+  </ul>
 
 </div>
