@@ -12,12 +12,10 @@ class Api::SessionsController < ApplicationController
 			params[:user][:email], params[:user][:password]
 		)
 
-		if @user
+		if (!! @user)
 			sign_in!(@user)
-			flash[:notice] = "You successfully signed in!"
-			redirect_to root_url
+			render :show
 		else
-			flash.now[:errors] = ["Invalid email and/or password"]
 			@user = User.new
       head :unprocessable_entity
 		end

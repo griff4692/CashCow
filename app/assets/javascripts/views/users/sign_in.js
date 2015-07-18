@@ -27,10 +27,13 @@ CashCow.Views.SignIn = Backbone.View.extend({
     var $form = $(event.currentTarget);
     var formData = $form.serializeJSON().user;
 
+    var that = this;
+
     CashCow.currentUser.signIn({
       email: formData.email,
       password: formData.password,
-      error: function(){
+      success: function () { return that.signInCallback() },
+      error: function() {
         alert("Wrong username/password combination. Please try again.");
       }
     });

@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
 						image_url: auth_hash[:info][:image]
 						)
 		end
-		
+
 		user
 	end
 

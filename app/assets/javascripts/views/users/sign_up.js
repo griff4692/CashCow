@@ -37,7 +37,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
       },
 
       error: function(data){
-
+        console.log(data);
       }
     });
   }
