@@ -1,22 +1,15 @@
-<section class='higlight-container'>
-  <div class="carousel-prev" data-id='<%= model.id %>'>
-    ◁
-  </div>
+<img src="<%= model.escape('image_url') %>" alt="Project Picture">
 
-  <div class="carousel-after" data-id='<%= model.id %>'>
-    ▷
-  </div>
+<h1 class='highlight highlight-category'>
+   <%= higlightTitle %>
+   <strong>
+     <%= model.escape(catToHighlight) %>
+   </strong>
+</h1>
+<h3 class='highlight higlight-title'>
+  <%= model.escape('title') %>
+</h3>
 
-  <img src="<%= model.escape('image_url') %>" alt="Project Picture">
-
-  <h1 class='highlight highlight-category'>
-     <%= higlightTitle %><%= model.escape(catToHighlight) %>
-  </h1>
-  <h3 class='highlight higlight-title'>
-    <%= model.escape('title') %>
-  </h3>
-
-  <a class='highlight proj-button' href="/#/projects/<%= model.id %>">
-    View This Project
-  </a>
-</section>
+<a class='highlight proj-button' href="/#/projects/<%= model.id %>">
+  View This Project
+</a>

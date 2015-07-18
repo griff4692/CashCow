@@ -25,7 +25,7 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 				'All',
 				array[0]
 			);
-			
+
 			if (primoModel !== -1) {
 				var primoView = new CashCow.Views.ProjectShow({
 					model: primoModel,
