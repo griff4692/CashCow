@@ -9,10 +9,10 @@ CashCow.Carousel = function (el) {
 
 CashCow.Carousel.prototype.bindHandlers = function() {
   this.$prev.on('click', function(event){
-    this.slide(-1)}.bind(this));
+    this.slide(1)}.bind(this));
 
   this.$next.on('click', function(event){
-    this.slide(1)}.bind(this));
+    this.slide(-1)}.bind(this));
 };
 
 CashCow.Carousel.prototype.slide = function (dir) {
