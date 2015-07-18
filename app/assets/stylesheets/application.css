@@ -88,24 +88,35 @@
    font-weight: 900;
  }
 
- /* forms */
  .user-form {
+   display: relative;
+ }
+
+ .user-form:after {
+   content: 'or';
+   display: inline;
+   background: white;
+   padding: 0px 10px 0px 10px;
+   position: relative;
+   left: 45%;
+   top: 8px;
+ }
+
+ /* forms */
+ .form {
+   display: relative;
    display: block;
    background: #fff;
    margin: 75px auto;
    width: 350px;
-   height: 500px;
    border: 2px solid #eee;
    border-radius: 25px;
- }
-
- .user-form {
    font-size: 16px;
    font-weight: 550;
    color: #aaa;
  }
 
- .user-form .form-header {
+ .form .form-header {
    padding: 15px 0px 5px 25px;
    font-size: 32px;
    color: #6e6e6e;
@@ -113,7 +124,7 @@
    line-height: 1.0;
  }
 
-.input > input, .user-form button {
+.input > input, .form button {
   margin: 15px 25px;
   border: 1px solid #eee;
   border-radius: 7.5px;
@@ -122,8 +133,9 @@
   display: block;
  }
 
- .user-form button {
-   margin-top: 50px;
+ .form button {
+   margin-top: 20px;
+   margin-bottom: 20px;
    padding-top: 10px;
    padding-bottom: 10px;
    border: 1px solid #2bde73;
@@ -137,6 +149,18 @@
  .input > input:focus {
    border: 1px solid #2bde73;
    font-weight: 900;
+ }
+
+ .twitter-sign-in {
+   margin: 0px 20px;
+   border-top: 2px solid #eee;
+   padding: 25px;
+   text-align: center;
+   font-weight: bold;
+ }
+
+ .twitter-sign-in:hover {
+   color: #3caf6a;
  }
 
  /* Clearfix */
@@ -244,6 +268,16 @@ div.carousel {
 
 .carousel .slide-right {
   right: 10px;
+}
+
+.carousel:hover .slide-right {
+  display: block;
+  cursor: pointer;
+}
+
+.carousel:hover .slide-left {
+  display: block;
+  cursor: pointer;
 }
 
 .featured-projects {

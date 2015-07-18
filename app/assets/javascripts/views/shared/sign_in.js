@@ -3,16 +3,22 @@ CashCow.Views.SignIn = Backbone.View.extend({
   initialize: function(options){
     this.callback = options.callback;
     this.listenTo(CashCow.currentUser, "signIn", this.signInCallback);
+    this.$el.addClass('form');
   },
 
   events: {
     "submit form": "submit"
   },
 
-  template: JST['shared/sign_in'],
+  template: JST['users/form'],
 
   render: function(){
-    this.$el.html(this.template());
+    var content = this.template({
+      model: this.model,
+      type: 'signIn'
+    })
+
+    this.$el.html(content);
     return this;
   },
 

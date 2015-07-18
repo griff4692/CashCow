@@ -1,0 +1,54 @@
+<% if (type==='signUp') { %>
+	<% var dir = 'Up' %>
+<% } else { %>
+	<% var dir = 'In' %>
+<%	} %>
+
+<form class='user-form'>
+
+	<h1 class='form-header'>Sign <%= dir %></h1>
+
+	<% if (type==='signUp') { %>
+
+		<div class="input">
+				<input type="text" name="user[fname]"
+							 value="First Name">
+		</div>
+
+		<div class="input">
+			<input type="text" name="user[lname]"
+							 value="Last Name">
+			</label>
+		</div>
+
+		<div class="input">
+				<input type="file" name="user[image]" value="Upload A Profile Image">
+		</div>
+
+	<%	} %>
+
+	<div class="input">
+    <input type="email" name="user[email]"
+           value="Email">
+	</div>
+
+	<div class="input">
+	    <input type="text" name="user[password]"
+	           value="Password">
+	  </label>
+	</div>
+
+	<button class='submit'>
+		<% if (type==='signUp') { %>
+			Create Account
+		<% } else { %>
+			Sign In
+		<% } %>
+
+	</button>
+
+</form>
+
+<div class='twitter-sign-in'>
+	<a href="/auth/twitter"> Sign <%= dir %> with Twitter</a>
+</div>

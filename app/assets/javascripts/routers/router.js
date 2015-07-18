@@ -52,7 +52,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
     var model = new this.usersCollection.model();
 
-    var formView = new CashCow.Views.UserForm({
+    var formView = new CashCow.Views.SignUp({
       collection: this.collection,
       model: model
     });
@@ -62,8 +62,11 @@ CashCow.Routers.Router = Backbone.Router.extend({
   userSignIn: function(callback){
     if (!this._requireSignedOut(callback)) { return; }
 
+    var model = new this.usersCollection.model();
+
     var signInView = new CashCow.Views.SignIn({
       callback: callback,
+      model: model,
       $errors: this.$errors
     });
     this._swapView(signInView);
