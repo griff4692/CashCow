@@ -46,16 +46,15 @@
    height: auto;
  }
 
- /*input[type="password"],
- input[type="email"],
+ input[type="password"],
+
  input[type="text"],
  input[type="submit"],
  textarea,
  button {
-   Get rid of native styling. Read more here:
    -webkit-appearance: none;
    -moz-appearance: none;
- }*/
+ }
 
  button,
  input[type="submit"] {
@@ -63,8 +62,10 @@
    display: block;
    box-sizing: content-box;
    outline: none;
-   -webkit-appearance: none;
  }
+
+ /* forms */
+ 
 
  /* Clearfix */
 
