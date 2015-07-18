@@ -142,42 +142,48 @@
   display: block;
 }
 
-.featured-projects button {
-  content: '⟨';
-  font-size: 100px;
-  color: white;
-  position: absolute;
-  display: none;
-  cursor: pointer;
-  top: 225px;
-  left: 25px;
+div.carousel {
+  position: relative;
 }
 
-.featured-projects > li:after {
-  content: '⟩';
-  color: white;
+.carousel > button {
   position: absolute;
-  display: none;
-  cursor: pointer;
-  font-size: 100px;
+  z-index: 2;
+  font-size: 150px;
+  color: white;
   top: 225px;
-  right: 25px;
+  display: none;
 }
 
-.featured-projects > li:hover:after,
- .featured-projects > li:hover:before
- {
+.carousel .slide-left {
+  left: 10px;
+}
+
+.carousel .slide-right {
+  right: 10px;
+}
+
+.carousel:hover button {
    display: block;
 }
 
-.featured-projects > li:hover:after,
- .featured-projects > li:hover:before
- {
-
-.featured-projects section {
-  position: absolute;
+.featured-projects {
   display: block;
   color: white;
+  /*width: 700px;
+  height: 300px;
+  left: 50%;
+  margin-left: -350px;
+  top: 50%;
+  margin-top: -150px;*/
+}
+
+.featured-projects > li {
+  position: relative;
+}
+
+.featured-projects .higlight-container {
+  position: absolute;
   width: 700px;
   height: 300px;
   left: 50%;

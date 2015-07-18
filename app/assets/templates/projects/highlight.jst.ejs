@@ -1,15 +1,23 @@
 <img src="<%= model.escape('image_url') %>" alt="Project Picture">
 
-<h1 class='highlight highlight-category'>
-   <%= higlightTitle %>
-   <strong>
-     <%= model.escape(catToHighlight) %>
-   </strong>
-</h1>
-<h3 class='highlight higlight-title'>
-  <%= model.escape('title') %>
-</h3>
+<section class='higlight-container'>
+  <h1 class='highlight highlight-category'>
+     <%= higlightTitle %>
+     <strong>
+       <%= model.escape(catToHighlight) %>
+     </strong>
+  </h1>
+  <h3 class='highlight higlight-title'>
+    <%= model.escape('title') %>
+  </h3>
 
-<a class='highlight proj-button' href="/#/projects/<%= model.id %>">
-  View This Project
-</a>
+  <a class='highlight proj-button' href="/#/projects/<%= model.id %>">
+    View This Project
+  </a>
+</section>
+
+<script type="text/javascript">
+  $(function () {
+    $('.carousel').carousel();
+  })
+</script>

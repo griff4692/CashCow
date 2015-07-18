@@ -1,9 +1,8 @@
 CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 	template: JST["projects/root"],
 
-	tagName: 'feature',
-
 	initialize: function (options) {
+		this.$el.addClass('carousel');
 		this.collection = options.collection;
 		this.projCategories = options.projCategories;
 		this.orderCategories = options.orderCategories;
