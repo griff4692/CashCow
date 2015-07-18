@@ -9,9 +9,8 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 	},
 
 	// takes either none, or grouped value
-	sortAndOrder: function (sortAttr, filter) {
+	sortAndOrder: function (sortAttr, filter, direction) {
 		var filtered;
-
 		if (filter === 'All') {
 			filtered = this.models;
 		} else {
@@ -22,26 +21,26 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 			return filtered;
 		}
 
-		return _.sortBy(filtered, function (model) {
+		var sorted = _.sortBy(filtered, function (model) {
 			return model.get(sortAttr)
-		})
+		});
+
+		if (direction==='asc') {
+			return sorted;
+		} else if (direction==='desc') {
+			return sorted.reverse();
+		} else {
+			alert('didnt specify direction');
+			return;
+		}
 	},
 
 	primoBy: function (sortAttr, filter, direction) {
-		var primoIndex;
-		var resultArr = this.sortAndOrder(sortAttr, filter);
+		var resultArr = this.sortAndOrder(sortAttr, filter, direction);
 
-		if (resultArr.length === 0) {
-			return -1;
-		}
+		if (resultArr.length === 0) { return -1 }
 
-		if (direction==='asc') {
-			primoIndex = 0;
-		} else {
-			primoIndex = resultArr.length - 1;
-		}
-
-		return resultArr[primoIndex];
+		return resultArr[0];
 	},
 
 	getOrFetch: function (id) {
