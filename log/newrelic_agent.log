@@ -1826,3 +1826,24 @@
 [07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (4520)] INFO : Unexpected frame in traced method stack: #<NewRelic::Agent::TracedMethodFrame:0x007fa0055e5ec8 @tag=:action_view, @start_time=2015-07-17 15:09:55 -0400, @children_time=11557.681659> expected to be #<NewRelic::Agent::TracedMethodFrame:0x007fa00596c380 @tag=:method_tracer, @start_time=1437160195.682194, @children_time=0, @name="Controller/api/projects/index">
 [07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (3097)] INFO : Starting Agent shutdown
 [07/17/15 18:22:34 -0400 Apps-Mac-mini-22.local (3097)] INFO : Unexpected frame in traced method stack: #<NewRelic::Agent::TracedMethodFrame:0x007f83cd916830 @tag=:action_view, @start_time=2015-07-17 14:14:39 -0400, @children_time=14874.206403999999> expected to be #<NewRelic::Agent::TracedMethodFrame:0x007f83d0071768 @tag=:method_tracer, @start_time=1437156879.168148, @children_time=0, @name="Controller/api/projects/index">
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Starting the New Relic agent in "development" environment.
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Environment: development
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Dispatcher: webrick
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Application: development
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing ActiveJob instrumentation
+[07/18/15 10:27:10 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing ActiveRecord 4 instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Net instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing deferred Rack instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Rack::Builder middleware instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Rails 3+ middleware instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Rails 4 Controller instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Rails 4 view instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Installing Rails 4 Error instrumentation
+[07/18/15 10:27:11 -0400 Apps-Mac-mini-22.local (10342)] INFO : Finished instrumentation
+[07/18/15 10:27:12 -0400 Apps-Mac-mini-22.local (10342)] INFO : Doing deferred dependency-detection before Rack startup
+[07/18/15 10:27:16 -0400 Apps-Mac-mini-22.local (10342)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/18/15 10:27:16 -0400 Apps-Mac-mini-22.local (10342)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
