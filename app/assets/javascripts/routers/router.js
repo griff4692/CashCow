@@ -6,11 +6,11 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
     this.orderCategories = {
-      days_left: ['asc', "Fewest Days Left: "],
-      amount_funded: ['desc', "Most Funded: "],
-      num_backers: ['asc', "Most Backed: "],
-      num_followers: ['asc', "Most Followed: "],
-      goal: ['desc', "Most Ambitious Goal: "]
+      days_left: ['asc', "Fewest Days Left"],
+      amount_funded: ['desc', "Most Funded"],
+      num_backers: ['asc', "Most Backed"],
+      num_followers: ['asc', "Most Followed"],
+      goal: ['desc', "Most Ambitious Goal"]
     };
 
     this.usersCollection = options.usersCollection;
