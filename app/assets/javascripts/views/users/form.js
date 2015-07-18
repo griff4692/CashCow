@@ -2,6 +2,7 @@ CashCow.Views.UserForm = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.model = options.model;
     this.collection = options.collection;
+    this.$el.addClass('user-form');
   },
 
   template: JST['users/sign_up'],
@@ -16,7 +17,6 @@ CashCow.Views.UserForm = Backbone.CompositeView.extend({
     });
 
     this.$el.html(content);
-
     return this;
   },
 

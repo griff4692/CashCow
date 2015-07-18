@@ -1,43 +1,39 @@
-<h1>Sign Up</h1>
+<form class='sign-up'>
+
+	<h1 class='form-header'>Sign Up</h1>
+
+
+  <div class="input">
+			<input type="text" name="user[fname]"
+						 value="First Name">
+  </div>
+
+  <div class="input">
+		<input type="text" name="user[lname]"
+	           value="Last Name">
+	  </label>
+	</div>
+
+	<div class="input">
+    <input type="email" name="user[email]"
+           value="Email">
+	</div>
+
+
+	<div class="input">
+	    <input type="text" name="user[password]"
+	           value="Password">
+	  </label>
+	</div>
+	
+  <div class="input">
+			<input type="file" name="user[image]" value="Upload A Profile Image">
+	</div>
+
+	<button class='submit'>Create Account</button>
+
+</form>
 
 <p>
 	<a href="/auth/twitter"> Sign Up with Twitter?	</a>
 </p>
-
-<form class='sign-up'>
-
-  <label>
-    First Name
-    <input type="text" name="user[fname]"
-           value="<%= user.escape("fname") %>">
-  </label>
-
-  <br>
-
-  <label>
-    Last Name
-    <input type="text" name="user[lname]"
-           value="<%= user.escape("lname") %>">
-  </label>
-
-  <br>
-
-  <label>
-    Email
-    <input type="email" name="user[email]"
-           value="<%= user.escape("email") %>">
-  </label>
-
-  <br>
-
-  <label>
-    Password
-    <input type="password" name="user[password]"
-           value="<%= user.escape("password") %>">
-  </label>
-
-  <br>
-
-  <button>Create Account</button>
-
-</form>
