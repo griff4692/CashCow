@@ -14,14 +14,14 @@
 
   <ul class="thumbnail-stats group">
     <li>
-      <%= model.escape('goal') %>funded
+      <%= model.fundedStatus().toLocaleString() %>% funded
     </li>
     <li>
-      <%= model.escape('funded_amount') %>pledged
+      $<%= model.escape('amount_funded').toLocaleString() %> pledged
     </li>
 
     <li>
-      <%= model.escape('days_left') %>days to go
+      <%= model.escape('days_left').toLocaleString() %> days to go
     </li>
   </ul>
 

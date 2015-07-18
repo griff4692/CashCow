@@ -22,7 +22,11 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		}
 
 		var sorted = _.sortBy(filtered, function (model) {
-			return model.get(sortAttr)
+			if (sortAttr==='funded_status') {
+				return model.fundedStatus()
+			} else {
+				return model.get(sortAttr)
+			}
 		});
 
 		if (direction==='asc') {

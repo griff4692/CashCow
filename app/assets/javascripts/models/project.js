@@ -11,6 +11,10 @@ CashCow.Models.Project = Backbone.Model.extend({
 		return { "project" : _.clone(this.attributes) }
 	},
 
+	fundedStatus: function () {
+		return Math.floor(this.get('amount_funded') / this.get('goal') * 100);
+	},
+
 	parse: function (resp) {
 		if (resp.followers) {
 			this.followers().set(resp.followers, { parse: true });
