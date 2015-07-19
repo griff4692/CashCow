@@ -71,7 +71,7 @@ CashCow.Models.CurrentUser = CashCow.Models.User.extend({
     this.listenTo(this, "change", this.fireSessionEvent)
   },
 
-  isSignedIn() {
+  isSignedIn: function () {
     return !this.isNew();
   },
 
