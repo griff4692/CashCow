@@ -12,21 +12,39 @@
     <%= model.blurb(25) %>
   </div>
 
+  <div class="progress-container">
+    <div class='meter'
+     <span style='width:<%= Math.min(parseInt(model.fundedStatus()), 100) %>%'></span>
+    </div>
+  </div>
+
   <ul class="thumbnail-stats group">
-    <li id='funded_status'>
+    <li id='funded_status'
+    <% if (catToHighlight === 'funded_status') { %>
+      class='active'
+    <% } %>
+    >
       <strong>
         <%= model.fundedStatus().toLocaleString() %>%
       </strong>
       funded
     </li>
-    <li id='amount_funded'>
+    <li id='amount_funded'
+    <% if (catToHighlight === 'amount_funded') { %>
+      class='active'
+    <% } %>
+    >
       <strong>
         $<%= (model.escape('amount_funded')/100*100).toLocaleString() %>
       </strong>
       pledged
     </li>
 
-    <li id='days_left'>
+    <li id='days_left'
+    <% if (catToHighlight === 'days_left') { %>
+      class='active'
+    <% } %>
+    >
       <strong>
         <%= model.escape('days_left').toLocaleString() %>
       </strong>

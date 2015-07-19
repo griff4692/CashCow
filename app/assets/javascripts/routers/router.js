@@ -11,6 +11,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
       amount_funded: ['desc', "Most Pledged"],
       days_left: ['asc', "Fewest Days Left"],
     };
+
+    this.users = options.users;
   },
 
   routes: {
@@ -74,7 +76,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
     if(!this._requireSignedIn(callback)) { return; }
 
-    var model = this.usersCollection.getOrFetch(id);
+    var model = this.users.getOrFetch(id);
     var profileView = new CashCow.Views.UserProfile({
       model: model
     });

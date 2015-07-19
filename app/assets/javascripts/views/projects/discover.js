@@ -63,8 +63,8 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
       this.attachSubviews();
     }
     // not working
-    this.$('.thumbnail').removeClass('active')
-    this.$('.thumbnail').find(("[id=" + that.currentOrder + "]")).addClass('active');
+    // this.$('.thumbnail').removeClass('active')
+    // this.$('.thumbnail').find(("[id=" + that.currentOrder + "]")).addClass('active');
 
     return this;
   }

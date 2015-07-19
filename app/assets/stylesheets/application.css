@@ -179,12 +179,15 @@
    font-weight: 700;
    color: #6e6e6e;
    -webkit-font-smoothing: antialiased;
+   background: #f9fafb;
  }
 
  header.nav {
    background: #3caf6a;
+   font-size: 18px;
    color: white;
-   letter-spacing: 4px;
+   letter-spacing: 6px;
+   font-weight: 900;
    opacity: 0.90;
    display: block;
  }
@@ -387,13 +390,32 @@ strong:hover {
 discover page
 */
 
+.modal-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.modal-form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .discover-toggle {
-  background: #2bde73;
-  border: 1px solid #2bde73;
+  background: #3caf6a;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #2bde73;
+  border-radius: 5px;
   color: black;
   font-size: 40px;
   height: 299px;
   display: block;
+  opacity: 0.95;
   position: relative;
 }
 
@@ -457,6 +479,10 @@ strong#discovery {
   box-shadow: none;
 }
 
+.thumbnail .active {
+  color: #2bde73;
+}
+
 .thumbnail > *:not(img) {
   margin-left: 10px;
   font-size: 16px;
@@ -464,10 +490,13 @@ strong#discovery {
 }
 
 #thumbnail-title {
+  padding-top: 5px;
   font-size: 20px;
   font-weight: 900px;
   color: black;
   margin-bottom: 3px;
+  letter-spacing: 6px;
+
 }
 
 #name {
@@ -501,37 +530,71 @@ strong#discovery {
   display: block;
 }
 
+.progress-container {
+  position: absolute;
+  top: 85%;
+  display: block;
+  width: 250px;
+  margin: auto;
+  background: red;
+  opacity: 0.65;
+}
 
+.meter {
+  height: 15px;
+  background: #2bde73;
+  display: block;
+}
+
+span {
+  border: 1px solid black;
+}
 
 /*
 footer
 */
 
-footer {
-  width: 900px;
+.footer {
+  background: #3caf6a;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.footer-nav-bar {
+  width: 958px;
+  border: 1px solid white;
   margin: auto;
+  border-top: none;
+  border-bottom: 0;
+  display: block;
+  color: white;
 }
 
-footer .footer-menu {
+.footer-menu {
+  display: block;
   float: left;
-  display: block;
 }
 
-.footer a {
-  margin: 5px;
+.footer-menu li:hover
+ {
+  color: black;
 }
 
-footer .footer-menu > li {
-  display: block;
-  margin: 0px 5px;
-  float: left
+
+.footer-nav-bar a:hover
+ {
+  color: black;
 }
 
-footer .footer-contact {
+.footer-menu > * {
+  border-right: 1px solid white;
+  float: left;
+  padding: 10px 20px;
+}
+
+.footer-nav-bar > a {
   float: right;
+  border-left: 1px solid white;
+  padding: 10px 20px;
   display: block;
-}
-
-.active {
-  background: purple;
 }
