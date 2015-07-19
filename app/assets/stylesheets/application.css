@@ -181,38 +181,77 @@
    -webkit-font-smoothing: antialiased;
  }
 
- header.nav-bar {
+ header.nav {
+   background: #3caf6a;
+   color: white;
+   letter-spacing: 4px;
+   opacity: 0.90;
    display: block;
+ }
+
+ .navbar {
    width: 958px;
-   border: 1px solid #eee;
-   margin: auto;
+   margin: 0 auto;
+   display: block;
+   border-left: 1px solid white;
+   border-right: 1px solid white;
+ }
+
+ .navbar a:hover {
+   color: black;
  }
 
  ul.logo-discovery {
    float: left;
+   display: block;
  }
 
  .logo {
-   border: 1px solid #2bde73;
-   border-radius: 5px;
-   height: 50px;
-   width: 50px;
    overflow: hidden;
  }
 
  ul.logo-discovery > li {
    float: left;
+   border-right: 1px solid white;
   }
 
- ul.user-menu {
+  ul.logo-discovery a {
+    display: block;
+    padding: 10px 15px;
+  }
+
+ ul.sign-up-menu {
+   display: block;
    float: right;
+   overflow: hidden;
+ }
+
+ ul.sign-up-menu > a {
+   padding: 10px 20px;
+   display: block;
+   float: left;
+   border-left: 1px solid white;
+ }
+
+ ul.user-menu {
+   display: block;
+   float: right;
+   overflow: hidden;
  }
 
  ul.user-menu > li {
    display: block;
+   padding: 10px 20px;
    float: left;
-   max-height: 50px;
-   overflow: hidden;
+   border-left: 1px solid white;
+ }
+
+ ul.user-menu #sign-out {
+   display: block;
+ }
+
+ ul.user-menu img {
+   letter-spacing: 0px;
  }
 
  #proj-errors, .user-errors {
@@ -227,7 +266,7 @@
    display: block;
    width: 958px;
    min-height: 998px;
-   border: 1px solid #eee;
+   border: 1px solid white;
    border-top: none;
    margin: auto;
    overflow:hidden;
@@ -287,7 +326,6 @@ div.carousel {
 
 .featured-projects > li {
   position: relative;
-  /*height: 748px;*/
 }
 
 .featured-projects .higlight-container {

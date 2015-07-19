@@ -10,10 +10,10 @@ CashCow.Views.Header = Backbone.View.extend({
     },
 
     events: {
-      "click #sign-out-link": "signOut"
+      "click a#sign-out": "signOut"
     },
 
-    tagName: 'nav',
+    tagName: 'header',
 
     template: JST['shared/header'],
 
@@ -25,8 +25,6 @@ CashCow.Views.Header = Backbone.View.extend({
 
       this.$el.html(content);
       this.$el.addClass('nav');
-      this.$el.addClass('nav-bar');
-      this.$el.addClass('group');
       return this;
     },
 
