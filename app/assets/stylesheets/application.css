@@ -15,6 +15,13 @@
  */
 
  /* Reset */
+/*
+characters to use 🔍
+❱ ❰
+❭
+❬
+http://mcdlr.com/8/
+*/
 
 
  html, body, header, nav, h1, a,
@@ -390,6 +397,14 @@ strong:hover {
 discover page
 */
 
+.modal.is-open {
+  display: block;
+}
+
+.modal {
+  display: none;
+}
+
 .modal-screen {
   position: fixed;
   top: 0;
@@ -404,6 +419,63 @@ discover page
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  top: 100px;
+  color: #aaa;
+  letter-spacing: 5px;
+  font-size: 46px;
+  z-index: 3;
+  width: 800px;
+}
+
+.modal-form li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.modal-form .category-choice {
+  float: left;
+  width: 400px;
+}
+
+.modal-form .order-choice {
+  float: right;
+  width: 400px;
+}
+
+.modal-form li {
+  display: block;
+}
+
+.close-out {
+  font-size: 72px;
+  position: absolute;
+  left: 87%;
+  top: -75px;
+}
+
+.close-out:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+.selection {
+  display: block;
+  width: 800px;
+}
+
+.model-form .category-choice {
+  display: block;
+  float: left;
+}
+
+.model-form .order-choice {
+  display: block;
+  float: right;
+}
+
+.selection .selected {
+  color: white;
 }
 
 .discover-toggle {
@@ -413,37 +485,45 @@ discover page
   border-radius: 5px;
   color: black;
   font-size: 40px;
-  height: 299px;
+  height: 150px;
   display: block;
   opacity: 0.95;
   position: relative;
 }
 
-strong#discovery {
-  font-style: italic;
-  font-size: 32px;
-}
-
-.selection {
-  background: white;
-  border: 3px solid #3caf6a;
-  float: left;
+.modal-vehicle {
   position: absolute;
-  height: 70px;
-  display: block;
   top: 50%;
-  margin-top: -50px;
-  left: 25px;
-  font-size: 40px;
+  margin-left: 20px;
+  width: 750px;
+  transform: translateY(-50%);
+  color:white;
 }
 
-.selection:hover {
-  background: #3caf6a;
-  color: white;
+.cat-modal {
+  letter-spacing: 10px;
+  float: left;
+  display: block;
+  padding-right: 15px;
 }
 
-.order {
-  float: right;
+.modal-vehicle > div:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.modal-vehicle #cat {
+  display: block;
+  width: 700px;
+  letter-spacing: 20px;
+  font-weight: 300;
+  font-size: 72px;
+}
+
+.modal-vehicle > strong.cat-modal {
+  font-style: italic;
+  margin-top: 16px;
+  font-size: 24px;
 }
 
 .discover-result {

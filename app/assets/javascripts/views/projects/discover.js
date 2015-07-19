@@ -14,23 +14,38 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
   },
 
   events: {
-    "change .category-choice": "changeCategory",
-    "change .order-choice": "changeOrder"
+    "click .cat-modal": "openModal",
+    "click .close-out": "closeModal",
+    "click .category": "changeCategory",
+    "click .order": "changeOrder"
   },
 
   changeCategory: function (event) {
-    this.currentCategory = $(event.currentTarget).val();
-    this.render();
+    this.currentCategory = $(event.currentTarget).data('value');
+    this.render({modal: 'open'});
+    this.render({modal: 'open'})
   },
 
   changeOrder: function (event) {
-    this.currentOrder = $(event.currentTarget).val();
-    this.render();
+    this.currentOrder = $(event.currentTarget).data('value');
+    $(event.currentTarget).addClass('selected');
+    this.render({modal: 'open'});
+  },
+
+  openModal: function (event) {
+    event.preventDefault();
+    this.render({modal: 'open'});
+    return;
+  },
+
+  closeModal: function (event) {
+    this.render({modal: 'close'});
+    return
   },
 
   tagName: 'discover',
 
-  render: function () {
+  render: function (options) {
     var that = this;
 
     that.resetSubviews();
@@ -62,9 +77,15 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
 
       this.attachSubviews();
     }
-    // not working
-    // this.$('.thumbnail').removeClass('active')
-    // this.$('.thumbnail').find(("[id=" + that.currentOrder + "]")).addClass('active');
+
+    if (options && options.modal && options.modal === 'open') {
+      this.$('.modal').addClass('is-open');
+    }
+
+    if (options && options.modal && options.modal === 'close') {
+      this.$('.modal').removeClass('is-open');
+    }
+
 
     return this;
   }

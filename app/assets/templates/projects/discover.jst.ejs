@@ -1,29 +1,14 @@
 <section class='discover-toggle'>
-  <div class="selection group">
-    <label class='category'>
-      <select class="category-choice" name="category">
-        <% projCategories.forEach(function (category) { %>
-            <option value='<%= category %>'
-             <% if(category === currentCategory) { %>
-               <%= "selected" %>
-             <% } %>>
-              <%= category %>
-            </option>
-        <% }) %>
-      </select>
-    </label>
-    <label class='order'><strong id='discovery'>sorted by</strong>
-      <select class="order-choice" name="order">
-        <% $.each(orderCategories, function (category, value) { %>
-            <option value='<%= category %>'
-             <% if(category === currentOrder) { %>
-               <%= "selected" %>
-             <% } %>>
-              <%= value[1] %>
-            </option>
-        <% }) %>
-      </select>
-    </label>
+  <div class="modal-vehicle group">
+    <div class="cat-modal" id="cat">
+      <%= currentCategory %>
+    </div>
+
+    <strong class='cat-modal'>sorted by</strong>
+
+    <div class="cat-modal">
+      <%= orderCategories[currentOrder][1] %>
+    </div>
   </div>
 </section>
 
@@ -35,23 +20,27 @@
 
   </section>
 
-  <section class='modal-form'>
+  <section class='modal-form group'>
+    <div class="close-out">
+      &times
+    </div>
 
+    <div class="selection group">
+        <ul class="category-choice" name="category">
+          <% projCategories.forEach(function (category) { %>
+              <li class='category' data-value='<%= category %>'>
+                <%= category %>
+              </li>
+          <% }) %>
+        </ul>
+        <ul class="order-choice" name="order">
+          <% $.each(orderCategories, function (order, value) { %>
+              <li class='order' data-value='<%= order %>'>
+                <%= value[1] %>
+              </li>
+          <% }) %>
+        </ul>
+    </div>
   </section>
 
 </div>
-
-<script>
-  $(function(){
-    $("body").on("click", ".js-modal-open", function(event){
-      event.preventDefault();
-      $(".modal").addClass("is-open");
-    });
-
-    $("body").on("click", ".js-modal-close", function(event){
-      event.preventDefault();
-      $(".modal").removeClass("is-open");
-    });
-
-  });
-</script>
