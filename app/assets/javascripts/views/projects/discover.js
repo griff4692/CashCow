@@ -52,6 +52,8 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
       ).forEach(function (project) {
         var projDetailView = new CashCow.Views.ProjectShow({
           model: project,
+          orderCategory: that.currentOrder,
+          higlightTitle: that.orderCategories[that.currentOrder][1],
           collection: that.collection,
           format: 'thumbnail',
         });
@@ -60,6 +62,9 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
 
       this.attachSubviews();
     }
+    // not working
+    this.$('.thumbnail').removeClass('active')
+    this.$('.thumbnail').find(("[id=" + that.currentOrder + "]")).addClass('active');
 
     return this;
   }

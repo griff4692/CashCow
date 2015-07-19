@@ -1,10 +1,10 @@
 <div class='thumbnail'>
   <img src="<%= model.escape('image_url') %>" alt="ProjectPicture">
-  <div class="thumbnail-title">
+  <div id="thumbnail-title">
     <%= model.escape('title') %>
   </div>
 
-    <div class="thumbnail-name">
+    <div id='thumbnail-name'>
       <%= creator.fullName() %>
     </div>
 
@@ -13,16 +13,26 @@
   </div>
 
   <ul class="thumbnail-stats group">
-    <li>
-      <%= model.fundedStatus().toLocaleString() %>% funded
+    <li id='funded_status'>
+      <strong>
+        <%= model.fundedStatus().toLocaleString() %>%
+      </strong>
+      funded
     </li>
-    <li>
-      $<%= model.escape('amount_funded').toLocaleString() %> pledged
+    <li id='amount_funded'>
+      <strong>
+        $<%= (model.escape('amount_funded')/100*100).toLocaleString() %>
+      </strong>
+      pledged
     </li>
 
-    <li>
-      <%= model.escape('days_left').toLocaleString() %> days to go
+    <li id='days_left'>
+      <strong>
+        <%= model.escape('days_left').toLocaleString() %>
+      </strong>
+      days to go
     </li>
+
   </ul>
 
 </div>

@@ -8,7 +8,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this.orderCategories = {
       num_followers: ['desc', "Most Popular"],
       funded_status: ['desc', "Most Funded"],
-      num_backers: ['desc', "Most Pledged"],
+      amount_funded: ['desc', "Most Pledged"],
       days_left: ['asc', "Fewest Days Left"],
     };
   },

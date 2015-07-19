@@ -5,6 +5,10 @@ CashCow.Carousel = function (el) {
   this.$prev = this.$el.find('.slide-right');
   this.$next = this.$el.find('.slide-left');
   this.bindHandlers();
+
+  var that = this;
+
+  setInterval(function () { that.slide(1) } , 3500);
 };
 
 CashCow.Carousel.prototype.bindHandlers = function() {
