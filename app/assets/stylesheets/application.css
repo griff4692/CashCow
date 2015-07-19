@@ -401,7 +401,7 @@ strong#discovery {
   overflow: hidden;
   border: 3px solid #eee;
   border-radius: 15px;
-  box-shadow: 0 1px 0 0 #090;
+  box-shadow: 0 3px 0 0 #eee;
 }
 
 .discover-result .thumbnail:nth-child(3n + 2) {
@@ -411,6 +411,7 @@ strong#discovery {
 .discover-result .thumbnail:hover {
   border: 3px solid #2bde73;
   cursor: pointer;
+  box-shadow:none;
 }
 
 .discover-result .thumbnail:active {
@@ -420,26 +421,38 @@ strong#discovery {
 
 .thumbnail > *:not(img) {
   margin-left: 10px;
-  color: black;
   font-size: 16px;
   font-weight: 700px;
 }
 
 .thumbnail-title {
+  font-size: 20px;
   font-weight: 900px;
+  color: black;
+  margin-bottom: 3px;
+}
+
+.thumbnail-name {
+  font-size: 14px;
+  padding-bottom: 5px;
 }
 
 
 .thumbnail-description {
-
+  padding-bottom: 5px;
 }
 
 .thumbnail-stats {
-
+  position: absolute;
+  bottom: 5px;
+  margin: auto;
 }
 
-.thumbnail-stats {
+.thumbnail-stats > li {
   float: left;
+  margin-left: 10px;
+  display: block;
+  width: 75px;
 }
 
 
