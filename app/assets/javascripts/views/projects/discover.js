@@ -21,15 +21,17 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
   },
 
   changeCategory: function (event) {
-    this.currentCategory = $(event.currentTarget).data('value');
-    this.render({modal: 'open'});
-    this.render({modal: 'open'})
+    this.$currentCategory && this.$currentCategory.removeClass('selected');
+    this.$currentCategory = $(event.currentTarget);
+    this.$currentCategory.addClass('selected');
+    this.currentCategory = this.$currentCategory.data('value');
   },
 
   changeOrder: function (event) {
-    this.currentOrder = $(event.currentTarget).data('value');
-    $(event.currentTarget).addClass('selected');
-    this.render({modal: 'open'});
+    this.$currentOrder && this.$currentOrder.removeClass('selected');
+    this.$currentOrder = $(event.currentTarget);
+    this.$currentOrder.addClass('selected');
+    this.currentOrder = this.$currentOrder.data('value');
   },
 
   openModal: function (event) {
@@ -39,6 +41,7 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
   },
 
   closeModal: function (event) {
+    // remove all classes
     this.render({modal: 'close'});
     return
   },
