@@ -1,5 +1,11 @@
 <div class='proj-header'>
-  <h1 class='proj-title'><%= model.escape('title') %></h1>
+  <h1 class='proj-title'><%= model.escape('title') %>
+    <!-- <div class="suggestion">
+      <a href="#/projects/discover" + <%= model.escape('category')%>>
+        See other <%= model.escape('category') %> Projects
+      </a>
+    </div> -->
+  </h1>
   <h4>by <%= creator.fullName() %></h4>
 </div>
 
@@ -59,22 +65,44 @@
   </div>
 </section>
 
-<%= model.escape('category') %>
+<section class='tabs'>
+  <ul class='tab-titles group'>
+     <li class='tab a' data-id='a'>
+       About <%= model.escape('title') %>
+     </li>
+     <li class='tab b' data-id='b'>
+       See All <%= model.numFollowers().toLocaleString() %> Followers
+     </li>
+     <li class='tab c' data-id='c'>
+       See All <%= model.numBackers() %> Backers
+     </li>
+  </ul>
+</section>
 
-About this Project
-<%= model.escape('description') %>
+<div class="tab-content">
 
-num likers
-<%= model.numFollowers().toLocaleString() %>
+  <div class="a active">
+    <%= model.escape('description') %>
+  </div>
 
-<div class="tabs">
-  <% model.backers().models.forEach(function (backer) { %>
-    <%= backer.fullName() %> gave $<%= backer.get('amount') %> on
-    <% var dateParts = backer.get('fund_date').split('-') %>
-    <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
-  <% })%>
+  <div class='b'>
+    <ul class='tab-list'>
   <% model.followers().models.forEach(function (follower) { %>
-    <%= follower.fullName() %> is following this project
+    <li>
+      <%= follower.fullName() %> is following this project
+    </li>
   <% })%>
+    </ul>
+  </div>
+
+  <div class='c'>
+    <ul class='tab-list'>
+      <% model.backers().models.forEach(function (backer) { %>
+        <%= backer.fullName() %> gave $<%= backer.get('amount') %> on
+        <% var dateParts = backer.get('deadline').split('-') %>
+        <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+      <% })%>
+    </ul>
+  </div>
 
 </div>

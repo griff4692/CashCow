@@ -3,6 +3,7 @@
 	padding: 50px 0px 25px 0px;
 	color: black;
 	font-size;
+	position: relative;
 }
 
 .proj-header > h1 {
@@ -14,7 +15,7 @@
 
 .proj-main {
 	display: block;
-	margin-left: 25px;
+	margin-left: 30px;
 }
 
 .proj-main > img {
@@ -28,9 +29,9 @@
 
 .proj-main .proj-stats {
 	display: block;
-	width: 360px;
+	width: 350px;
 	float: right;
-	padding-left: 15px;
+	padding-left: 25px;
 	color: black;
 	font-size: 16px;
 	font-weight: bold;
@@ -59,7 +60,7 @@
 }
 
 .proj-stats .like-me {
-	color: #2bde73;
+	color: #3caf6a;
 }
 
 .proj-stats .unlike-me {
@@ -69,7 +70,7 @@
 .fund {
 	display: block;
 	width: 175px;
-	background: #2bde73;
+	background: #3caf6a;
 	padding: 15px 15px;
 	font-weight: 900;
 	color: white;
@@ -85,10 +86,60 @@
 }
 
 .fund:hover {
-	background: #3caf6a;
 	color: black;
 }
 
 .tabs {
-	padding-top: 50px;
+	padding-top: 25px;
+}
+
+.tab-titles {
+	margin: auto;
+	background: #3caf6a;
+	opacity: 0.75;
+	color: white;
+	margin-bottom: 25px;
+	padding-left: 75px;
+}
+
+.tab-titles > li {
+	float: left;
+	opacity: 1;
+	font-weight: 300;
+	padding-left: 75px;
+}
+
+.tab-titles > li:hover {
+	color: black;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.tab-content {
+	position: relative;
+	display: block;
+	background: white;
+	border: 2px solid #aaa;
+	height: 305px;
+	width: 900px;
+	border-radius: 10px;
+	margin: auto;
+}
+
+.tab-content > div {
+	opacity: 0;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	max-width: 860px;
+	max-height: 285px;
+	color: black;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 1.66666667;
+	transition: opacity 500ms;
+}
+
+.tab-content > div.active {
+	opacity: 1;
 }

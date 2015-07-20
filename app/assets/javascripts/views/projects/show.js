@@ -8,6 +8,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.highlightTitle = "";
 		this.currentUserFollows = false;
 
+		this.currentTabId = 'a';
+
 		var model = this.model;
 		CashCow.currentUser.follows(model);
 
@@ -28,7 +30,17 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	events: {
 		"click .like-me": "handleFollow",
 		"click .unlike-me":"handleFollow",
-		"click #project-picture": "visitProj"
+		"click #project-picture": "visitProj",
+		"click .tab": "toggleTab"
+	},
+
+	toggleTab: function (event) {
+		var that = this;
+		$('.tab-content').find('.' + this.currentTabId).removeClass('active');
+		this.currentTabId = $(event.currentTarget).data('id');
+		setTimeout(function () {
+			$('.tab-content').find('.' + that.currentTabId).addClass('active')
+		}, 500);
 	},
 
 	visitProj: function () {
