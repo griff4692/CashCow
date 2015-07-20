@@ -8,7 +8,7 @@
   <div class="proj-stats">
     <li class='backers'>
       <div class="num">
-        <%= model.backers().length %>
+        <%= model.numBackers().toLocaleString() %>
       </div>
       <div class='description'>
         backers
@@ -16,14 +16,17 @@
     </li>
     <li class='pledged'>
       <div class='num'>
+        <%= model.pledged().toLocaleString() %>
       </div>
       <div class="description">
-        pledged of $<%= model.get('goal') %> goal
+        pledged of <strong>
+        $<%= (model.get('goal')*100/100).toLocaleString() %>
+        </strong>goal
       </div>
     </li>
     <li class='days-to-go'>
       <div class="num">
-        <%= model.days_left %>
+        <%= model.escape('days_left').toLocaleString() %>
       </div>
       <div class="description">
         days to go
@@ -33,7 +36,7 @@
     <% if (CashCow.currentUser.isSignedIn()) { %>
         <% if (!CashCow.currentUser.follows(model)) { %>
             <button class='follow like-me' data-id='<%= model.id %>'>
-              ✭ <strong>Follow </strong>This Project
+              <strong>✭ Follow </strong>This Project
             </button>
         <% } else { %>
           <button class='follow unlike-me' data-id='<%= model.id %>'>
@@ -61,14 +64,17 @@
 About this Project
 <%= model.escape('description') %>
 
+num likers
+<%= model.numFollowers().toLocaleString() %>
+
 <div class="tabs">
   <% model.backers().models.forEach(function (backer) { %>
-    <%= backer.get('fname') %> gave $<%= backer.get('amount') %> on
+    <%= backer.fullName() %> gave $<%= backer.get('amount') %> on
     <% var dateParts = backer.get('fund_date').split('-') %>
     <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
   <% })%>
   <% model.followers().models.forEach(function (follower) { %>
-    <%= follower.get('fname') %> is following this project
+    <%= follower.fullName() %> is following this project
   <% })%>
 
 </div>

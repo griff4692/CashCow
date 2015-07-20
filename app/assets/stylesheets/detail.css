@@ -12,9 +12,6 @@
 	font-size: 72px;
 }
 
-.proj-header > h4 {
-}
-
 .proj-main {
 	display: block;
 	margin-left: 25px;
@@ -33,7 +30,7 @@
 	display: block;
 	width: 360px;
 	float: right;
-	padding-left: 10px;
+	padding-left: 15px;
 	color: black;
 	font-size: 16px;
 	font-weight: bold;
@@ -61,11 +58,19 @@
 	cursor: pointer;
 }
 
+.proj-stats .like-me {
+	color: #2bde73;
+}
+
+.proj-stats .unlike-me {
+	color: #f00;
+}
+
 .fund {
 	display: block;
 	width: 175px;
 	background: #2bde73;
-	padding: 20px;
+	padding: 15px 15px;
 	font-weight: 900;
 	color: white;
 	border-radius: 10px;

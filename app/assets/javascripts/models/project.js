@@ -11,8 +11,25 @@ CashCow.Models.Project = Backbone.Model.extend({
 		return { "project" : _.clone(this.attributes) }
 	},
 
+	numBackers: function () {
+		return this.backers().length;
+	},
+
+	pledged: function () {
+		var total = 0;
+		this.backers().pluck('amount').forEach(function (amount) {
+			total += amount;
+		});
+
+		return total;
+	},
+
+	numFollowers: function () {
+		return this.followers().length;
+	},
+
 	fundedStatus: function () {
-		return Math.floor(this.get('amount_funded') / this.get('goal') * 100);
+		return Math.floor(this.pledged() / this.get('goal') * 100);
 	},
 
 	blurb: function (len) {
