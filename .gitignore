@@ -4,6 +4,7 @@
 /public/system
 /config/secrets.yml
 /log/*
+/log/development.log
 /tmp
 
 # Ignore application configuration
