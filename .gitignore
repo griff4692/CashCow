@@ -2,8 +2,8 @@
 *.swp
 /.bundle
 /public/system
-config/secrets.yml
-/log/development.log
+/config/secrets.yml
+/log/*
 /tmp
 
 # Ignore application configuration
