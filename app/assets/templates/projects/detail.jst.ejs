@@ -1,38 +1,74 @@
-<a href="/#/projects/<%= model.id %>">
-  <%= model.escape('title') %>
-</a>
-<% model.backers().models.forEach(function (backer) { %>
-  <%= backer.get('fname') %> gave $<%= backer.get('amount') %> on
-  <% var dateParts = backer.get('fund_date').split('-') %>
-  <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
-<% })%>
-<% model.followers().models.forEach(function (follower) { %>
-  <%= follower.get('fname') %> is following this project
-<% })%>
-<%= model.escape('category') %>
-<%= model.escape('description') %>
-<br>
-<% if (CashCow.currentUser.isSignedIn()) { %>
-    <% if (CashCow.currentUser.followedProjects().where
-        ({id: model.id}).length===0) { %>
-        <button class='follow' data-id='<%= model.id %>'>
-          Follow This Project
-        </button>
-    <% } else { %>
-      <button class='follow' data-id='<%= model.id %>'>
-        Unfollow This Project
-      </button>
-      <br>
-    <% } %>
-    <% if (CashCow.currentUser.backedProjects().where
-        ({id: model.id}).length===0) { %>
+<div class='proj-header'>
+  <h1 class='proj-title'><%= model.escape('title') %></h1>
+  <h4>by <%= creator.fullName() %></h4>
+</div>
+
+<section class='proj-main group'>
+  <img src="<%= model.escape('image_url') %>" alt="ProjPictures">
+  <div class="proj-stats">
+    <li class='backers'>
+      <div class="num">
+        <%= model.backers().length %>
+      </div>
+      <div class='description'>
+        backers
+      </div>
+    </li>
+    <li class='pledged'>
+      <div class='num'>
+      </div>
+      <div class="description">
+        pledged of $<%= model.get('goal') %> goal
+      </div>
+    </li>
+    <li class='days-to-go'>
+      <div class="num">
+        <%= model.days_left %>
+      </div>
+      <div class="description">
+        days to go
+      </div>
+    </li>
+
+    <% if (CashCow.currentUser.isSignedIn()) { %>
+        <% if (!CashCow.currentUser.follows(model)) { %>
+            <button class='follow like-me' data-id='<%= model.id %>'>
+              ✭ <strong>Follow </strong>This Project
+            </button>
+        <% } else { %>
+          <button class='follow unlike-me' data-id='<%= model.id %>'>
+            ✭ <strong>Unfollow </strong>This Project
+          </button>
+          <br>
+        <% } %>
+        <% if (! CashCow.currentUser.backs(model)) { %>
+              <a class='fund' href='/#/projects/<%= model.id %>/back'>
+                Fund This Project
+              </a>
+        <% } else { %>
           <a class='fund' href='/#/projects/<%= model.id %>/back'>
-            Fund This Project
+            Adjust Your Funding Of This Project (<%= CashCow.currentUser.backedProjects().where({id: model.id}) %>)
           </a>
-    <% } else { %>
-      <a class='fund' href='/#/projects/<%= model.id %>/back'>
-        Adjust Your Funding Of This Project (<%= CashCow.currentUser.backedProjects().where({id: model.id}) %>)
-      </a>
-      <br>
+          <br>
+        <% } %>
     <% } %>
-<% } %>
+
+  </div>
+</section>
+
+<%= model.escape('category') %>
+
+About this Project
+<%= model.escape('description') %>
+
+<div class="tabs">
+  <% model.backers().models.forEach(function (backer) { %>
+    <%= backer.get('fname') %> gave $<%= backer.get('amount') %> on
+    <% var dateParts = backer.get('fund_date').split('-') %>
+    <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+  <% })%>
+  <% model.followers().models.forEach(function (follower) { %>
+    <%= follower.get('fname') %> is following this project
+  <% })%>
+
+</div>

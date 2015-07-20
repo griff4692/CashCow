@@ -6,6 +6,10 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.format = options.format;
 		this.catToHighlight = "";
 		this.highlightTitle = "";
+		this.currentUserFollows = false;
+
+		var model = this.model;
+		CashCow.currentUser.follows(model);
 
 		if (this.format === 'highlight' || this.format=== 'thumbnail') {
 			this.catToHighlight = options.orderCategory;
@@ -15,8 +19,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.listenTo(this.model, "sync", this.check);
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
-		this.listenTo(this.model.followers(), "change", this.render);
-		this.listenTo(this.model.backers(), "change", this.render);
+		this.listenTo(this.model.followers(), "change add remove", this.render);
+		this.listenTo(this.model.backers(), "change add remove", this.render);
 	},
 
 	tagName: 'li',
@@ -24,7 +28,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	events: {
 		"click .like-me": "handleFollow",
 		"click .unlike-me":"handleFollow",
-		"click .thumbnail": "visitProj"
+		"click #project-picture": "visitProj"
 	},
 
 	visitProj: function () {
@@ -35,29 +39,34 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		event.preventDefault();
 
 		var projId = $(event.currentTarget).data('id');
-		var formData = {"follow[project_id]": projId};
 
 		var that = this;
 
 		var action;
+		var url;
 		var callback;
+		var formData = {"follow[project_id]": projId}
 
 		if ($(event.currentTarget).data('type') === 'like') {
 			action = "post";
-		  callback = function (data) {
+			url = 'api/follows';
+		  callback = function () {
 				that.model.followers().add(CashCow.currentUser);
-				CashCow.currentUser.followedProjects.add(that.model);
+				CashCow.currentUser.followedProjects().add(that.model);
+				that.render()
 			}
 		} else {
 			action = 'delete';
-			callback = function (data) {
+			url = 'api/follows/' + CashCow.currentUser.id;
+			callback = function () {
 				that.model.followers().remove(CashCow.currentUser);
-				CashCow.currentUser.followedProjects.remove(that.model);
+				CashCow.currentUser.followedProjects().remove(that.model);
+				that.render()
 			}
 		}
 
 		$.ajax({
-			url: 'api/follows',
+			url: url,
 			type: action,
 			data: formData,
 			dataType: "json",
@@ -78,7 +87,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	},
 
 	render: function () {
-
 		var content = this.template({
 			model: this.model,
 			creator: this.creator,

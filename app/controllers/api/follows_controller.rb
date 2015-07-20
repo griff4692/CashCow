@@ -4,19 +4,25 @@ class Api::FollowsController < ApplicationController
     @follow = current_user.follows.new(follow_params)
 
     if @follow.save
-      render json: "Successful create"
+      render json: {msg: "Successful create" }
     else
 			render json: @follow.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @follow = Follow.get(id)
+    @follow = Follow.find_by(
+      project_id: params[:follow][:project_id],
+      user_id: params[:id]
+      );
+
     if @follow
       @follow.destroy();
-      render json: "Successful destroy"
+      print 'successful destroy on server'
+      render json: @follow
     else
-      render json: "Project doesn't exist!", status: :unprocessable_entity
+      print 'unsuccessful destroy on server'
+      render json: ["doesnt exist"], status: :unprocessable_entity
     end
   end
 

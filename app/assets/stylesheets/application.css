@@ -26,7 +26,7 @@ http://mcdlr.com/8/
 
  html, body, header, nav, h1, a,
  ul, li, strong, main, button, i,
- section, img, div, h2, h3, p, form,
+ section, img, div, h2, h3, h4, p, form,
  fieldset, label, textarea,
  span, article, section,
  footer, time, small {
@@ -555,8 +555,7 @@ discover page
   margin-right: 25px;
 }
 
-.discover-result .thumbnail:hover {
-  border: 3px solid #2bde73;
+.discover-result #project-picture:hover {
   cursor: pointer;
   box-shadow: none;
 }

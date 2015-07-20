@@ -1,0 +1,89 @@
+.proj-header {
+	text-align: center;
+	padding: 50px 0px 25px 0px;
+	color: black;
+	font-size;
+}
+
+.proj-header > h1 {
+	letter-spacing: 5px;
+	padding-bottom: 5px;
+	font-weight: 300;
+	font-size: 72px;
+}
+
+.proj-header > h4 {
+}
+
+.proj-main {
+	display: block;
+	margin-left: 25px;
+}
+
+.proj-main > img {
+	display: block;
+	float: left;
+	width: 550px;
+	height: 390px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.proj-main .proj-stats {
+	display: block;
+	width: 360px;
+	float: right;
+	padding-left: 10px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.proj-stats > li {
+	padding-bottom: 25px;
+}
+
+.proj-stats .num {
+	font-size: 34px;
+}
+
+.proj-stats .description {
+	font-weight: 300;
+}
+
+.follow {
+	display: block;
+	padding: 25px 0px;
+}
+
+.like-me:hover {
+	cursor: pointer;
+}
+
+.fund {
+	display: block;
+	width: 175px;
+	background: #2bde73;
+	padding: 20px;
+	font-weight: 900;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 0 0 #070;
+	transition: box-shadow 100ms;
+	transition: top 1000ms;
+}
+
+.fund:active {
+	box-shadow: none;
+	top: 3px;
+}
+
+.fund:hover {
+	background: #3caf6a;
+	color: black;
+}
+
+.tabs {
+	padding-top: 50px;
+}
