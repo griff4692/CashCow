@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716161525) do
+ActiveRecord::Schema.define(version: 20150720210645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,31 +38,37 @@ ActiveRecord::Schema.define(version: 20150716161525) do
   add_index "follows", ["user_id"], name: "index_follows_on_user_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
-    t.integer  "user_id",     null: false
-    t.string   "category",    null: false
-    t.string   "title",       null: false
-    t.text     "description", null: false
-    t.integer  "goal",        null: false
-    t.date     "deadline",    null: false
+    t.integer  "user_id",            null: false
+    t.string   "category",           null: false
+    t.string   "title",              null: false
+    t.text     "description",        null: false
+    t.integer  "goal",               null: false
+    t.date     "deadline",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "projects", ["title"], name: "index_projects_on_title", unique: true, using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.string   "session_token",   null: false
-    t.string   "image_url"
+    t.string   "email",              null: false
+    t.string   "password_digest",    null: false
+    t.string   "session_token",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "fname"
     t.string   "lname"
     t.string   "provider"
     t.string   "uid"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree

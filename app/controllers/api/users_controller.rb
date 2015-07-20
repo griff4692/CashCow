@@ -31,7 +31,7 @@ class Api::UsersController < ApplicationController
 		params.require(:user).permit(
 			:email,
 			:password,
-			:image_url,
+			:image,
 			:fname,
 			:lname)
 	end

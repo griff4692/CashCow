@@ -4,7 +4,9 @@ followers_info = project.followers_with_total
 
 json.(project, :id, :user_id, :category,
   :title, :description, :goal, :deadline,
-  :created_at, :image_url, :updated_at)
+  :created_at, :updated_at)
+
+json.image_url asset_path(project.image.url(:original))
 
 json.days_left project.days_left
 

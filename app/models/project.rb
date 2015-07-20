@@ -2,16 +2,19 @@
 #
 # Table name: projects
 #
-#  id          :integer          not null, primary key
-#  user_id     :integer          not null
-#  category    :string           not null
-#  title       :string           not null
-#  description :text             not null
-#  goal        :integer          not null
-#  deadline    :date             not null
-#  created_at  :datetime
-#  updated_at  :datetime
-#  image_url   :string
+#  id                 :integer          not null, primary key
+#  user_id            :integer          not null
+#  category           :string           not null
+#  title              :string           not null
+#  description        :text             not null
+#  goal               :integer          not null
+#  deadline           :date             not null
+#  created_at         :datetime
+#  updated_at         :datetime
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class Project < ActiveRecord::Base
@@ -22,6 +25,9 @@ class Project < ActiveRecord::Base
 	validates :goal, numericality: { only_integer: true}
 	validates :category, inclusion: { in: PROJ_CATEGORIES, message: "Must choose a provided category" }
 	validate :deadline_must_be_in_future
+
+	has_attached_file :image, styles: {thumb: '100x100>', show: '550x390>'}, default_url: 'logo.png'
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	belongs_to :user,
 		class_name: "User",

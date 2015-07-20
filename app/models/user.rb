@@ -2,17 +2,20 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  email           :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  image_url       :string
-#  created_at      :datetime
-#  updated_at      :datetime
-#  fname           :string
-#  lname           :string
-#  provider        :string
-#  uid             :string
+#  id                 :integer          not null, primary key
+#  email              :string           not null
+#  password_digest    :string           not null
+#  session_token      :string           not null
+#  created_at         :datetime
+#  updated_at         :datetime
+#  fname              :string
+#  lname              :string
+#  provider           :string
+#  uid                :string
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class User < ActiveRecord::Base
@@ -21,6 +24,8 @@ class User < ActiveRecord::Base
 	validates :email, :fname, :lname, :session_token, presence: true
 	validates :password, length: { minimum: 5, allow_nil: true }
 	validates :email, uniqueness: true
+	has_attached_file :image, styles: {thumb: '100x100>'}, default_url: 'logo.png'
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	after_initialize :ensure_session_token
 
