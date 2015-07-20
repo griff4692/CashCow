@@ -1,6 +1,6 @@
 <br>
 <label>Category:
-	<select class="category" name="category">
+	<select id='category' class="category" name="category">
 		<option value="Art"
 		<% if (model.escape('category') === "Art") { %>
 			<%= "selected" %>
@@ -26,25 +26,25 @@
 </label>
 <br>
 <label>Title:
-	<input type="text" name="title", val="<%= model.escape('title') %>">
+	<input id='title' type="text" name="title", val="<%= model.escape('title') %>">
 </label>
 <br>
 <label>Image URL:
-	<input type="text" name="image_url" value="<%= model.escape('image_url') %>">
+	<input id='image' type="file" name="image" value="<%= model.escape('image_url') %>">
 </label>
 <br>
 <label>Description:
-	<textarea name="description" rows="8" cols="40">
+	<textarea id='description' name="description" rows="8" cols="40">
 		<%= model.escape('description') %>
 	</textarea>
 </label>
 <br>
 <label> Deadline:
-	<input type="date" class='date' name="deadline">
+	<input id='deadline' type="date" class='date' name="deadline">
 </label>
 <br>
 <label> Funding Goal:
-	<input type="integer" name="goal">
+	<input id='goal' type="integer" name="goal">
 </label>
 <br>
 <button class="start-proj">Create New Project!</button>

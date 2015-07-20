@@ -9,7 +9,17 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .delete-account": "deleteUser"
+    "click .delete-account": "deleteUser",
+    "click .tab": "toggleTab"
+  },
+
+  toggleTab: function (event) {
+    var that = this;
+    $('.tab-content').find('.' + this.currentTabId).removeClass('active');
+    this.currentTabId = $(event.currentTarget).data('id');
+    setTimeout(function () {
+      $('.tab-content').find('.' + that.currentTabId).addClass('active')
+    }, 500);
   },
 
   template: JST['users/profile'],

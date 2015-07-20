@@ -24,21 +24,47 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
   signUp: function (event) {
     event.preventDefault();
 
-    var $form = $(event.currentTarget);
-    var userData = $form.serializeJSON().user;
+    var fname = this.$("#fname").val();
+    var lname = this.$("#fname").val();
+    var email = this.$("#email").val();
+    var password = this.$("#password").val();
+    var file = this.$("#user-profile-pic")[0].files[0];
+
+    var formData = new FormData();
+    formData.append("user[fname]", fname);
+    formData.append("user[lname]", lname);
+    formData.append("user[email]", email);
+    formData.append("user[password]", password);
+    formData.append("user[image]", file);
+
     var that = this;
 
-    this.model.set(userData);
-    this.model.save({}, {
-      success: function () {
+    this.model.saveFormData(formData, {
+      success: function() {
         CashCow.currentUser.fetch();
-        that.collection.add(that.model, { merge: true });
-        Backbone.history.navigate("", { trigger: true });
-      },
-
-      error: function(data){
-        console.log(data);
+        that.collection.add(that.model);
+        Backbone.history.navigate('', { trigger: true } );
       }
     });
+  },
+
+  fileInputChange: function(event){
+    var that = this;
+    var file = event.currentTarget.files[0];
+    var reader = new FileReader();
+
+    reader.onloadend = function(){
+      that._updatePreview(reader.result);
+    }
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      that._updatePreview("");
+    }
+  },
+
+  _updatePreview: function(src){
+    this.$el.find("#preview-post-image").attr("src", src);
   }
 });

@@ -1,4 +1,15 @@
-Profile Page
+<header class='profile-header'>
+   <div class="profile-picture">
+     <img src="<%= user.escape('image_url') %>" alt="PROFPIC">
+   </div>
+   <h1> <%= user.fullName() %> </h1>
+   <ul class='user-stats'>
+     <li><%= user.createdProjects().length %> Created Projects</li>
+     <li><%= user.backedProjects().length %> Funded Projects</li>
+     <li><%= user.followedProjects().length %> Followed Projects</li>
+    <ul>
+</header>
+
 
 <button class='delete-account'>Delete This Account</button>
 
@@ -6,17 +17,54 @@ Profile Page
   <li></li>
 </ul>
 
-<section class='created-projects'>
-  <h1>Created Projects</h1>
-  <%= user.createdProjects().length %>
+<section class='tabs'>
+  <ul class='tab-titles group'>
+     <li class='tab a' data-id='a'>
+       Created
+       (<%= user.createdProjects().length %>)
+     </li>
+     <li class='tab b' data-id='b'>
+      Backed (<%= user.backedProjects().length %>)
+    </li>
+     <li class='tab c' data-id='c'>
+       Followed (<%= user.followedProjects().length %>)
+     </li>
+  </ul>
 </section>
 
-<section class='backed-projects'>
-  <h1>Backed Projects</h1>
-  <%= user.backedProjects().length %>
-</section>
+<div class="tab-content">
 
-<section class='followed-projects'>
-  <h1>Followed Projects</h1>
-  <%= user.followedProjects().length %>
-</section>
+  <div class="a active">
+    <ul class='tab-list'>
+      <% user.createdProjects().models.forEach(function (proj) { %>
+        <li>
+          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
+          <%= proj.escape('title') %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="b">
+    <ul class='tab-list'>
+      <% user.backedProjects().models.forEach(function (proj) { %>
+        <li>
+          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
+          <%= proj.escape('title') %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="c">
+    <ul class='tab-list'>
+      <% user.followedProjects().models.forEach(function (proj) { %>
+        <li>
+          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
+          <%= proj.escape('title') %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+</div>

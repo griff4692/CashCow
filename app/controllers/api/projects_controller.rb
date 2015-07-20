@@ -1,4 +1,5 @@
 class Api::ProjectsController < ApplicationController
+	# wrap_parameters false
 
 	def index
 		@projects = Project.includes(follows: :follower, backings: :backer).all
@@ -24,7 +25,7 @@ class Api::ProjectsController < ApplicationController
 	def project_params
 		params.require(:project).permit(
 		:category, :title, :description,
-		:deadline, :goal, :image_url)
+		:deadline, :goal, :image)
 	end
 
 end

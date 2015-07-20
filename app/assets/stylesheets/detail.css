@@ -58,6 +58,10 @@
 	cursor: pointer;
 }
 
+.unlike-me:hover {
+	cursor: pointer;
+}
+
 .proj-stats .like-me {
 	color: #3caf6a;
 }

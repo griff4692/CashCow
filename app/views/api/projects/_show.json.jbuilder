@@ -6,7 +6,7 @@ json.(project, :id, :user_id, :category,
   :title, :description, :goal, :deadline,
   :created_at, :updated_at)
 
-json.image_url asset_path(project.image.url(:original))
+json.image_url asset_path(project.image.url)
 
 json.days_left project.days_left
 
