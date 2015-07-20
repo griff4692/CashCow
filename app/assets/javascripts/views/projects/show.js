@@ -22,7 +22,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	tagName: 'li',
 
 	events: {
-		"click .follow": "handleFollow",
+		"click .like-me": "handleFollow",
+		"click .unlike-me":"handleFollow",
 		"click .thumbnail": "visitProj"
 	},
 
@@ -33,19 +34,35 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	handleFollow: function (event) {
 		event.preventDefault();
 
-		var idToFollow = $(event.currentTarget).data('id');
-		var formData = {"follow[project_id]": idToFollow};
+		var projId = $(event.currentTarget).data('id');
+		var formData = {"follow[project_id]": projId};
 
 		var that = this;
 
+		var action;
+		var callback;
+
+		if ($(event.currentTarget).data('type') === 'like') {
+			action = "post";
+		  callback = function (data) {
+				that.model.followers().add(CashCow.currentUser);
+				CashCow.currentUser.followedProjects.add(that.model);
+			}
+		} else {
+			action = 'delete';
+			callback = function (data) {
+				that.model.followers().remove(CashCow.currentUser);
+				CashCow.currentUser.followedProjects.remove(that.model);
+			}
+		}
+
 		$.ajax({
 			url: 'api/follows',
-			type: "POST",
+			type: action,
 			data: formData,
 			dataType: "json",
 			success: function(data) {
-				that.model.followers().add(CashCow.currentUser);
-				CashCow.currentUser.followedProjects.add(that.model)
+				callback(data);
 			}
 		});
 	},
@@ -61,6 +78,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	},
 
 	render: function () {
+
 		var content = this.template({
 			model: this.model,
 			creator: this.creator,

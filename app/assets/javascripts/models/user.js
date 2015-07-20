@@ -75,6 +75,14 @@ CashCow.Models.CurrentUser = CashCow.Models.User.extend({
     return !this.isNew();
   },
 
+  follows: function(proj) {
+    return (this.followedProjects().pluck('id').indexOf(proj.id) !== -1);
+  },
+
+  backs: function(proj) {
+    return (this.backedProjects().pluck('id').indexOf(proj.id) !== -1);
+  },
+
   signIn: function(options) {
     var model = this;
     var credentials = {

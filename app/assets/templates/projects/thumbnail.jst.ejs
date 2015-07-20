@@ -1,4 +1,13 @@
 <div class='thumbnail'>
+  <% if (CashCow.currentUser.isSignedIn()) { %>
+    <% if (!CashCow.currentUser.follows(model)) { %>
+      <div data-id='<%= model.id %>' data-type='like' class="like-me">
+    <% } else { %>
+      <div data-id='<%= model.id %>' data-type='unlike' class="unlike-me">
+    <% } %>
+        ✭
+      </div>
+  <% } %>
   <img src="<%= model.escape('image_url') %>" alt="ProjectPicture">
   <div id="thumbnail-title">
     <%= model.escape('title') %>

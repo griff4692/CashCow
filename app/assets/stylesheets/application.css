@@ -112,6 +112,7 @@ http://mcdlr.com/8/
  }
 
  /* forms */
+
  .form {
    display: relative;
    display: block;
@@ -171,6 +172,12 @@ http://mcdlr.com/8/
  .twitter-sign-in:hover {
    color: #3caf6a;
  }
+
+ /*
+ new project form
+ */
+
+
 
  /* Clearfix */
 
@@ -276,8 +283,9 @@ http://mcdlr.com/8/
    display: block;
    width: 958px;
    min-height: 998px;
-   border: 1px solid white;
+   border: 1px solid #3caf6a;
    border-top: none;
+   border-bottom: none;
    margin: auto;
    overflow:hidden;
    background: #f9fafb;
@@ -517,7 +525,6 @@ discover page
   width: 700px;
   letter-spacing: 20px;
   font-weight: 300;
-  font-size: 72px;
 }
 
 .modal-vehicle > strong.cat-modal {
@@ -551,7 +558,7 @@ discover page
 .discover-result .thumbnail:hover {
   border: 3px solid #2bde73;
   cursor: pointer;
-  box-shadow:none;
+  box-shadow: none;
 }
 
 .discover-result .thumbnail:active {
@@ -566,7 +573,25 @@ discover page
 .thumbnail > *:not(img) {
   margin-left: 10px;
   font-size: 16px;
-  font-weight: 700px;
+  font-weight: 700;
+}
+
+.thumbnail .like-me,
+.thumbnail .unlike-me {
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  size: 72px;
+  z-index: 9;
+}
+
+.thumbnail .unlike-me {
+  color: #FFD700;
+}
+
+.thumbnail .like-me:hover {
+  color: #FFD700;
+  cursor: pointer;
 }
 
 #thumbnail-title {
@@ -576,7 +601,6 @@ discover page
   color: black;
   margin-bottom: 3px;
   letter-spacing: 6px;
-
 }
 
 #name {
