@@ -300,7 +300,8 @@ ul.user-menu img:active {
  #content {
    display: block;
    width: 958px;
-   height: 770px;
+   min-height: 500px;
+   max-height: 770px;
    border: 1px solid #3caf6a;
    border-top: none;
    border-bottom: none;

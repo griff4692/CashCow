@@ -1,7 +1,7 @@
 fnames = ["Bertha", "Patty", "Griffin", "Pablo", "Quincy", "Kristaps"]
 lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
 
-25.times do |i|
+15.times do |i|
 	user = User.create!(
 		fname: fnames.sample,
 		lname: lnames.sample,
@@ -19,9 +19,9 @@ lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
 		Project.create!(
 			user_id: user.id,
 			title: title+j.to_s,
-			description: 'project',
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 			category: category,
-			goal: rand(25000),
+			goal: rand(2500000),
 			deadline: Date.new(randYear.sample, randMonth.sample, 1),
 			image: 'http://41.media.tumblr.com/b6e166c8b2adc00adbdcf3290ddb7658/tumblr_mlpmilKm5p1qkodk4o1_1280.jpg'
 		)
@@ -30,8 +30,13 @@ end
 
 user_ids = User.pluck(:id)
 project_ids = Project.pluck(:id)
+used_pairings = []
 
-75.times do |i|
+50.times do |i|
+	user_id = user_ids.sample
+	project_id = project_ids.sample
+	next if used_pairings.includes?([user_id, project_id])
+	used_pairings << project
 	Follow.create!(user_id: user_ids.sample, project_id: project_ids.sample)
-	Backing.create!(user_id: rand(25), project_id: rand(249), amount: rand(250))
+	Backing.create!(user_id: user_ids.sample, project_id: project_ids.sample, amount: rand(1000))
 end

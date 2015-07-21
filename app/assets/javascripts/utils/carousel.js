@@ -6,9 +6,18 @@ CashCow.Carousel = function (el) {
   this.$next = this.$el.find('.slide-left');
   this.bindHandlers();
 
+  this.direction = 1;
+
   var that = this;
 
-  setInterval(function () { that.slide(1) } , 3500);
+  setInterval(function () {
+    if (that.activeIdx === that.length - 1) {
+      that.direction = -1;
+    } else if (that.activeId === 0) {
+      that.direction = 1;
+    }
+    that.slide(that.direction)
+    } ,4000);
 };
 
 CashCow.Carousel.prototype.bindHandlers = function() {

@@ -8,7 +8,7 @@
         ✭
       </div>
   <% } %>
-  <img id='project-picture' src="<%= model.escape('image_url') %>" alt="ProjectPicture">
+  <img id='project-picture' src="<%= model.escape('image_url_thumbnail') %>" alt="ProjectPicture">
   <div id="thumbnail-title">
     <%= model.escape('title') %>
   </div>
@@ -18,7 +18,7 @@
     </div>
 
   <div class="thumbnail-description">
-    <%= model.blurb(25) %>
+    <%= model.blurb(175) %>
   </div>
 
   <div class="progress-container">

@@ -4,7 +4,6 @@ root page
 
 .featured-projects {
  width: 4800px;
- height: 680px;
  overflow: hidden;
  transition: margin 1000ms;
 }
@@ -13,7 +12,6 @@ root page
  position: relative;
  width: 960px;
  float: left;
- height: 770px;
  display: block;
 }
 
@@ -58,22 +56,21 @@ div.carousel {
 
 .featured-projects .higlight-container {
  position: absolute;
- width: 800px;
- height: 300px;
- left: 50%;
- margin-left: -400px;
- top: 50%;
- margin-top: -400px;
- color: black;
- font-size: 72px;
- letter-spacing: 3px;
+ text-align: center;
+ width: 960px;
+ background: black;
+ opacity: 0.65;
+ top: 0%;
+ z-index: 3;
+ color: white;
+ letter-spacing: 5px;
 }
 
 .featured-projects h1 {
  display: block;
- font-weight: 50;
  font-size: 64px;
  text-align: center;
+ opacity: 1;
  margin-bottom: 10px;
 }
 
@@ -90,6 +87,7 @@ strong:hover {
  text-align: center;
  font-style: italic;
  margin-bottom: 10px;
+ opacity: 1;
 }
 
 .featured-projects img {
@@ -99,13 +97,16 @@ strong:hover {
 .featured-projects .submit {
  display: block;
  text-align: center;
- padding: 5px;
+ padding: 5px 25px;
  background: #2bde73;
  border: 1px solid #2bde73;
  border-radius: 7.5px;
  font-size: 24px;
  width: 250px;
+ font-weight: 900;
  margin: 0px auto;
+ opacity: 1;
+ z-index: 5;
 }
 
 .featured-projects .submit:hover {
