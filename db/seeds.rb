@@ -2,7 +2,7 @@ fnames = ["Bertha", "Patty", "Griffin", "Pablo", "Quincy", "Kristaps"]
 lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
 
 25.times do |i|
-	user = User.create(
+	user = User.create!(
 		fname: fnames.sample,
 		lname: lnames.sample,
 		email: "griff4692" + i.to_s,
@@ -16,14 +16,14 @@ lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
 	rand(10).times do |j|
 		category = categories.sample
 
-		Project.create(
+		Project.create!(
 			user_id: user.id,
 			title: title+j.to_s,
 			description: 'project',
 			category: category,
 			goal: rand(25000),
 			deadline: Date.new(randYear.sample, randMonth.sample, 1),
-			image_url: 'http://41.media.tumblr.com/b6e166c8b2adc00adbdcf3290ddb7658/tumblr_mlpmilKm5p1qkodk4o1_1280.jpg'
+			image: 'http://41.media.tumblr.com/b6e166c8b2adc00adbdcf3290ddb7658/tumblr_mlpmilKm5p1qkodk4o1_1280.jpg'
 		)
 	end
 end
@@ -32,6 +32,6 @@ user_ids = User.pluck(:id)
 project_ids = Project.pluck(:id)
 
 75.times do |i|
-	Follow.create(user_id: user_ids.sample, project_id: project_ids.sample)
-	Backing.create(user_id: rand(25), project_id: rand(250), amount: rand(250))
+	Follow.create!(user_id: user_ids.sample, project_id: project_ids.sample)
+	Backing.create!(user_id: rand(25), project_id: rand(250), amount: rand(250))
 end

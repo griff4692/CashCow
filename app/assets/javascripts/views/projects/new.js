@@ -29,7 +29,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 		var category =this.$('#category').val();
 		var title =this.$('#title').val();
-		var images = this.$('#image')[0].files[0];
+		var image = this.$('#image')[0].files[0];
 		var description =this.$('#description').val();
 		var deadline =this.$('#deadline').val();
 		var goal =this.$('#goal').val();

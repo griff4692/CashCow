@@ -12,6 +12,11 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "sync", this.generatePrimoSubViews);
 	},
 
+	removeModal: function (event) {
+		debugger;
+		$('#content').find('#sign-in-modal').clear();
+	},
+
 	generatePrimoSubViews: function () {
 		this.render();
 

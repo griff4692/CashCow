@@ -5,12 +5,21 @@ CashCow.Views.Header = Backbone.View.extend({
         "signIn signOut",
         this.render);
 
-      // this.logoPath = options.logoPath;
       this.render();
     },
 
     events: {
-      "click a#sign-out": "signOut"
+      "click a#sign-out": "signOut",
+      "click #sign-in": "signInModal"
+    },
+
+    signInModal: function (event) {
+      event.preventDefault();
+
+      signInCallback = Backbone.history.navigate("", { trigger: true } );
+      var modalView = new CashCow.Views.SignInModal();
+
+      $('#content').append(modalView.render().$el);
     },
 
     tagName: 'header',
@@ -20,8 +29,7 @@ CashCow.Views.Header = Backbone.View.extend({
     render: function(){
       var content = this.template({
           currentUser: CashCow.currentUser
-          // logoPath: this.logoPath
-      });
+    });
 
       this.$el.html(content);
       this.$el.addClass('nav');

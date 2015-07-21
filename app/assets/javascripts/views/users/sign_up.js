@@ -29,14 +29,14 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
     var lname = this.$("#fname").val();
     var email = this.$("#email").val();
     var password = this.$("#password").val();
-    var file = this.$("#user-profile-pic")[0].files[0];
+    var image = this.$("#user-profile-pic")[0].files[0];
 
     var formData = new FormData();
     formData.append("user[fname]", fname);
     formData.append("user[lname]", lname);
     formData.append("user[email]", email);
     formData.append("user[password]", password);
-    formData.append("user[image]", file);
+    formData.append("user[image]", image);
 
     var that = this;
 
