@@ -8,7 +8,8 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 	},
 
 	initialize: function (options) {
-    this.$formErrors = options.$formErrors;		this.listenTo(this.model, "sync", this.render);
+    this.$formErrors = options.$formErrors;
+		this.listenTo(this.model, "sync", this.render);
 		this.$el.addClass('form');
 	},
 
@@ -42,6 +43,11 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		formData.append("project[deadline]", deadline);
 		formData.append("project[goal]", goal);
 
+		if (image===undefined) {
+			that.renderFormErrors(["Must Have a Project Image"]);
+			return;
+		}
+
 		this.model.saveFormData(formData, {
 			success: function() {
 				CashCow.currentUser.fetch();
@@ -49,7 +55,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 				Backbone.history.navigate('/#/projects/' + that.model.id, { trigger: true } );
 			},
 			error: function (model, error, options) {
-				that.renderFormErrors(error.responseText);
+				that.renderFormErrors(error.responseJSON);
 			}
 		});
 	},
@@ -59,10 +65,10 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 	  $errorsList.addClass('proj-errors');
 	  errors.forEach(function (error) {
 			var $newLi = $('<li>');
-			if(error.length <= 20) {
+			if(error.length <= 50) {
 				$newLi.text(error);
 			} else {
-				$newLi.text(error.slice(0,20) + '...');
+				$newLi.text(error.slice(0, 50) + '...');
 			}
 
 			$errorsList.append($newLi);

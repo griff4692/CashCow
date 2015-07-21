@@ -71,18 +71,5 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     } else {
       Backbone.history.navigate("", { trigger: true });
     }
-  },
-
-  // renderFormErrors: function () {
-  //   var $errorsList = $('<ul>');
-  //   $errorsList.addClass('proj-errors');
-  //
-  //   this.$formErrors && that.$formErrors.forEach(function (error) {
-  //     var $newLi = $('<li>');
-  //     $newLi.text(error);
-  //     $errorsList.append($newLi);
-  //   });
-  //
-  //   this.$el.prepend($errorsList);
-  // }
+  }
 });
