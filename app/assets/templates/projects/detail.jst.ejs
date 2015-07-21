@@ -41,11 +41,11 @@
 
     <% if (CashCow.currentUser.isSignedIn()) { %>
         <% if (!CashCow.currentUser.follows(model)) { %>
-            <button class='follow like-me' data-id='<%= model.id %>'>
+            <button class='follow like-me' data-type='like'>
               <strong>✭ Follow </strong>This Project
             </button>
         <% } else { %>
-          <button class='follow unlike-me' data-id='<%= model.id %>'>
+          <button class='follow unlike-me' data-type='unlike'>
             ✭ <strong>Unfollow </strong>This Project
           </button>
           <br>
@@ -56,7 +56,7 @@
               </a>
         <% } else { %>
           <a class='fund' href='/#/projects/<%= model.id %>/back'>
-            Adjust Your Funding Of This Project (<%= model.backers().findWhere({id: CashCow.currentUser.id}).amount %>)
+            Adjust Funding From $<%= (model.backers().findWhere({id: CashCow.currentUser.id}).get('amount')*100/100).toLocaleString() %>
           </a>
           <br>
         <% } %>

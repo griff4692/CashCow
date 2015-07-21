@@ -10,11 +10,17 @@
     	<h1 class='form-header modal-form-header'>Sign In</h1>
     	<div class="input modal-input">
         <input id='email' type="email" name="user[email]"
-               value="Email">
+               placeholder="Email">
     	</div>
+      <% if (wrongCombo) { %>
+        <div class="sign-in-error">
+          Incorrect Email / Password Combo
+        </div>
+      <% } %>
+
     	<div class="input modal-input">
     	    <input id='password' type="password" name="user[password]"
-    	           value="Password">
+    	           placeholder="Password">
     	  </label>
     	</div>
     	<button class='submit modal-submit'>

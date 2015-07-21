@@ -122,8 +122,8 @@ http://mcdlr.com/8/
    border: 2px solid #eee;
    border-radius: 25px;
    font-size: 16px;
-   font-weight: 550;
-   color: #aaa;
+   color: black;
+   font-weight: 700;
  }
 
  .form .form-header {
@@ -158,7 +158,8 @@ http://mcdlr.com/8/
 
  .input > input:focus {
    border: 1px solid #2bde73;
-   font-weight: 900;
+   font-weight: 500;
+   letter-spacing: 1px;
  }
 
  .twitter-sign-in {
@@ -171,13 +172,8 @@ http://mcdlr.com/8/
 
  .twitter-sign-in:hover {
    color: #3caf6a;
+   cursor: pointer;
  }
-
- /*
- new project form
- */
-
-
 
  /* Clearfix */
 

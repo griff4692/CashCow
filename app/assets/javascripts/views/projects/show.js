@@ -11,7 +11,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.currentTabId = 'a';
 
 		var model = this.model;
-		CashCow.currentUser.follows(model);
 
 		if (this.format === 'highlight' || this.format=== 'thumbnail') {
 			this.catToHighlight = options.orderCategory;
@@ -50,14 +49,12 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	handleFollow: function (event) {
 		event.preventDefault();
 
-		var projId = $(event.currentTarget).data('id');
-
 		var that = this;
 
 		var action;
 		var url;
 		var callback;
-		var formData = {"follow[project_id]": projId}
+		var formData = {"follow[project_id]": this.model.id}
 
 		if ($(event.currentTarget).data('type') === 'like') {
 			action = "post";
@@ -65,7 +62,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		  callback = function () {
 				that.model.followers().add(CashCow.currentUser);
 				CashCow.currentUser.followedProjects().add(that.model);
-				that.render()
+				that.render();
 			}
 		} else {
 			action = 'delete';
@@ -99,6 +96,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	},
 
 	render: function () {
+
 		var content = this.template({
 			model: this.model,
 			creator: this.creator,

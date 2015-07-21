@@ -14,7 +14,7 @@ window.CashCow = {
     this.header = new CashCow.Views.Header({
       el: "#header",
     })
-
+    
     var cashCowRouter = new CashCow.Routers.Router({
       root$el: $('#content'),
       collection: CashCow.Collections.projects,

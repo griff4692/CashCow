@@ -16,6 +16,17 @@
   z-index: 5;
 }
 
+.sign-in-error {
+  color: red;
+  position: absolute;
+  width: 500px;
+  text-align: center;
+  font-size: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45px;
+}
+
 .sign-in-modal-form {
   overflow: hidden;
 }
@@ -135,14 +146,11 @@ user sign in modal specifics
   font-weight: 900;
 }
 
-.modal-form {
-}
-
 .modal-form-header {
   text-align: center;
   letter-spacing: 4px;
   font-size: 20px;
-  padding-top: 10px;
+  padding: 15px 0px 20px 0px;
 }
 
 .modal-input {

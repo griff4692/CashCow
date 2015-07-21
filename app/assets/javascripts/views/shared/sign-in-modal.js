@@ -4,7 +4,21 @@ CashCow.Views.SignInModal = Backbone.View.extend({
   events: {
     "click #sign-in-close-out": "closeOut",
     "click .modal-submit": "signInUser",
-    "click #guest-log-in": "signInAsGuest"
+    "click #guest-log-in": "signInAsGuest",
+    "click input": "removePlaceHolder"
+  },
+
+  initialize: function (options) {
+    if(options.callback) {
+      this.returnToCallback = options.callback;
+    }
+    this.wrongCombo = false;
+
+    var that = this;
+    this.callback = function () {
+      that.closeOut();
+      that.returnToCallback && that.returnToCallback();
+    };
   },
 
   signInAsGuest: function (event) {
@@ -20,26 +34,15 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     })
   },
 
-  initialize: function (options) {
-    if(options.callback) {
-      this.returnToCallback = options.callback;
-    }
-
-    var that = this;
-    this.callback = function () {
-      that.closeOut();
-      that.returnToCallback && that.returnToCallback();
-    };
-  },
-
   closeOut: function () {
     this.$('#sign-in-modal').removeClass('is-open');
   },
 
   render: function () {
-    var content = this.template();
+    var content = this.template({
+      wrongCombo: this.wrongCombo
+    });
     this.$el.html(content);
-    this.renderFormErrors();
     return this;
   },
 
@@ -55,8 +58,9 @@ CashCow.Views.SignInModal = Backbone.View.extend({
       email: formData.email,
       password: formData.password,
       success: function () { return that.signInCallback() },
-      error: function (model, error, options) {
-        that.$formErrors = ["Invalid username / password combination"];
+      error: function () {
+        that.wrongCombo = true;
+        that.render();
       }
     });
   },
@@ -69,16 +73,16 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     }
   },
 
-  renderFormErrors: function () {
-    var $errorsList = $('<ul>');
-    $errorsList.addClass('proj-errors');
-
-    this.$formErrors && that.$formErrors.forEach(function (error) {
-      var $newLi = $('<li>');
-      $newLi.text(error);
-      $errorsList.append($newLi);
-    });
-
-    this.$el.prepend($errorsList);
-  }
+  // renderFormErrors: function () {
+  //   var $errorsList = $('<ul>');
+  //   $errorsList.addClass('proj-errors');
+  //
+  //   this.$formErrors && that.$formErrors.forEach(function (error) {
+  //     var $newLi = $('<li>');
+  //     $newLi.text(error);
+  //     $errorsList.append($newLi);
+  //   });
+  //
+  //   this.$el.prepend($errorsList);
+  // }
 });

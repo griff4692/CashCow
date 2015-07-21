@@ -10,7 +10,7 @@ CashCow.Views.Header = Backbone.View.extend({
 
     events: {
       "click a#sign-out": "signOut",
-      "click #sign-in": "signInModal"
+      "click #sign-in": "signInModal",
     },
 
     signInModal: function (event) {
