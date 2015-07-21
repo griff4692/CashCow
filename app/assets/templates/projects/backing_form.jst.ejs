@@ -14,5 +14,12 @@
 <p>
   <%= model.escape('description') %>
 </p>
+
+  Here is an indication of how your contribution will help!  
+  <div class="progress-container">
+    <div class='meter'
+     <span style='width:<%= Math.min(parseInt(model.fundedStatus()), 100) %>%'></span>
+    </div>
+  </div>
 <br>
 <a href="/#/projects/<%= model.id %>">Go to Project Page</a>

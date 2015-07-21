@@ -33,8 +33,13 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 			data: data,
 			dataType: "json",
 			success: function(data) {
-				alert("You have successfully backed this project!");
-				that.model.backers().add(CashCow.currentUser);
+				debugger;
+
+				var newBacker = new CashCow.Models.Backer(CashCow.currentUser.attributes);
+				newBacker.set('amount', data.amount);
+				newBacker.set('fund_date', data.fund_date);
+
+				that.model.backers().add(newBacker);
 				CashCow.currentUser.backedProjects().add(that.model);
 				Backbone.history.navigate('#/projects/' + that.model.id, { trigger: true } );
 			}

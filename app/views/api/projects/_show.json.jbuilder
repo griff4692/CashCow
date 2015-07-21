@@ -10,7 +10,6 @@ json.image_url asset_path(project.image.url)
 
 json.days_left project.days_left
 
-
 if include_details
   json.followers followers_info['followers']
   json.backers_with_amounts backings_info['backers']

@@ -307,6 +307,7 @@ ul.user-menu img:active {
    margin: auto;
    overflow:hidden;
    background: #f9fafb;
+   position: relative;
  }
 
  /*
@@ -333,7 +334,7 @@ div.carousel {
   position: absolute;
   z-index: 2;
   font-size: 150px;
-  color: white;
+  color: black;
   top: 225px;
   display: none;
 }
@@ -371,7 +372,10 @@ div.carousel {
   left: 50%;
   margin-left: -400px;
   top: 50%;
-  margin-top: -150px;
+  margin-top: -400px;
+  color: black;
+  font-size: 72px;
+  letter-spacing: 3px;
 }
 
 .featured-projects h1 {

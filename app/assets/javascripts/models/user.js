@@ -77,7 +77,7 @@ CashCow.Models.User = Backbone.Model.extend({
 
 });
 
-CashCow.Models.Backers = CashCow.Models.User.extend({
+CashCow.Models.Backer = CashCow.Models.User.extend({
   urlRoot: 'na',
 
   backerWithAmount: function () {

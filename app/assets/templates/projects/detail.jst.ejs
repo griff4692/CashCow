@@ -56,7 +56,7 @@
               </a>
         <% } else { %>
           <a class='fund' href='/#/projects/<%= model.id %>/back'>
-            Adjust Your Funding Of This Project (<%= CashCow.currentUser.backedProjects().where({id: model.id}) %>)
+            Adjust Your Funding Of This Project (<%= model.backers().findWhere({id: CashCow.currentUser.id}).amount %>)
           </a>
           <br>
         <% } %>
@@ -99,8 +99,8 @@
     <ul class='tab-list'>
       <% model.backers().models.forEach(function (backer) { %>
         <%= backer.fullName() %> gave $<%= (backer.get('amount')*100/100).toLocaleString() %> on
-        <#% var dateParts = backer.get('deadline').split('-') %>
-        <#%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+        <% var dateParts = backer.get('fund_date').split('-') %>
+        <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
       <% })%>
     </ul>
   </div>

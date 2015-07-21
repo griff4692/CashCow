@@ -4,7 +4,10 @@ class Api::BackingsController < ApplicationController
     @backing = current_user.backings.new(backing_params)
 
     if @backing.save
-      render json: { msg: "Successfully backed project"}
+      render json: {
+        fund_date: Date.today,
+        amount: @backing.amount
+       }
     else
       render json: @backing.errors.full_messages, status: :unprocessable_entity
     end

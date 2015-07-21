@@ -42,7 +42,6 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		event.preventDefault();
 
 		var that = this;
-		debugger;
 
 		var category =this.$('#category').val();
 		var title =this.$('#title').val();

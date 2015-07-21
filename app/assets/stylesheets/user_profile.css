@@ -1,0 +1,43 @@
+.profile-header {
+	background: white;
+	position: relative;
+}
+.profile-picture {
+	display: block;
+	width: 160px;
+	height: 160px;
+	border-radius: 5px;
+	float: left;
+}
+
+.profile-info {
+	float: right;
+	width: 780px;
+	color: black;
+	letter-spacing: 4px;
+}
+
+.profile-info > h1 {
+	padding: 25px 0px 20px 0px;
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.user-stats {
+	font-size: 14px;
+}
+
+#delete-user {
+	position: absolute;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	left: 4px;
+	top: 165px;
+}
+
+#delete-user:hover {
+	cursor: pointer;
+	color: #3caf6a;
+	font-weight: 900;
+}

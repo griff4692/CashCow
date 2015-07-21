@@ -1,17 +1,18 @@
-<header class='profile-header'>
+<header class='profile-header group'>
    <div class="profile-picture">
      <img src="<%= user.escape('image_url') %>" alt="PROFPIC">
    </div>
-   <h1> <%= user.fullName() %> </h1>
-   <ul class='user-stats'>
-     <li><%= user.createdProjects().length %> Created Projects</li>
-     <li><%= user.backedProjects().length %> Funded Projects</li>
-     <li><%= user.followedProjects().length %> Followed Projects</li>
-    <ul>
+   <div class="profile-info">
+     <h1> <%= user.fullName() %> </h1>
+     <ul class='user-stats'>
+       <li><%= user.createdProjects().length %> Created Projects</li>
+       <li><%= user.backedProjects().length %> Funded Projects</li>
+       <li><%= user.followedProjects().length %> Followed Projects</li>
+      <ul>
+   </div>
 </header>
 
-
-<button class='delete-account'>Delete This Account</button>
+<button id='delete-user' class='delete-account'>Delete This Account</button>
 
 <ul class='user-stats'>
   <li></li>
