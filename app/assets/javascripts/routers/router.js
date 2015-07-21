@@ -89,7 +89,14 @@ CashCow.Routers.Router = Backbone.Router.extend({
   _requireSignedIn: function(callback){
     if (!CashCow.currentUser.isSignedIn()) {
       callback = callback || this._goHome.bind(this);
-      this.userSignIn(callback);
+
+      var modalView = new CashCow.Views.SignInModal({
+        callback: callback
+      });
+      
+      $('#content').append(modalView.render().$el);
+
+      // this.userSignIn(callback);
       return false;
     }
 

@@ -16,8 +16,7 @@ CashCow.Views.Header = Backbone.View.extend({
     signInModal: function (event) {
       event.preventDefault();
 
-      signInCallback = Backbone.history.navigate("", { trigger: true } );
-      var modalView = new CashCow.Views.SignInModal();
+      var modalView = new CashCow.Views.SignInModal({});
 
       $('#content').append(modalView.render().$el);
     },

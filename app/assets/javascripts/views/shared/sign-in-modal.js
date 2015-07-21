@@ -6,8 +6,16 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     "click .modal-submit": "signInUser"
   },
 
-  initialize: function () {
-    this.signInCallback = this.closeOut.bind(this);
+  initialize: function (options) {
+    if(options.callback) {
+      this.returnToCallback = options.callback;
+    }
+
+    var that = this;
+    this.callback = function () {
+      that.closeOut();
+      that.returnToCallback && that.returnToCallback();
+    };
   },
 
   closeOut: function () {
