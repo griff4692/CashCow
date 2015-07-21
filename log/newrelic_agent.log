@@ -2111,3 +2111,7 @@
 [07/20/15 18:06:24 -0400 Apps-Mac-mini-16.local (19644)] INFO : Doing deferred dependency-detection before Rack startup
 [07/20/15 18:06:30 -0400 Apps-Mac-mini-16.local (19644)] ERROR : Invalid license key, please contact support@newrelic.com
 [07/20/15 18:06:30 -0400 Apps-Mac-mini-16.local (19644)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/20/15 21:44:29 -0400 Apps-Mac-mini-16.local (19644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No handler found for "undefined"
+[07/20/15 21:44:45 -0400 Apps-Mac-mini-16.local (19644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No handler found for "undefined"
+[07/20/15 21:45:12 -0400 Apps-Mac-mini-16.local (19644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No handler found for "undefined"
+[07/20/15 21:46:53 -0400 Apps-Mac-mini-16.local (19644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No handler found for "undefined"

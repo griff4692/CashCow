@@ -1,6 +1,6 @@
 CashCow.Views.SignUp = Backbone.CompositeView.extend({
   initialize: function (options) {
-    this.formErrors = options.formErrors;
+    this.$formErrors = options.$formErrors;
     this.model = options.model;
     this.collection = options.collection;
     this.$el.addClass('form');
@@ -47,7 +47,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
         Backbone.history.navigate('', { trigger: true } );
       },
       error: function (model, error, options) {
-        that.formErrors = error.responseJSON;
+        that.renderFormErrors([error.responseText]);
       }
     });
   },
@@ -70,5 +70,21 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
 
   _updatePreview: function(src){
     this.$el.find("#preview-post-image").attr("src", src);
+  },
+
+  renderFormErrors: function (errors) {
+    var $errorsList = $('<ul>');
+    $errorsList.addClass('proj-errors');
+    errors.forEach(function (error) {
+      var $newLi = $('<li>');
+      if(error.length > 20) {
+        $newLi.text(error.slice(0,20) + "...");
+      } else {
+        $newLi.text(error)
+      }
+      $errorsList.append($newLi);
+    });
+
+    this.$formErrors.html($errorsList);
   }
 });

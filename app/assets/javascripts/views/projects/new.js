@@ -8,8 +8,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 	},
 
 	initialize: function (options) {
-		this.formErrors = options.formErrors;
-		this.listenTo(this.model, "sync", this.render);
+    this.$formErrors = options.$formErrors;		this.listenTo(this.model, "sync", this.render);
 		this.$el.addClass('form');
 	},
 
@@ -50,8 +49,25 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 				Backbone.history.navigate('/#/projects/' + that.model.id, { trigger: true } );
 			},
 			error: function (model, error, options) {
-				that.formErrors = error.responseJSON;
+				that.renderFormErrors(error.responseText);
 			}
 		});
+	},
+
+	renderFormErrors: function (errors) {
+	  var $errorsList = $('<ul>');
+	  $errorsList.addClass('proj-errors');
+	  errors.forEach(function (error) {
+			var $newLi = $('<li>');
+			if(error.length <= 20) {
+				$newLi.text(error);
+			} else {
+				$newLi.text(error.slice(0,20) + '...');
+			}
+
+			$errorsList.append($newLi);
+		});
+
+	  this.$formErrors.html($errorsList);
 	}
 })

@@ -1,0 +1,17 @@
+#errors {
+	color: #f00;
+	letter-spacing: 3px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 4;
+	top: 60px;
+
+	font-size: 16px;
+	font-weight: 300;
+}
+
+#errors:hover {
+	font-weight: 900;
+	cursor: pointer;
+}

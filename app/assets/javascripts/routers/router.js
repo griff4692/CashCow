@@ -13,25 +13,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
     this.users = options.users;
 
-    this.$errors = $('errors');
-    this.formErrors = [];
-    this.listenTo(this.formErrors, "change", this.renderFormErrors)
-  },
-
-  renderFormErrors: function () {
-    if (this.formErrors.length === 0) {
-      return;
-    }
-
-    var $errorsList = $('<ul>');
-    $errorsList.addClass('proj-errors');
-    this.formErrors.forEach(function (error) {
-  		var $newLi = $('<li>');
-  		$newLi.text(error);
-  		$errorsList.append($newLi);
-  	})
-
-    this.$errors.html($errorsList);
+    this.$errors = $('#errors');
   },
 
   routes: {
@@ -73,7 +55,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var formView = new CashCow.Views.SignUp({
       collection: this.collection,
       model: model,
-      formErrors: this.formErrors
+      $formErrors: this.$errors
     });
     this._swapView(formView);
   },
@@ -86,7 +68,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var signInView = new CashCow.Views.SignIn({
       callback: callback,
       model: model,
-      formErrors: this.formErrors
+      $formErrors: this.$errors
     });
     this._swapView(signInView);
   },
@@ -165,7 +147,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var newProjView = new CashCow.Views.ProjectForm ({
       model: newProj,
       collection: this.collection,
-      formErrors: this.formErrors
+      $formErrors: this.$errors
     });
 
     this._swapView(newProjView);
@@ -175,8 +157,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this._currentView && this._currentView.remove();
     this._currentView = view;
     this.root$el.html(view.render().$el);
-
-    this.formErrors = [];
+    this.$errors.empty();
   }
 
 });
