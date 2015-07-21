@@ -16,6 +16,32 @@
   z-index: 5;
 }
 
+.sign-in-modal-form {
+  overflow: hidden;
+}
+
+.guest-log-in {
+  border-top: 1px solid #ccc;
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-align: center;
+  background: #3caf6a;
+}
+
+.twitter-sign-in:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#guest-log-in {
+  padding: 5px 30px;
+}
+
+#guest-log-in:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .modal-form {
   position: absolute;
   left: 50%;
@@ -86,7 +112,6 @@ user sign in modal specifics
   top: 100px;
   width: 350px;
   background: white;
-  border: 3px solid white;
   border-radius: 20px;
   font-size: 14px;
   z-index: 15;
@@ -127,7 +152,14 @@ user sign in modal specifics
 
 .modal-submit {
   margin: auto;
-  text-decoration: none;
+  display: block;
+  letter-spacing: 7.5px;
+  padding: 10px 25px;
+}
+
+.modal-submit:hover {
+  color: white;
+  cursor: pointer;
 }
 
 button.modal-submit {

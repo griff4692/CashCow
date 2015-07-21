@@ -23,7 +23,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
     "projects/:id": "projShow",
     "projects/:id/back": "projBacking",
     "users/new": "userNew",
-    "session/new": "userSignIn",
     "users/:id": "userProfile"
   },
 
@@ -60,19 +59,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
     this._swapView(formView);
   },
 
-  userSignIn: function(callback){
-    if (!this._requireSignedOut(callback)) { return; }
-
-    var model = new CashCow.Collections.users.model();
-
-    var signInView = new CashCow.Views.SignIn({
-      callback: callback,
-      model: model,
-      $formErrors: this.$errors
-    });
-    this._swapView(signInView);
-  },
-
   userProfile: function (id) {
     var callback = this.userProfile.bind(this, id);
 
@@ -93,10 +79,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
       var modalView = new CashCow.Views.SignInModal({
         callback: callback
       });
-      
-      $('#content').append(modalView.render().$el);
 
-      // this.userSignIn(callback);
+      $('#content').append(modalView.render().$el);
       return false;
     }
 
@@ -109,7 +93,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
       callback();
       return false;
     }
-
     return true;
   },
 
@@ -131,7 +114,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
   projDiscover: function (category, order) {
     var category = category || "all";
-    // fix this!
     var order = order || "days_left";
     var discoverView = new CashCow.Views.Discover({
       collection: this.collection,

@@ -300,7 +300,7 @@ ul.user-menu img:active {
  #content {
    display: block;
    width: 958px;
-   min-height: 998px;
+   height: 770px;
    border: 1px solid #3caf6a;
    border-top: none;
    border-bottom: none;
@@ -309,140 +309,6 @@ ul.user-menu img:active {
    background: #f9fafb;
    position: relative;
  }
-
- /*
- root page
- */
-
-.featured-projects {
-  width: 4800px;
-  transition: margin 1000ms;
-}
-
-.featured-projects > li {
-  position: relative;
-  width: 960px;
-  float: left;
-  display: block;
-}
-
-div.carousel {
-  position: relative;
-}
-
-.carousel > button {
-  position: absolute;
-  z-index: 2;
-  font-size: 150px;
-  color: black;
-  top: 225px;
-  display: none;
-}
-
-.carousel .slide-left {
-  left: 10px;
-}
-
-.carousel .slide-right {
-  right: 10px;
-}
-
-.carousel:hover .slide-right {
-  display: block;
-  cursor: pointer;
-}
-
-.carousel:hover .slide-left {
-  display: block;
-  cursor: pointer;
-}
-
-.featured-projects {
-  color: white;
-}
-
-.featured-projects > li {
-  position: relative;
-}
-
-.featured-projects .higlight-container {
-  position: absolute;
-  width: 800px;
-  height: 300px;
-  left: 50%;
-  margin-left: -400px;
-  top: 50%;
-  margin-top: -400px;
-  color: black;
-  font-size: 72px;
-  letter-spacing: 3px;
-}
-
-.featured-projects h1 {
-  display: block;
-  font-weight: 50;
-  font-size: 64px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-strong {
-  font-weight: 900;
-}
-
-strong:hover {
-  color: #2bde73;
-}
-
-.featured-projects h3 {
-  display: block;
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.featured-projects img {
-  display: block;
-}
-
-.featured-projects .submit {
-  display: block;
-  text-align: center;
-  padding: 5px;
-  background: #2bde73;
-  border: 1px solid #2bde73;
-  border-radius: 7.5px;
-  font-size: 24px;
-  width: 250px;
-  margin: 0px auto;
-}
-
-.featured-projects .submit:hover {
-  background: #3caf6a;
-  border: 1px solid #3caf6a;
-  font-weight: 900;
-}
-
-/*
-discover page
-*/
-
-.selection .selected {
-  color: white;
-}
-
-.discover-toggle {
-  background: #3caf6a;
-  border-top: 1px solid white;
-  border-bottom: 1px solid #2bde73;
-  border-radius: 5px;
-  color: black;
-  font-size: 40px;
-  height: 150px;
-  display: block;
-  opacity: 0.95;
-  position: relative;
-}
 
 .modal-vehicle {
   position: absolute;

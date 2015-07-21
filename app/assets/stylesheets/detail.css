@@ -1,6 +1,6 @@
 .proj-header {
 	text-align: center;
-	padding: 50px 0px 25px 0px;
+	padding: 12px 0px 25px 0px;
 	color: black;
 	position: relative;
 }
@@ -15,6 +15,7 @@
 .proj-main {
 	display: block;
 	margin-left: 30px;
+	margin-top: -10px;
 }
 
 .proj-main > img {
@@ -23,7 +24,7 @@
 	width: 550px;
 	height: 390px;
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: 15px;
 }
 
 .proj-main .proj-stats {

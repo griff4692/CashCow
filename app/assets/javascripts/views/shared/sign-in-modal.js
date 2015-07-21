@@ -3,7 +3,21 @@ CashCow.Views.SignInModal = Backbone.View.extend({
 
   events: {
     "click #sign-in-close-out": "closeOut",
-    "click .modal-submit": "signInUser"
+    "click .modal-submit": "signInUser",
+    "click #guest-log-in": "signInAsGuest"
+  },
+
+  signInAsGuest: function (event) {
+    var that = this;
+    event.preventDefault();
+    CashCow.currentUser.signIn({
+      email: 'guest@cash-cow.io',
+      password: 'password',
+      success: function () {
+        Backbone.history.navigate('', { trigger: true });
+        that.closeOut();
+      }
+    })
   },
 
   initialize: function (options) {

@@ -1,14 +1,6 @@
-<% if (type==='signUp') { %>
-	<% var dir = 'Up' %>
-<% } else { %>
-	<% var dir = 'In' %>
-<%	} %>
-
 <form class='user-form'>
 
-	<h1 class='form-header'>Sign <%= dir %></h1>
-
-	<% if (type==='signUp') { %>
+	<h1 class='form-header'>Sign Up</h1>
 
 		<div class="input">
 				<input id='fname' type="text" name="user[fname]"
@@ -25,8 +17,6 @@
 				<input id='user-profile-pic' type="file" name="user[image]" value="Upload A Profile Image">
 		</div>
 
-	<%	} %>
-
 	<div class="input">
     <input id='email' type="email" name="user[email]"
            value="Email">
@@ -39,16 +29,10 @@
 	</div>
 
 	<button class='submit'>
-		<% if (type==='signUp') { %>
-			Create Account
-		<% } else { %>
-			Sign In
-		<% } %>
-
+		Create An Account
 	</button>
-
 </form>
 
 <div class='twitter-sign-in'>
-	<a href="/auth/twitter"> Sign <%= dir %> with Twitter</a>
+	<a href="/auth/twitter"> Sign Up with Twitter</a>
 </div>

@@ -33,5 +33,5 @@ project_ids = Project.pluck(:id)
 
 75.times do |i|
 	Follow.create!(user_id: user_ids.sample, project_id: project_ids.sample)
-	Backing.create!(user_id: rand(25), project_id: rand(250), amount: rand(250))
+	Backing.create!(user_id: rand(25), project_id: rand(249), amount: rand(250))
 end

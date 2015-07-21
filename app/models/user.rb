@@ -24,7 +24,10 @@ class User < ActiveRecord::Base
 	validates :email, :fname, :lname, :session_token, presence: true
 	validates :password, length: { minimum: 5, allow_nil: true }
 	validates :email, uniqueness: true
-	has_attached_file :image, styles: {thumb: '100x100>'}, default_url: 'logo.png'
+	has_attached_file :image, styles: {
+			mini: '25x25>', profile: '160x160>'
+		},
+		default_url: 'logo.png'
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	after_initialize :ensure_session_token
