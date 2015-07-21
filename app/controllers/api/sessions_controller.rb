@@ -17,7 +17,7 @@ class Api::SessionsController < ApplicationController
 			render :show
 		else
 			@user = User.new
-      head :unprocessable_entity
+      render json: ["Invalid username / password combo"], status: :unprocessable_entity
 		end
 	end
 

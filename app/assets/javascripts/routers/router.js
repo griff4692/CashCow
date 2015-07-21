@@ -1,7 +1,6 @@
 CashCow.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.root$el = options.root$el;
-    this.$errors = $('errors');
     this.collection = options.collection;
     this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
@@ -13,6 +12,26 @@ CashCow.Routers.Router = Backbone.Router.extend({
     };
 
     this.users = options.users;
+
+    this.$errors = $('errors');
+    this.formErrors = [];
+    this.listenTo(this.formErrors, "change", this.renderFormErrors)
+  },
+
+  renderFormErrors: function () {
+    if (this.formErrors.length === 0) {
+      return;
+    }
+
+    var $errorsList = $('<ul>');
+    $errorsList.addClass('proj-errors');
+    this.formErrors.forEach(function (error) {
+  		var $newLi = $('<li>');
+  		$newLi.text(error);
+  		$errorsList.append($newLi);
+  	})
+
+    this.$errors.html($errorsList);
   },
 
   routes: {
@@ -53,7 +72,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
     var formView = new CashCow.Views.SignUp({
       collection: this.collection,
-      model: model
+      model: model,
+      formErrors: this.formErrors
     });
     this._swapView(formView);
   },
@@ -66,7 +86,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var signInView = new CashCow.Views.SignIn({
       callback: callback,
       model: model,
-      $errors: this.$errors
+      formErrors: this.formErrors
     });
     this._swapView(signInView);
   },
@@ -96,7 +116,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
   _requireSignedOut: function(callback){
     if (CashCow.currentUser.isSignedIn()) {
-      // default is to go home if signed in and trying to sign in
       callback = callback || this._goHome.bind(this);
       callback();
       return false;
@@ -146,7 +165,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var newProjView = new CashCow.Views.ProjectForm ({
       model: newProj,
       collection: this.collection,
-      $errors: this.$errors
+      formErrors: this.formErrors
     });
 
     this._swapView(newProjView);
@@ -155,8 +174,9 @@ CashCow.Routers.Router = Backbone.Router.extend({
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
-    this.$errors.empty();
     this.root$el.html(view.render().$el);
+
+    this.formErrors = [];
   }
 
 });

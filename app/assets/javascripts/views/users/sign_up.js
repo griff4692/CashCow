@@ -1,5 +1,6 @@
 CashCow.Views.SignUp = Backbone.CompositeView.extend({
   initialize: function (options) {
+    this.formErrors = options.formErrors;
     this.model = options.model;
     this.collection = options.collection;
     this.$el.addClass('form');
@@ -44,6 +45,9 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
         CashCow.currentUser.fetch();
         that.collection.add(that.model);
         Backbone.history.navigate('', { trigger: true } );
+      },
+      error: function (model, error, options) {
+        that.formErrors = error.responseJSON;
       }
     });
   },

@@ -1,6 +1,7 @@
 CashCow.Views.SignIn = Backbone.View.extend({
 
   initialize: function(options){
+    this.formErrors = options.formErrors;
     this.callback = options.callback;
     this.listenTo(CashCow.currentUser, "signIn", this.signInCallback);
     this.$el.addClass('form');
@@ -33,8 +34,9 @@ CashCow.Views.SignIn = Backbone.View.extend({
       email: formData.email,
       password: formData.password,
       success: function () { return that.signInCallback() },
-      error: function() {
-        alert("Wrong username/password combination. Please try again.");
+      error: function (model, error, options) {
+        // that.formErrors = ["Invalid username / password combination"];
+        // that.renderFormErrors(formErrors);
       }
     });
   },

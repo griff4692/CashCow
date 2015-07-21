@@ -8,24 +8,9 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 	},
 
 	initialize: function (options) {
-		this.modelErrors = [];
-		this.$projErrors = options.$errors;
+		this.formErrors = options.formErrors;
 		this.listenTo(this.model, "sync", this.render);
-		this.$errorEl = $('#proj-errors');
 		this.$el.addClass('form');
-	},
-
-	renderErrors: function () {
-		var $errorsList = $('<ul>');
-		$errorsList.addClass('proj-errors');
-
-		this.modelErrors.forEach(function (error) {
-			var $newLi = $('<li>');
-			$newLi.text(error);
-			$errorsList.append($newLi);
-		})
-
-		this.$errorEl.html($errorsList);
 	},
 
 	render: function () {
@@ -63,14 +48,10 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 				CashCow.currentUser.fetch();
 				that.collection.add(that.model);
 				Backbone.history.navigate('/#/projects/' + that.model.id, { trigger: true } );
+			},
+			error: function (model, error, options) {
+				that.formErrors = error.responseJSON;
 			}
 		});
-
-		// 	error: function (model, error, options) {
-		// 		that.modelErrors = error.responseJSON;
-		// 		that.renderErrors();
-		// 	}
-		// })
-
 	}
 })
