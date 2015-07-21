@@ -1,16 +1,18 @@
 <img src="<%= model.escape('image_url_highlight') %>" alt="Project Picture">
 
-<section class='higlight-container'>
+<section class='over-it higlight-container'>
   <h1 class='highlight highlight-category'>
-     <%= higlightTitle %>
+     <%= higlightTitle %>:
      <strong>
-       <%= model.returnStat(catToHighlight) %>
+       <%= model.returnStatStr(catToHighlight) %>
      </strong>
   </h1>
   <h3 class='highlight higlight-title'>
     <%= model.escape('title') %>
   </h3>
+</section>
 
+<section class='over-it visit-button'>
   <a class='highlight submit proj-button' href="/#/projects/<%= model.id %>">
     View This Project
   </a>

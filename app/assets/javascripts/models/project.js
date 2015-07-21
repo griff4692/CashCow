@@ -7,16 +7,20 @@ CashCow.Models.Project = Backbone.Model.extend({
 
 	urlRoot: '/api/projects',
 
-	returnStat: function(category) {
+	returnStatStr: function(category) {
 		if (category==='days_left') {
 			return this.escape(category);
 		} else if (category==='funded_status') {
-			return this.fundedStatus();
+			return this.fundedStatus() + '%';
 		} else if (category==='num_backers') {
-			return this.numBackers();
+			return this.numBackers().toLocaleString();
 		} else if (category==='num_followers'){
-			return this.numFollowers();
-		};
+			return this.numFollowers().toLocaleString() + " Likes";
+		} else if (category==='amount_funded') {
+			return '$' + (this.pledged()*100/100).toLocaleString();
+		} else {
+			return -1;
+		}
 	},
 
 	saveFormData: function(formData, options){

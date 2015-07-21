@@ -54,7 +54,7 @@ div.carousel {
  position: relative;
 }
 
-.featured-projects .higlight-container {
+.featured-projects .over-it {
  position: absolute;
  text-align: center;
  width: 960px;
@@ -64,6 +64,19 @@ div.carousel {
  z-index: 3;
  color: white;
  letter-spacing: 5px;
+}
+
+.featured-projects .visit-button {
+  top: 78%;
+  padding: 40px;
+  margin: auto;
+  display: block;
+  transition: opacity 500;
+}
+
+.featured-projects .visit-button:hover {
+  font-weight: 900;
+  opacity: 1;
 }
 
 .featured-projects h1 {
