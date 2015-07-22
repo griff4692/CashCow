@@ -3,8 +3,7 @@ class Api::SearchResultsController < ApplicationController
     @search_results = Project
       .search_by_title(params[:query])
       .includes(:searchable)
-      
+
     render :search
   end
-
 end

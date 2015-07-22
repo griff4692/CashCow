@@ -60,10 +60,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
   },
 
   userProfile: function (id) {
-    var callback = this.userProfile.bind(this, id);
-
-    if(!this._requireSignedIn(callback)) { return; }
-
     var model = this.users.getOrFetch(id);
     var profileView = new CashCow.Views.UserProfile({
       model: model

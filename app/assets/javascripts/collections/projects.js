@@ -8,7 +8,19 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		});
 	},
 
-	// takes either none, or grouped value
+	page: function (num, offset) {
+		return this.models.slice((num - 1) * offset, ((num - 1) * offset + offset));
+	},
+
+	totalPages: function(offset) {
+		var length = this.models.length;
+		if (length === 0) {
+			return 0;
+		} else {
+			return Math.floor(this.models.length / offset) + 1;
+		}
+	},
+
 	sortAndOrder: function (sortAttr, filter, direction) {
 		var filtered;
 		if (filter === 'All') {
@@ -19,7 +31,7 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 
 		if(sortAttr === 'none') {
 			return filtered;
-		}
+		};
 
 		var sorted = _.sortBy(filtered, function (model) {
 			if (sortAttr==='funded_status') {

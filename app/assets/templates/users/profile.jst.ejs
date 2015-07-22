@@ -33,39 +33,21 @@
   </ul>
 </section>
 
-<div class="tab-content">
+<section class = 'page-tabs tab-titles group'>
+  <% if(currentPage > 1) { %>
+    <button class='prev pagination'> << </button>
+  <% } %>
+  <div id='current-page'><%= currentPage %></div> of <%= totalPages  %>
+  <% if(currentPage < totalPages) { %>
+    <button class='next pagination'> >> </button>
+  <% } %>
+</section>
 
-  <div class="a active">
-    <ul class='tab-list'>
-      <% user.createdProjects().models.forEach(function (proj) { %>
-        <li>
-          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
-          <%= proj.escape('title') %>
-        </li>
-      <% }) %>
-    </ul>
-  </div>
-
-  <div class="b">
-    <ul class='tab-list'>
-      <% user.backedProjects().models.forEach(function (proj) { %>
-        <li>
-          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
-          <%= proj.escape('title') %>
-        </li>
-      <% }) %>
-    </ul>
-  </div>
-
-  <div class="c">
-    <ul class='tab-list'>
-      <% user.followedProjects().models.forEach(function (proj) { %>
-        <li>
-          <img src="<%= proj.escape('image_url') %>" alt="ProjectPicture">
-          <%= proj.escape('title') %>
-        </li>
-      <% }) %>
-    </ul>
-  </div>
-
-</div>
+<ul class='user-projects'>
+  <% currentTab.page(currentPage, offSet).forEach(function (proj) { %>
+    <li>
+      <img src='<%= proj.escape('image_url_thumbnail') %>' alt="ProjectPicture">
+      <%= proj.escape('title') %>
+    </li>
+  <% }) %>
+</ul>

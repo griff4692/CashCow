@@ -3,11 +3,18 @@
 	position: relative;
 }
 .profile-picture {
-	display: block;
-	width: 160px;
-	height: 160px;
-	border-radius: 5px;
+	padding: 5px;
+	overflow: hidden;
 	float: left;
+}
+
+.profile-picture > img {
+	display: block;
+	width: 159px;
+	height: 159px;
+	border-radius: 25px;
+	border: 1px solid black;
+	overflow: hidden;
 }
 
 .profile-info {

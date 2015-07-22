@@ -41,7 +41,6 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
   },
 
   closeModal: function (event) {
-    // remove all classes
     this.render({modal: 'close'});
     return
   },
@@ -88,8 +87,7 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
     if (options && options.modal && options.modal === 'close') {
       this.$('.modal').removeClass('is-open');
     }
-
-
+    
     return this;
   }
 })
