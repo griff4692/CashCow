@@ -19,7 +19,7 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.currentPage = 1;
     this.offSet = 3;
     this.currentTab = this.backedProjects;
-    this.currentTabId = 'a';
+    this.currentTabId = 'b';
   },
 
   events: {
@@ -55,6 +55,9 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
 
   render: function(){
 
+    var that = this;
+    that.resetSubviews();
+
     var html = this.template({
       user: this.model,
       currentTab: this.currentTab,
@@ -66,6 +69,19 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
 
     this.$('.tab-titles > li').removeClass('active');
     this.$('.' + this.currentTabId).addClass('active');
+
+    this.currentTab.page(this.currentPage, this.offSet).forEach(function (project) {
+      var projDetailView = new CashCow.Views.ProjectShow({
+        model: project,
+        orderCategory: "null",
+        higlightTitle: "null",
+        collection: "null",
+        format: 'thumbnail',
+      });
+        that.addSubview('.user-projects', projDetailView);
+    });
+
+    this.attachSubviews();
 
     return this;
   },

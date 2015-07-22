@@ -37,13 +37,18 @@
   <% if(currentPage > 1) { %>
     <button class='prev pagination'> << </button>
   <% } %>
-  <div id='current-page'><%= currentPage %></div> of <%= totalPages  %>
+  <div id='current-page'>
+    <% if(currentTab.models.length === 0) { %>
+      0
+    <% } else { %>
+      <%= currentPage %>
+    <% } %></div> of <%= totalPages  %>
   <% if(currentPage < totalPages) { %>
     <button class='next pagination'> >> </button>
   <% } %>
 </section>
 
-<ul class='user-projects'>
+<ul class='user-projects group'>
   <% currentTab.page(currentPage, offSet).forEach(function (proj) { %>
     <li>
       <img src='<%= proj.escape('image_url_thumbnail') %>' alt="ProjectPicture">

@@ -14,10 +14,12 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 
 	totalPages: function(offset) {
 		var length = this.models.length;
-		if (length === 0) {
-			return 0;
+		var floor = Math.floor(length / offset);
+
+		if (length % offset === 0) {
+			return floor;
 		} else {
-			return Math.floor(this.models.length / offset) + 1;
+			return floor + 1;
 		}
 	},
 

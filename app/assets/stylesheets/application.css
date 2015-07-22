@@ -340,11 +340,15 @@ ul.user-menu img:active {
   font-size: 24px;
 }
 
-.discover-result {
+.discover-result, .user-projects {
   margin-top: 25px;
 }
 
-.discover-result .thumbnail {
+.user-projects {
+  margin-top: 50px;
+}
+
+.thumbnail {
   display: block;
   position: relative;
   float: left;
@@ -358,16 +362,16 @@ ul.user-menu img:active {
   box-shadow: 0 3px 0 0 #eee;
 }
 
-.discover-result .thumbnail:nth-child(3n + 2) {
+.thumbnail:nth-child(3n + 2) {
   margin-right: 25px;
 }
 
-.discover-result #project-picture:hover {
+#project-picture:hover {
   cursor: pointer;
   box-shadow: none;
 }
 
-.discover-result .thumbnail:active {
+ .thumbnail:active {
   top: 4px;
   box-shadow: none;
 }
