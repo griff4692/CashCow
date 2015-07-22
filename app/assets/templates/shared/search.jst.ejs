@@ -1,0 +1,11 @@
+<div class='query'>
+	<input id='query' type="text" placeholder='Search For Project'>
+</div>
+
+<section class="results">
+	<% results.each(function (result) { %>
+		<article>
+			<%= result.escape('title') %>
+		</article>
+	<% }) %>
+</section>

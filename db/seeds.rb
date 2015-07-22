@@ -35,8 +35,8 @@ used_pairings = []
 50.times do |i|
 	user_id = user_ids.sample
 	project_id = project_ids.sample
-	next if used_pairings.includes?([user_id, project_id])
-	used_pairings << project
+	next if used_pairings.include?([user_id, project_id])
+	used_pairings << [user_id, project_id]
 	Follow.create!(user_id: user_ids.sample, project_id: project_ids.sample)
 	Backing.create!(user_id: user_ids.sample, project_id: project_ids.sample, amount: rand(1000))
 end

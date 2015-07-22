@@ -23,7 +23,7 @@ CashCow.Routers.Router = Backbone.Router.extend({
     "projects/:id": "projShow",
     "projects/:id/back": "projBacking",
     "users/new": "userNew",
-    "users/:id": "userProfile"
+    "users/:id": "userProfile",
   },
 
   projBacking: function (id) {

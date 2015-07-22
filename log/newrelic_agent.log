@@ -2258,3 +2258,172 @@
 [07/21/15 15:55:40 -0400 Apps-Mac-mini-17.local (61897)] INFO : Installing Rails 4 view instrumentation
 [07/21/15 15:55:40 -0400 Apps-Mac-mini-17.local (61897)] INFO : Installing Rails 4 Error instrumentation
 [07/21/15 15:55:40 -0400 Apps-Mac-mini-17.local (61897)] INFO : Finished instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Environment: development
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : No known dispatcher detected.
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Application: development
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing ActiveJob instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Net instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing deferred Rack instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 19:44:44 -0400 Apps-Mac-mini-17.local (66809)] INFO : Finished instrumentation
+[07/21/15 20:06:20 -0400 Apps-Mac-mini-17.local (50362)] INFO : Starting Agent shutdown
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Environment: development
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Dispatcher: webrick
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Application: development
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Net instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:06:37 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:06:38 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:06:38 -0400 Apps-Mac-mini-17.local (67318)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:06:38 -0400 Apps-Mac-mini-17.local (67318)] INFO : Finished instrumentation
+[07/21/15 20:06:38 -0400 Apps-Mac-mini-17.local (67318)] INFO : Doing deferred dependency-detection before Rack startup
+[07/21/15 20:06:41 -0400 Apps-Mac-mini-17.local (67318)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/21/15 20:06:41 -0400 Apps-Mac-mini-17.local (67318)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Environment: development
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : No known dispatcher detected.
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Application: development
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Net instrumentation
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:10:42 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:10:43 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:10:43 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:10:43 -0400 Apps-Mac-mini-17.local (67446)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:10:43 -0400 Apps-Mac-mini-17.local (67446)] INFO : Finished instrumentation
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] INFO : Environment: development
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] INFO : Dispatcher: webrick
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] INFO : Application: development
+[07/21/15 20:16:59 -0400 Apps-Mac-mini-17.local (67622)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Net instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:17:00 -0400 Apps-Mac-mini-17.local (67622)] INFO : Finished instrumentation
+[07/21/15 20:17:01 -0400 Apps-Mac-mini-17.local (67622)] INFO : Doing deferred dependency-detection before Rack startup
+[07/21/15 20:17:19 -0400 Apps-Mac-mini-17.local (67622)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/21/15 20:17:20 -0400 Apps-Mac-mini-17.local (67622)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/21/15 20:25:04 -0400 Apps-Mac-mini-17.local (67861)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Environment: development
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : No known dispatcher detected.
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Application: development
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Net instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:25:05 -0400 Apps-Mac-mini-17.local (67861)] INFO : Finished instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Environment: development
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : No known dispatcher detected.
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Application: development
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Net instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:26:41 -0400 Apps-Mac-mini-17.local (67928)] INFO : Finished instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Environment: development
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : No known dispatcher detected.
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Application: development
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Net instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:31:35 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:31:36 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:31:36 -0400 Apps-Mac-mini-17.local (69113)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:31:36 -0400 Apps-Mac-mini-17.local (69113)] INFO : Finished instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Environment: development
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : No known dispatcher detected.
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Application: development
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Net instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:34:33 -0400 Apps-Mac-mini-17.local (70313)] INFO : Finished instrumentation
+[07/21/15 20:59:45 -0400 Apps-Mac-mini-17.local (71759)] INFO : Starting the New Relic agent in "development" environment.
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Environment: development
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : No known dispatcher detected.
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Application: development
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing ActiveJob instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing ActiveRecord 4 instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Net instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing deferred Rack instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Rack::Builder middleware instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Rails 3+ middleware instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Rails 4 Controller instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Rails 4 view instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Installing Rails 4 Error instrumentation
+[07/21/15 20:59:46 -0400 Apps-Mac-mini-17.local (71759)] INFO : Finished instrumentation

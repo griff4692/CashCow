@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'site#root'
 
   namespace :api, defaults: { format: :json } do
+    get "/search", to: "search_results#search"
     resources :projects, except: [:new, :edit]
     resources :backings, only: [:create, :update, :destroy]
     resources :follows, only: [:create, :destroy]

@@ -18,6 +18,10 @@
 #
 
 class Project < ActiveRecord::Base
+	include PgSearch
+
+	pg_search_scope :search_by_title, against: :title
+
 	PROJ_CATEGORIES = %w(Art Music Philanthropy)
 
 	validates :user, :category, :title, :description, :goal, :deadline, presence: true

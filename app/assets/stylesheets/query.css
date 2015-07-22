@@ -1,0 +1,24 @@
+.query {
+  position: relative;
+  display: inline-block;
+  width: 225px;
+  border: 2px solid black;
+  margin-top: 4px;
+  margin-left: 12px;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+#query {
+  display: block;
+  width: 230px;
+  color: black;
+  font-size: 12px;
+  padding: 7.5px 15px;
+  letter-spacing: 2px;
+}
+
+#search-bar {
+  border: none;
+}
