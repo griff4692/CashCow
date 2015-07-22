@@ -1,10 +1,5 @@
 <div class='proj-header'>
   <h1 class='proj-title'><%= model.escape('title') %>
-    <!-- <div class="suggestion">
-      <a href="#/projects/discover" + <%= model.escape('category')%>>
-        See other <%= model.escape('category') %> Projects
-      </a>
-    </div> -->
   </h1>
   <h4>by <%= creator.fullName() %></h4>
 </div>
@@ -66,7 +61,7 @@
 </section>
 
 <section class='tabs'>
-  <ul class='tab-titles group'>
+  <ul class='tab-titles group' id='detail-tab'>
      <li class='tab a' data-id='a'>
        About <%= model.escape('title') %>
      </li>
@@ -80,29 +75,5 @@
 </section>
 
 <div class="tab-content">
-
-  <div class="a active">
-    <%= model.escape('description') %>
-  </div>
-
-  <div class='b'>
-    <ul class='tab-list'>
-  <% model.followers().models.forEach(function (follower) { %>
-    <li>
-      <%= follower.fullName() %> is following this project
-    </li>
-  <% })%>
-    </ul>
-  </div>
-
-  <div class='c'>
-    <ul class='tab-list'>
-      <% model.backers().models.forEach(function (backer) { %>
-        <%= backer.fullName() %> gave $<%= (backer.get('amount')*100/100).toLocaleString() %> on
-        <% var dateParts = backer.get('fund_date').split('-') %>
-        <%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
-      <% })%>
-    </ul>
-  </div>
 
 </div>

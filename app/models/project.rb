@@ -71,7 +71,7 @@ class Project < ActiveRecord::Base
 	end
 
 	def followers_with_total
-		# follows = self.follows.includes(:follower)
+		follows = self.follows.includes(:follower)
 		followers_with_total = {}
 
 		followers_with_total['total'] = follows.length
@@ -85,7 +85,7 @@ class Project < ActiveRecord::Base
 	end
 
 	def backers_with_amounts_and_total_funding
-		# backings = self.backings.includes(:backer)
+		backings = self.backings.includes(:backer)
 
 		backers_with_amounts_and_total_funding = {}
 		backers_with_amounts_and_total_funding['total'] = 0

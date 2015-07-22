@@ -37,17 +37,14 @@ CashCow.Models.User = Backbone.Model.extend({
  parse: function (resp) {
    if (resp.followedProjects) {
      this.followedProjects().set(resp.followedProjects, { parse: true });
-    //  this.Projects().trigger('sync');
      delete resp.followedProjects;
    }
    if (resp.backedProjects) {
      this.backedProjects().set(resp.backedProjects, { parse: true });
-    //  this.backedProjects().trigger('sync');
      delete resp.backedProjects;
    }
    if (resp.createdProjects) {
      this.createdProjects().set(resp.createdProjects, { parse: true });
-    //  this.createdProjects().trigger('sync');
      delete resp.createdProjects;
    }
 

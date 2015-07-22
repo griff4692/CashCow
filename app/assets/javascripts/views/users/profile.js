@@ -1,11 +1,8 @@
 CashCow.Views.UserProfile = Backbone.CompositeView.extend({
 
   initialize: function(options){
-
     this.backedProjects = this.model.backedProjects();
-
     this.followedProjects = this.model.followedProjects();
-
     this.createdProjects = this.model.createdProjects();
 
     this.listenTo(this.model, "sync change", this.render);
@@ -14,7 +11,7 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
       "a": this.createdProjects,
       "b": this.backedProjects,
       "c": this.followedProjects
-    }
+    };
 
     this.currentPage = 1;
     this.offSet = 3;
@@ -92,7 +89,6 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
 
     that.model.destroy({
       success: function () {
-        console.log("Successfully deleted account!")
         that.model.clear();
         CashCow.currentUser.clear();
         Backbone.history.navigate('', { trigger: true } )

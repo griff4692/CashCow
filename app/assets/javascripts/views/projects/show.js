@@ -6,9 +6,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.format = options.format;
 		this.catToHighlight = "";
 		this.highlightTitle = "";
-		this.currentUserFollows = false;
-
-		this.currentTabId = 'a';
 
 		var model = this.model;
 
@@ -22,6 +19,16 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.model.followers(), "change add remove", this.render);
 		this.listenTo(this.model.backers(), "change add remove", this.render);
+
+		this.tabs = {
+			"a": this.model,
+			"b": this.model.followers(),
+			"c": this.model.backers()
+		};
+
+		this.currentTabId = 'a';
+		this.currentPage = 1;
+		this.offSet = 3;
 	},
 
 	tagName: 'li',
@@ -34,12 +41,10 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	},
 
 	toggleTab: function (event) {
-		var that = this;
-		$('.tab-content').find('.' + this.currentTabId).removeClass('active');
-		this.currentTabId = $(event.currentTarget).data('id');
-		setTimeout(function () {
-			$('.tab-content').find('.' + that.currentTabId).addClass('active')
-		}, 500);
+		this.currentPage = 1;
+    var id = $(event.currentTarget).data('id');
+    this.currentTabId = id;
+    this.render();
 	},
 
 	visitProj: function () {
@@ -106,6 +111,21 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.html(content);
+
+		if (this.format==='detail') {
+			this.resetSubviews();
+			var userList = new CashCow.Views.UserList({
+				currentTab: this.tabs[this.currentTabId],
+				currentPage: this.currentPage,
+				offSet: this.offSet,
+				currentTabId: this.currentTabId
+			});
+
+			this.addSubview('.tab-content', userList);
+		};
+
+    this.attachSubviews();
+
 		return this;
 	}
 
