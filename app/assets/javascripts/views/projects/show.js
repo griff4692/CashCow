@@ -1,7 +1,14 @@
 CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	initialize: function (options) {
+		this.resetSubviews();
+
 		this.model = options.model;
-		this.creator = CashCow.Collections.users.getOrFetch(this.model.get('user_id'));
+		if(this.model.get('user_id') === CashCow.currentUser.id) {
+			this.creator = CashCow.currentUser;
+		} else {
+			this.creator = CashCow.Collections.users.getOrFetch(this.model.get('user_id'));
+		}
+
 		this.collection = options.collection;
 		this.format = options.format;
 		this.catToHighlight = "";
@@ -14,37 +21,32 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			this.highlightTitle = options.highlightTitle;
 		};
 
-		this.listenTo(this.model, "sync", this.check);
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
-		this.listenTo(this.model.followers(), "change add remove", this.render);
-		this.listenTo(this.model.backers(), "change add remove", this.render);
-
-		this.tabs = {
-			"a": this.model,
-			"b": this.model.followers(),
-			"c": this.model.backers()
-		};
 
 		this.currentTabId = 'a';
-		this.currentPage = 1;
-		this.offSet = 3;
+		this.generateUserList();
 	},
 
 	tagName: 'li',
+
+	generateUserList: function () {
+		if (this.format!=='detail') {
+			return;
+		}
+		var userList = new CashCow.Views.UserList({
+			model: this.model,
+			currentTabId: this.currentTabId,
+			view: this
+		});
+
+		this.addSubview('.tabs', userList);
+	},
 
 	events: {
 		"click .like-me": "handleFollow",
 		"click .unlike-me":"handleFollow",
 		"click #project-picture": "visitProj",
-		"click .tab": "toggleTab"
-	},
-
-	toggleTab: function (event) {
-		this.currentPage = 1;
-    var id = $(event.currentTarget).data('id');
-    this.currentTabId = id;
-    this.render();
 	},
 
 	visitProj: function () {
@@ -67,15 +69,19 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		  callback = function () {
 				that.model.followers().add(CashCow.currentUser);
 				CashCow.currentUser.followedProjects().add(that.model);
+				that.resetSubviews();
+				that.generateUserList();
 				that.render();
-			}
+			};
 		} else {
 			action = 'delete';
 			url = 'api/follows/' + CashCow.currentUser.id;
 			callback = function () {
 				that.model.followers().remove(CashCow.currentUser);
 				CashCow.currentUser.followedProjects().remove(that.model);
-				that.render()
+				that.resetSubviews();
+				that.generateUserList();
+				that.render();
 			}
 		}
 
@@ -111,19 +117,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.html(content);
-
-		if (this.format==='detail') {
-			this.resetSubviews();
-			var userList = new CashCow.Views.UserList({
-				currentTab: this.tabs[this.currentTabId],
-				currentPage: this.currentPage,
-				offSet: this.offSet,
-				currentTabId: this.currentTabId
-			});
-
-			this.addSubview('.tab-content', userList);
-		};
-
     this.attachSubviews();
 
 		return this;

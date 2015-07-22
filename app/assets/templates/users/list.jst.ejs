@@ -1,27 +1,46 @@
-<section class = 'page-tabs tab-titles group' id='page-tabs'>
-  <% if(currentPage > 1) { %>
-    <button class='prev pagination'> << </button>
-  <% } %>
-  <div id='current-page'>
-    <% if(users.length === 0) { %>
-      0
-    <% } else { %>
-      <%= currentPage %>
-    <% } %></div> of <%= totalPages %>
-  <% if(currentPage < totalPages) { %>
-    <button class='next pagination'> >> </button>
-  <% } %>
-</section>
+<ul class='tab-titles group' id='detail-tab'>
+   <li class='tab a' data-id='a'>
+     About <%= model.escape('title') %>
+   </li>
+   <li class='tab b' data-id='b'>
+     See All <%= model.numFollowers().toLocaleString() %> Followers
+   </li>
+   <li class='tab c' data-id='c'>
+     See All <%= model.numBackers() %> Backers
+   </li>
+</ul>
 
-<% users.forEach(function (user) { %>
-		<li id='user-description'>
-			<% if(currentTabId === 'b') { %>
-				<%= user.fullName() %> is following this project
-			<% } else { %>
-				<%= user.fullName() %> gave $<%= (user.get('amount')*100/100).toLocaleString() %> on
-				<% var dateParts = user.get('fund_date').split('-') %>
-				<%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
-				<%= Date.parse(backer.get('fund_date').split('-')) %>
-			<% } %>
-		</li>
-<% }); %>
+<% if(currentTabId === 'a') { %>
+  <%= subject %>
+<% } else { %>
+  <div class="tab-content">
+    <section class = 'page-tabs tab-titles group' id='page-tabs'>
+      <% if(currentPage > 1) { %>
+        <button class='prev pagination'> << </button>
+      <% } %>
+      <div id='current-page'>
+        <% if(subject.length === 0) { %>
+          0
+        <% } else { %>
+          <%= currentPage %>
+        <% } %></div> of <%= totalPages %>
+      <% if(currentPage < totalPages) { %>
+        <button class='next pagination'> >> </button>
+      <% } %>
+    </section>
+
+    <% subject.forEach(function (user) { %>
+    		<li id='user-description'>
+    			<% if(currentTabId === 'b') { %>
+    				<%= user.fullName() %> is following this project
+    			<% } else { %>
+    				<%= user.fullName() %> gave $<%= (user.get('amount')*100/100).toLocaleString() %> on
+    				<% var dateParts = user.get('fund_date').split('-') %>
+    				<%= new Date (dateParts[0], dateParts[1], dateParts[2].slice(0,2)) %>
+    				<%= Date.parse(backer.get('fund_date').split('-')) %>
+    			<% } %>
+    		</li>
+    <% }); %>
+  </div>
+
+<%  } %>
