@@ -1,25 +1,27 @@
 CashCow.Views.ProjectForm = Backbone.View.extend({
 	template: JST["projects/new_form"],
 
-	tagName: 'form',
-
 	events: {
-		"click button": "submit"
+		"click button": "submit",
+		"click .cat-modal": "openModal",
+		"click .close-out": "closeModal"
 	},
 
 	initialize: function (options) {
     this.$formErrors = options.$formErrors;
 		this.listenTo(this.model, "sync", this.render);
-		this.$el.addClass('form');
+		this.projCategories = options.projCategories;
+		this.selectedCat = this.projCategories[0];
 	},
 
 	render: function () {
 		var content = this.template({
-			model: this.model
+			model: this.model,
+			selectedCat: this.selectedCat,
+			projCategories: this.projCategories
 		});
 
 		this.$el.html(content);
-
 		return this;
 	},
 
@@ -28,7 +30,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 		var that = this;
 
-		var category =this.$('#category').val();
+		// var category =this.$('#category').val();
 		var title =this.$('#title').val();
 		var image = this.$('#image')[0].files[0];
 		var description =this.$('#description').val();
@@ -36,7 +38,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		var goal =this.$('#goal').val();
 
 		var formData = new FormData();
-		formData.append("project[category]", category);
+		formData.append("project[category]", this.selectedProj);
 		formData.append("project[title]", title);
 		formData.append("project[image]", image);
 		formData.append("project[description]", description);

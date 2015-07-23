@@ -132,7 +132,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
     var newProjView = new CashCow.Views.ProjectForm ({
       model: newProj,
       collection: this.collection,
-      $formErrors: this.$errors
+      $formErrors: this.$errors,
+      projCategories: this.projCategories
     });
 
     this._swapView(newProjView);

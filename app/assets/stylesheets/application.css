@@ -75,137 +75,6 @@ http://mcdlr.com/8/
    background: transparent;
    color: inherit;
  }
-
- /* all submit buttons when hovered turn darker green */
-.submit {
-  cursor: pointer;
-  position: relative;
-  display: block;
-  box-shadow: 0 2px 0 0 #070;
-  transition: box-shadow 100ms;
-  transition: top 1000ms;
-}
-
- .submit:hover {
-   background: #3caf6a;
-   border-color: #3caf6a;
- }
-
- .submit:active {
-   top: 4px;
-   box-shadow: none;
-   background: #3caf6a;
-   font-weight: 900;
- }
-
- .user-form {
-   display: relative;
- }
-
- .user-form:after {
-   content: 'or';
-   display: inline;
-   background: white;
-   padding: 0px 10px 0px 10px;
-    color: #2E5C8A;
-   position: relative;
-   font-style: italic;
-   left: 45%;
-   top: 8px;
- }
-
- /* forms */
-
- .form {
-   display: relative;
-   display: block;
-   background: #fff;
-   margin: 75px auto;
-   width: 350px;
-   border: 2px solid #eee;
-   border-radius: 25px;
-   font-size: 16px;
-   color: black;
-   font-weight: 700;
- }
-
- .form .form-header {
-   padding: 15px 0px 5px 0px;
-   font-size: 32px;
-   text-align: center;
-   color: #2E5C8A;
-   letter-spacing: 5px;
-   font-weight: bold;
-   line-height: 1.0;
- }
-
-.input > input, .form button {
-  margin: 15px 25px;
-  border: 1px solid #eee;
-  border-radius: 7.5px;
-  padding: 10px;
-  width: 280px;
-  display: block;
- }
-
- #profile-upload {
-   width: 300px;
-   margin: 20px 0px;
-   border-top: 2px solid #eee;
-   border-bottom: 2px solid #eee;
-   margin: auto;
- }
-
- #profile-upload > h5 {
-   display: block;
-   width: 150px;
-   float: left;
-   color: #2E5C8A;
- }
-
- #user-profile-pic {
-   display: block;
-   float: right;
-   width: 150px;
-   padding-top: 22px;
- }
-
- .form button {
-   margin: 20px auto;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   background: #3caf6a;
-   width: 200px;
-   color: white;
-   font-size: 20px;
-   text-align: center;
-   font-weight: 700;
- }
-
- .form button:hover {
-   color: black;
- }
-
- .input > input:focus {
-   border: 1px solid #2bde73;
-   font-weight: 500;
-   letter-spacing: 1px;
- }
-
- .twitter-sign-in {
-   margin: 0px 20px;
-   border-top: 2px solid #eee;
-   padding: 25px;
-   text-align: center;
-   font-weight: bold;
-  color: #2E5C8A;
- }
-
- .twitter-sign-in:hover {
-   color: black;
-   cursor: pointer;
- }
-
  /* Clearfix */
 
  .group:after {
@@ -568,4 +437,138 @@ footer
   border-left: 1px solid white;
   padding: 10px 20px;
   display: block;
+}
+
+.submit {
+ cursor: pointer;
+ position: relative;
+ display: block;
+ box-shadow: 0 2px 0 0 #070;
+ transition: box-shadow 100ms;
+ transition: top 1000ms;
+}
+
+.submit:hover {
+  background: #3caf6a;
+  border-color: #3caf6a;
+}
+
+.submit:active {
+  top: 4px;
+  box-shadow: none;
+  background: #3caf6a;
+  font-weight: 900;
+}
+
+.user-form {
+  display: relative;
+}
+
+.user-form:after {
+  content: 'or';
+  display: inline;
+  background: white;
+  padding: 0px 10px 0px 10px;
+   color: #2E5C8A;
+  position: relative;
+  font-style: italic;
+  left: 45%;
+  top: 8px;
+}
+
+/* forms */
+
+.form {
+  display: relative;
+  display: block;
+  background: #fff;
+  margin: 75px auto;
+  width: 350px;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+
+.form .form-header {
+  padding: 15px 0px 5px 0px;
+  font-size: 32px;
+  text-align: center;
+  color: #2E5C8A;
+  letter-spacing: 5px;
+  font-weight: bold;
+  line-height: 1.0;
+}
+
+.input > input, .form button {
+ margin: 15px 25px;
+ border: 1px solid #eee;
+ border-radius: 7.5px;
+ padding: 10px;
+ width: 280px;
+ display: block;
+}
+
+#profile-upload {
+  width: 300px;
+  margin: 20px 0px;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  margin: auto;
+}
+
+#profile-upload > h5 {
+  display: block;
+  width: 150px;
+  float: left;
+  color: #2E5C8A;
+}
+
+#user-profile-pic {
+  display: block;
+  float: right;
+  width: 150px;
+  padding-top: 22px;
+}
+
+.form button {
+  margin: 20px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #3caf6a;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form button:hover {
+  color: black;
+}
+
+.input > input:focus {
+  border: 1px solid #2bde73;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.twitter-sign-in {
+  margin: 0px 20px;
+  border-top: 2px solid #eee;
+  padding: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #2E5C8A;
+}
+
+.twitter-sign-in:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#twitter:hover {
+  color: black;
+  cursor: pointer;
 }

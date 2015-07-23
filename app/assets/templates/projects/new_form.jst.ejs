@@ -1,50 +1,53 @@
-<br>
-<label>Category:
-	<select id='category' class="category" name="category">
-		<option value="Art"
-		<% if (model.escape('category') === "Art") { %>
-			<%= "selected" %>
-		<% } %>
-		>
-			Art
-		</option>
-		<option value="Music"
-			<% if (model.escape('category') === "Music") { %>
-				<%= "selected" %>
-			<% } %>
-		>
-			Music
-		</option>
-		<option value="Philanthropy"
-			<% if (model.escape('category') === "Philanthropy") { %>
-				<%= "selected" %>
-			<% } %>
-			>
-			Philanthropy
-		</option>
-	</select>
-</label>
-<br>
-<label>Title:
-	<input id='title' type="text" name="title", val="<%= model.escape('title') %>">
-</label>
-<br>
+<div class="new-proj-header">
+	<h1 clas='new-proj-header'>What are you going to Create?</h1>
+	<section class='selection'>
+		<h2>I want to start a</h2>
+		<div class="cat-modal">
+			<%= selectedCat %> ▼
+		</div>
+		<h2>project called</h2>
+	</section>
+	<section class=title id='title'>
+		<input id='title' type="text" name="title" placeholder='title...' val="<%= model.escape('title') %>">
+	</section>
+</div>
+
 <label>Image URL:
-	<input id='image' type="file" name="image" value="<%= model.escape('image_url') %>">
+	<input id='image' type="file" name="image">
 </label>
-<br>
 <label>Description:
 	<textarea id='description' name="description" rows="8" cols="40">
 		<%= model.escape('description') %>
 	</textarea>
 </label>
-<br>
 <label> Deadline:
 	<input id='deadline' type="date" class='date' name="deadline">
 </label>
-<br>
 <label> Funding Goal:
 	<input id='goal' type="integer" name="goal">
 </label>
-<br>
-<button class="start-proj">Create New Project!</button>
+
+<button class="start-proj">Start!</button>
+
+
+<div class="modal">
+  <section class='modal-screen'>
+
+  </section>
+
+  <section class='modal-form group'>
+    <div class="close-out">
+      ●
+    </div>
+
+    <div class="selection group">
+        <ul class="category-choice" name="category">
+          <% projCategories.forEach(function (category) { %>
+              <li class='category' data-value='<%= category %>'>
+                <%= category %>
+              </li>
+          <% }) %>
+        </ul>
+        </ul>
+    </div>
+  </section>
