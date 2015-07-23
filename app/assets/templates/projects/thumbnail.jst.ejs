@@ -21,45 +21,46 @@
     <%= model.blurb(175) %>
   </div>
 
-  <div class="progress-container">
-    <div class='meter'
-     <span style='width:<%= Math.min(parseInt(model.fundedStatus()), 100) %>%'></span>
+  <% if (showStats) { %>
+    <div class="progress-container">
+      <div class='meter'
+       <span style='width:<%= Math.min(parseInt(model.fundedStatus()), 100) %>%'></span>
+      </div>
     </div>
-  </div>
 
-  <ul class="thumbnail-stats group">
-    <li id='funded_status'
-    <% if (catToHighlight === 'funded_status') { %>
-      class='active'
-    <% } %>
-    >
-      <strong>
-        <%= model.fundedStatus().toLocaleString() %>%
-      </strong>
-      funded
-    </li>
-    <li id='amount_funded'
-    <% if (catToHighlight === 'amount_funded') { %>
-      class='active'
-    <% } %>
-    >
-      <strong>
-        $<%= (model.pledged()/100*100).toLocaleString() %>
-      </strong>
-      pledged
-    </li>
+    <ul class="thumbnail-stats group">
+      <li id='funded_status'
+      <% if (catToHighlight === 'funded_status') { %>
+        class='active'
+      <% } %>
+      >
+        <strong>
+          <%= model.fundedStatus().toLocaleString() %>%
+        </strong>
+        funded
+      </li>
+      <li id='amount_funded'
+      <% if (catToHighlight === 'amount_funded') { %>
+        class='active'
+      <% } %>
+      >
+        <strong>
+          $<%= (model.pledged()/100*100).toLocaleString() %>
+        </strong>
+        pledged
+      </li>
 
-    <li id='days_left'
-    <% if (catToHighlight === 'days_left') { %>
-      class='active'
-    <% } %>
-    >
-      <strong>
-        <%= model.escape('days_left').toLocaleString() %>
-      </strong>
-      days to go
-    </li>
+      <li id='days_left'
+      <% if (catToHighlight === 'days_left') { %>
+        class='active'
+      <% } %>
+      >
+        <strong>
+          <%= model.escape('days_left').toLocaleString() %>
+        </strong>
+        days to go
+      </li>
 
-  </ul>
-
+    </ul>
+  <% } %>
 </div>

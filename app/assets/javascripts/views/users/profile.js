@@ -74,6 +74,7 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
         higlightTitle: "null",
         collection: "null",
         format: 'thumbnail',
+        stats: 'none'
       });
         that.addSubview('.user-projects', projDetailView);
     });

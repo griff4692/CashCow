@@ -84,6 +84,10 @@ class Project < ActiveRecord::Base
 		followers_with_total
 	end
 
+	def pledged
+		self.backings.sum(:amount)
+	end
+
 	def backers_with_amounts_and_total_funding
 		backings = self.backings.includes(:backer)
 

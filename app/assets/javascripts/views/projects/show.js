@@ -20,12 +20,18 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			this.catToHighlight = options.orderCategory;
 			this.highlightTitle = options.highlightTitle;
 		};
-		
+
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
 
 		this.currentTabId = 'a';
 		this.generateUserList();
+
+		if(options.stats && options.stats === 'none') {
+			this.showStats = false;
+		} else {
+			this.showStats = true;
+		}
 	},
 
 	tagName: 'li',
@@ -113,7 +119,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			creator: this.creator,
 			type: this.format,
 			catToHighlight: this.catToHighlight,
-			higlightTitle: this.highlightTitle
+			higlightTitle: this.highlightTitle,
+			showStats: this.showStats
 		});
 
 		this.$el.html(content);
