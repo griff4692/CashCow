@@ -115,3 +115,15 @@
 #creator-name:hover {
 		color: #2E5C8A;
 }
+
+#unfund {
+	position: relative;
+	font-size: 14px;
+	padding-left: 20px;
+	font-weight: 500;
+}
+
+#unfund:hover {
+	cursor: pointer;
+	top: 3px;
+}

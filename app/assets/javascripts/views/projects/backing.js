@@ -30,7 +30,14 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 
   submitBack: function(event) {
     event.preventDefault();
-    var data = $(event.currentTarget).serializeJSON().backing;
+
+		if(this.$('#real-donation') !== this.$('#fake-donation')) {
+			var paymentError = "<li class='payment-error'>The numbers don't match --></li>"
+			$('#errors').html(paymentError);
+			return;
+		};
+
+		var data = $(event.currentTarget).serializeJSON().backing;
 		data.project_id = this.model.id
 
 		data = { 'backing' : data };

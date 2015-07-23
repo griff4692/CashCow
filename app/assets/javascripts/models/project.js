@@ -95,6 +95,7 @@ CashCow.Models.Project = Backbone.Model.extend({
 				userAttributes = backer[0];
 				userAttributes.amount = backer[1];
 				userAttributes.fund_date = backer[2];
+				userAttributes.backing_id = backer[3];
 				toSet.push(userAttributes);
 			})
 

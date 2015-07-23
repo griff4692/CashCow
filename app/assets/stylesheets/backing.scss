@@ -75,6 +75,10 @@
   margin-left: 60px;
 }
 
+#project-form {
+  height: 500px;
+}
+
 .money-one {
   position: absolute;
   left: 48px;
@@ -97,5 +101,17 @@ input.money {
 }
 
 #payment-submit {
+  margin-top: -5px;
   margin-bottom: 25px;
+  padding: 10px 25px;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.payment-error {
+  position: absolute;
+  width: 350px;
+  top: 440px;
+  left: 165px;
+  font-weight: 900;
 }

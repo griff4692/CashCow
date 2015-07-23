@@ -2815,3 +2815,6 @@
 [07/23/15 16:47:11 -0400 Apps-Mac-mini-29.local (3693)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'backings' was not found on Follow; perhaps you misspelled it?
 [07/23/15 16:47:11 -0400 Apps-Mac-mini-29.local (3693)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'backings' was not found on Backing; perhaps you misspelled it?
 [07/23/15 16:47:11 -0400 Apps-Mac-mini-29.local (3693)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'backings' was not found on Follow; perhaps you misspelled it?
+[07/23/15 17:01:35 -0400 Apps-Mac-mini-29.local (3693)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  duplicate key value violates unique constraint "index_backings_on_user_id_and_project_id"
+DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
+

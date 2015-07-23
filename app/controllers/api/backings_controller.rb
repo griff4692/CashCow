@@ -14,6 +14,8 @@ class Api::BackingsController < ApplicationController
   end
 
   def destroy
+    @backing = Backing.find(params[:id])
+
     @backing.destroy!
     render json: { msg: "Successfully removed your funding of this project.  Your account will be reimbursed!"}
   end

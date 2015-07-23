@@ -53,6 +53,26 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		"click .like-me": "handleFollow",
 		"click .unlike-me":"handleFollow",
 		"click #project-picture": "visitProj",
+		"click #unfund": "unfund"
+	},
+
+	unfund: function (event) {
+		event.preventDefault();
+		var backer = this.model.backers().findWhere({id: CashCow.currentUser.id});
+		var backingId = backer.get('backing_id');
+		var that = this;
+
+		$.ajax({
+			url: 'api/backings/' + backingId,
+			type: 'delete',
+			dataType: "json",
+			success: function(data) {
+				alert("successfully removed your funding!");
+				that.model.backers().remove(backer);
+				CashCow.currentUser.backedProjects().remove(that.model);
+				that.render();
+			}
+		});
 	},
 
 	visitProj: function () {

@@ -101,33 +101,7 @@ class User < ActiveRecord::Base
 		self.save!
 		self.session_token
 	end
-
-	def backed_projects_avec_amount
-		backings = self.backings.includes(:project).includes(:backings)
-
-		backed_with_amount = []
-
-		backings.each do |backing|
-			backed_with_amount <<
-			[backing.project, backing.project.pledged]
-		end
-
-		backed_with_amount
-	end
-
-	def followed_projects_avec_amount
-		follows = self.follows.includes(:project).includes(:backings)
-
-		followed_with_amount = []
-
-		follows.each do |follow|
-			followed_with_amount <<
-			[follow.project, follow.project.pledged]
-		end
-
-		followed_with_amount
-	end
-
+	
 	protected
 
 	def ensure_session_token

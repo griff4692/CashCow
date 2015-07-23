@@ -50,8 +50,8 @@
                 Fund This Project
               </a>
         <% } else { %>
-          <a class='fund' href='/#/projects/<%= model.id %>/back'>
-            Adjust Funding From $<%= (model.backers().findWhere({id: CashCow.currentUser.id}).get('amount')*100/100).toLocaleString() %>
+          <a class='fund' id='unfund'>
+            Remove Funding $<%= (model.backers().findWhere({id: CashCow.currentUser.id}).get('amount')*100/100).toLocaleString() %>
           </a>
           <br>
         <% } %>

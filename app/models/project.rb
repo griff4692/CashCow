@@ -99,7 +99,7 @@ class Project < ActiveRecord::Base
 		backings.each do |backing|
 			backers_with_amounts_and_total_funding['total'] += backing.amount
 			backers_with_amounts_and_total_funding['backers'] <<
-			 [backing.backer, backing.amount, backing.created_at]
+			 [backing.backer, backing.amount, backing.created_at, backing.id]
 			backers_with_amounts_and_total_funding['num_backers'] += 1
 		end
 

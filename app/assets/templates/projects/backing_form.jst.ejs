@@ -15,7 +15,7 @@
 </div>
 
 <section class='backing-form'>
-  <form class='user-form form' id='project-form'>
+  <form class='form' id='project-form'>
 
   	<h1 class='form-header'>Back this Project</h1>
 
@@ -33,13 +33,13 @@
   	<div class="input">
   	    <div class="money-one">
           $
-  	    </div><input class='money' type="number" name="backing[amount]" placeholder="Donation">
+  	    </div><input class='money' id='real-donation' type="number" name="backing[amount]" placeholder="Donation">
   	</div>
 
     <div class="input">
       <div class="money-two">
         $
-      </div><input class='money' type="number" name="backing[retype]" placeholder="Re-Type Your Donation">
+      </div><input class='money' type="number" id='fake-donation' name="backing[retype]" placeholder="Re-Type Your Donation">
     </div>
 
   	<button class='submit' id='payment-submit'>
