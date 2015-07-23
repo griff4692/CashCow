@@ -1,33 +1,46 @@
 <div class="new-proj-header">
-	<h1 clas='new-proj-header'>What are you going to Create?</h1>
-	<section class='selection'>
-		<h2>I want to start a</h2>
-		<div class="cat-modal">
-			<%= selectedCat %> ▼
+	<section class='new-proj-selection'>
+		<h1 clas='new-proj-header'>What are <strong id='emphasis'>you</strong> going to Create?</h1>
+		<div class="proj-header-selection group">
+			<h2>I want to start a</h2>
+			<div class="proj-cat-modal">
+				<%= currentCategory %> ▼
+			</div>
+			<h2>project called</h2>
 		</div>
-		<h2>project called</h2>
 	</section>
-	<section class=title id='title'>
-		<input id='title' type="text" name="title" placeholder='title...' val="<%= model.escape('title') %>">
-	</section>
+	<input id='title' type="text" name="title" placeholder='title...' val="<%= model.escape('title') %>">
 </div>
 
-<label>Image URL:
-	<input id='image' type="file" name="image">
-</label>
-<label>Description:
-	<textarea id='description' name="description" rows="8" cols="40">
-		<%= model.escape('description') %>
-	</textarea>
-</label>
-<label> Deadline:
-	<input id='deadline' type="date" class='date' name="deadline">
-</label>
-<label> Funding Goal:
-	<input id='goal' type="integer" name="goal">
-</label>
+<section class='main-form group'>
+	<div class="project-start">
+		<button class='proj-start'>
+			Let's Get Started!
+		</button>
+	</div>
 
-<button class="start-proj">Start!</button>
+	<section class='form' id='project-form'>
+		<div class='group'>
+			<h6>Deadline:</h6>
+			<input id='deadline' type="date" class='date' name="deadline">
+		</div>
+		<div class='group'>
+			<h6 class='funding-goal group'>Funding Goal:</h6>
+			<input id='goal' type="integer" name="goal">
+		</div>
+		<div class='group'>
+			<h6>Description:</h5>
+			<textarea id='description' name="description" rows="3" cols="40">
+				<%= model.escape('description') %>
+			</textarea>
+		</div>
+
+		<div class='group'>
+			<h6>Upload an Image For Project:</h6>
+			<input id='image' type="file" name="image">
+		</div>
+	</section>
+</section>
 
 
 <div class="modal">
@@ -40,14 +53,13 @@
       ●
     </div>
 
-    <div class="selection group">
-        <ul class="category-choice" name="category">
-          <% projCategories.forEach(function (category) { %>
-              <li class='category' data-value='<%= category %>'>
-                <%= category %>
-              </li>
-          <% }) %>
-        </ul>
-        </ul>
-    </div>
+  <div class="selection group">
+		<ul class="category-choice proj-category-choice" name="category">
+      <% projCategories.forEach(function (category) { %>
+          <li class='category' id='<%= category %>' data-value='<%= category %>'>
+            <%= category %>
+          </li>
+      <% }) %>
+    </ul>
+	</div>
   </section>

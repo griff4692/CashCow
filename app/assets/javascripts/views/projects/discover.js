@@ -6,7 +6,6 @@ CashCow.Views.Discover = Backbone.CompositeView.extend({
     this.projCategories = options.projCategories;
     this.orderCategories = options.orderCategories;
     this.currentCategory = options.currentCategory;
-    this.modalCategory = null;
     this.currentOrder = options.order;
     this.modalCategory = null;
 

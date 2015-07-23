@@ -1,0 +1,139 @@
+/* new project form */
+
+.new-proj-header {
+  padding: 100px 0px 20px 0px;
+  display: block;
+  background-image: image_url('new_project.png');
+  background-blend-mode: saturation;
+  width: 960px;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: 500;
+  text-shadow: 10px white;
+
+  font-size: 48px;
+}
+
+#emphasis {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.new-proj-header > h1 {
+  text-shadow: 10px white;
+  letter-spacing: 10px;
+  padding-bottom: 50px;
+}
+
+.proj-header-selection {
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+.proj-header-selection >* {
+  float: left;
+  font-size: 32px;
+}
+
+.new-proj-selection .proj-cat-modal {
+  width: 320px;
+  padding: 0px 10px;
+}
+
+.new-proj-selection .proj-cat-modal:hover {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 34px;
+}
+
+input#title {
+  margin-top: 50px;
+  border-bottom: 3px solid #ccc;
+  letter-spacing: 5px;
+  width: 600px;
+  font-weight: 300;
+  background-blend-mode: darken;
+  color: white;
+  padding: 5px;
+}
+
+.main-form {
+  display: none;
+}
+
+.main-form.reveal {
+  display: block;
+}
+
+.project-start {
+  float: left;
+  display: block;
+  width: 477px;
+  border-right: 2px dashed #ccc;
+  height: 395px;
+  text-align: center;
+}
+
+.project-start > .proj-start {
+  margin-top: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #3caf6a;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.project-start > .proj-start:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.project-start > .proj-start:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+.form {
+  float: right;
+}
+
+#project-form {
+  display: block;
+  width: 450px;
+  margin-top: 25px;
+  height: 340px;
+  margin-right: 10px;
+}
+
+#project-form > .group {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+#project-form > .group:first-child {
+  border: none;
+}
+
+#project-form > .group > h6 {
+  float: left;
+  display: block;
+  margin: 0px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100px;
+}
+
+#project-form > .group > input {
+  display: block;
+  margin-top: 10px;
+  width: 200px;
+  padding: 5px 0px 5px 5px;
+}

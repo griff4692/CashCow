@@ -14,6 +14,20 @@
 	font-weight: 300;
 }
 
+.proj-errors {
+	position: absolute;
+	width: 300px;
+	top: 275px;
+	left: 150px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 25px #ccc;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 3px;
+
+}
+
 .proj-errors > li {
 	padding: 10px;
 	font-weight: 900;

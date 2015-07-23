@@ -3,25 +3,64 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 	events: {
 		"click button": "submit",
-		"click .cat-modal": "openModal",
-		"click .close-out": "closeModal"
+		"click .proj-cat-modal": "openModal",
+		"click .close-out": "closeModal",
+		"click .category": "changeCategory",
+		"change #title": "openForm"
+	},
+
+	openForm: function (event) {
+		event.preventDefault();
+		this.$('.main-form').addClass('reveal');
+	},
+
+	openModal: function (event) {
+		event.preventDefault();
+    this.render({modal: 'open'});
+    return;
+	},
+
+	closeModal: function(event) {
+		event.preventDefault();
+		this.render({modal: 'close'});
+		this.$('.close-out').removeClass('ready');
+		this.modalOrder = null;
+		this.modalCategory = null;
 	},
 
 	initialize: function (options) {
     this.$formErrors = options.$formErrors;
 		this.listenTo(this.model, "sync", this.render);
 		this.projCategories = options.projCategories;
-		this.selectedCat = this.projCategories[0];
+		this.currentCategory = this.projCategories[0];
 	},
 
-	render: function () {
+	changeCategory: function (event) {
+		event.preventDefault();
+		this.$currentCategory && this.$currentCategory.removeClass('selected');
+		this.$currentCategory = $(event.currentTarget);
+		this.$currentCategory.addClass('selected');
+		this.currentCategory = this.$currentCategory.data('value');
+		this.$('.close-out').addClass('ready');
+	},
+
+	render: function (options) {
 		var content = this.template({
 			model: this.model,
-			selectedCat: this.selectedCat,
+			currentCategory: this.currentCategory,
 			projCategories: this.projCategories
 		});
 
 		this.$el.html(content);
+
+		if (options && options.modal && options.modal === 'open') {
+			this.$('.modal').addClass('is-open');
+		}
+
+		if (options && options.modal && options.modal === 'close') {
+			this.$('.modal').removeClass('is-open');
+		}
+
 		return this;
 	},
 
@@ -38,7 +77,7 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 		var goal =this.$('#goal').val();
 
 		var formData = new FormData();
-		formData.append("project[category]", this.selectedProj);
+		formData.append("project[category]", this.currentCategory);
 		formData.append("project[title]", title);
 		formData.append("project[image]", image);
 		formData.append("project[description]", description);
@@ -52,7 +91,6 @@ CashCow.Views.ProjectForm = Backbone.View.extend({
 
 		this.model.saveFormData(formData, {
 			success: function() {
-				CashCow.currentUser.fetch();
 				that.collection.add(that.model);
 				Backbone.history.navigate('/#/projects/' + that.model.id, { trigger: true } );
 			},
