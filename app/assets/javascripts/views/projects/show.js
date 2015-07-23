@@ -32,6 +32,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		} else {
 			this.showStats = true;
 		}
+
+		this.justUnfunded = false;
 	},
 
 	tagName: 'li',
@@ -71,6 +73,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 				that.model.backers().remove(backer);
 				CashCow.currentUser.backedProjects().remove(that.model);
 				that.render();
+				that.justUnfunded = true;
 			}
 		});
 	},
@@ -140,7 +143,8 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			type: this.format,
 			catToHighlight: this.catToHighlight,
 			higlightTitle: this.highlightTitle,
-			showStats: this.showStats
+			showStats: this.showStats,
+			justUnfunded: this.justUnfunded
 		});
 
 		this.$el.html(content);

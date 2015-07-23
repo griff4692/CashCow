@@ -31,7 +31,7 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
   submitBack: function(event) {
     event.preventDefault();
 
-		if(this.$('#real-donation') !== this.$('#fake-donation')) {
+		if(this.$('#real-donation').val() !== this.$('#fake-donation').val()) {
 			var paymentError = "<li class='payment-error'>The numbers don't match --></li>"
 			$('#errors').html(paymentError);
 			return;

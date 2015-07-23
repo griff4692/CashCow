@@ -45,7 +45,7 @@
           </button>
           <br>
         <% } %>
-        <% if (! CashCow.currentUser.backs(model)) { %>
+        <% if (! CashCow.currentUser.backs(model) || justUnfunded) { %>
               <a class='fund' href='/#/projects/<%= model.id %>/back'>
                 Fund This Project
               </a>
