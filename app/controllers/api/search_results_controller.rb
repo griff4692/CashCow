@@ -4,8 +4,6 @@ class Api::SearchResultsController < ApplicationController
       .search_by_title(params[:query])
       .includes(:searchable)
 
-    debugger
-
     render :search
   end
 end

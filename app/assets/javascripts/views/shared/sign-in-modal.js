@@ -10,16 +10,10 @@ CashCow.Views.SignInModal = Backbone.View.extend({
 
   initialize: function (options) {
     if(options.callback) {
-      this.returnToCallback = options.callback;
+      this.callback = options.callback;
     }
     this.wrongCombo = false;
     this.emailValue = '';
-
-    var that = this;
-    this.callback = function () {
-      that.closeOut();
-      that.returnToCallback && that.returnToCallback();
-    };
   },
 
   signInAsGuest: function (event) {
@@ -28,10 +22,7 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     CashCow.currentUser.signIn({
       email: 'guest@cash-cow.io',
       password: 'password',
-      success: function () {
-        Backbone.history.navigate('', { trigger: true });
-        that.closeOut();
-      }
+      success: that.signInCallback.bind(that)
     })
   },
 
@@ -60,7 +51,7 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     CashCow.currentUser.signIn({
       email: formData.email,
       password: formData.password,
-      success: function () { return that.signInCallback() },
+      success: that.signInCallback.bind(that),
       error: function () {
         that.wrongCombo = true;
         that.emailValue = $form.find('#email').val();
@@ -69,11 +60,12 @@ CashCow.Views.SignInModal = Backbone.View.extend({
     });
   },
 
-  signInCallback: function(event){
+  signInCallback: function() {
     if(this.callback) {
       this.callback();
     } else {
       Backbone.history.navigate("", { trigger: true });
     }
+    this.closeOut();
   }
 });

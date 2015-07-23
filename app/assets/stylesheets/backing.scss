@@ -3,14 +3,14 @@
   height: 300px;
   width: 958px;
   background-image: image_url('logo_stencil.png');
-  background-blend-mode: saturation;
+  background-blend-mode: darken;
 }
 
 #hypo {
   display: block;
   padding: 5px;
   position:absolute;
-  border: 2px solid 2#f00;
+  border: 2px solid #f00;
   border-radius: 5px;
   width: 110px;
   left: 63px;
@@ -29,4 +29,73 @@
   font-size: 16px;
   font-weight: 700;
   color: #f00;
+}
+
+.indication {
+  width: 490px;
+  height: 297px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f9fafb;;
+  color: black;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  text-align: center;
+  overflow: hidden;
+}
+
+.indication > h1 {
+  font-size: 16px;
+  background: #3caf6a;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+#feature-progress {
+  position: absolute;
+  margin: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.backing-form {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-48%);
+}
+
+#project-form input {
+  width: 300px;
+  margin-left: 60px;
+}
+
+.money-one {
+  position: absolute;
+  left: 48px;
+  top: 220px;
+}
+
+input.money {
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+
+.money-two {
+  position: absolute;
+  left: 48px;
+  top: 273px;
+}
+
+#project-form:after {
+  content: '';
+}
+
+#payment-submit {
+  margin-bottom: 25px;
 }

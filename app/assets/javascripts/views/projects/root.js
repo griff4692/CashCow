@@ -13,7 +13,6 @@ CashCow.Views.ProjectRoot = Backbone.CompositeView.extend({
 	},
 
 	removeModal: function (event) {
-		debugger;
 		$('#content').find('#sign-in-modal').clear();
 	},
 

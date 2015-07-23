@@ -572,3 +572,9 @@ footer
   color: black;
   cursor: pointer;
 }
+
+.user-signup-form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

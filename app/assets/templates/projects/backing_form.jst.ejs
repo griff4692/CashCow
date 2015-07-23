@@ -3,26 +3,47 @@
     Type Below to See!
   </div>
   <input id='hypo' type="text" name="backing[amount]" value='' placeholder='$...'>
-  <div class="progress-container">
-    <div class='meter'
-     <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
+  <div>
+  <div class='indication'>
+    <h1>Here is an indication of how your contribution will help!</h1>
+    <div class="progress-container" id='feature-progress'>
+      <div class='meter'
+       <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
+      </div>
     </div>
   </div>
 </div>
 
+<section class='backing-form'>
+  <form class='user-form form' id='project-form'>
 
+  	<h1 class='form-header'>Back this Project</h1>
 
-<h1>Fund <%= model.escape('title') %> Project</h1>
-<br>
+  		<div class="input">
+  				<input id='fname' type="text" name="user[fname]"
+  					placeholder="First Name" value='<%= CashCow.currentUser.escape('fname') %>'>
+  		</div>
 
-<input id='hypo' type="text" name="backing[amount]" value=''>
+  	<div class="input">
+  		<input id='lname' type="text" name="user[lname]"
+  						 placeholder="Last Name" value='<%= CashCow.currentUser.escape('lname') %>'>
+  		</label>
+  	</div>
 
+  	<div class="input">
+  	    <div class="money-one">
+          $
+  	    </div><input class='money' type="number" name="backing[amount]" placeholder="Donation">
+  	</div>
 
-Here is an indication of how your contribution will help!
-<div class="progress-container">
-  <div class='meter'
-   <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
-  </div>
-</div>
-<br>
-<a href="/#/projects/<%= model.id %>">Go to Project Page</a>
+    <div class="input">
+      <div class="money-two">
+        $
+      </div><input class='money' type="number" name="backing[retype]" placeholder="Re-Type Your Donation">
+    </div>
+
+  	<button class='submit' id='payment-submit'>
+  		Submit Payment
+  	</button>
+  </form>
+</section>

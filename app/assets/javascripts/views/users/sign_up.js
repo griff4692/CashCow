@@ -4,6 +4,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
     this.model = options.model;
     this.collection = options.collection;
     this.$el.addClass('form');
+    this.$el.addClass('user-signup-form')
   },
 
   template: JST['users/form'],
@@ -49,7 +50,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
       success: function() {
         CashCow.currentUser.fetch();
         that.collection.add(that.model);
-        Backbone.history.navigate('', { trigger: true } );
+        Backbone.history.navigate('#/users/' + that.model.id, { trigger: true } );
       },
       error: function (model, error, options) {
         that.renderFormErrors(error.responseJSON);
