@@ -8,7 +8,7 @@
 #
 
 class Follow < ActiveRecord::Base
-  validates :follower, :project, presence: true
+  validates :user_id, :project_id, presence: true
   validates :user_id, uniqueness: { scope: :project_id }
 
   belongs_to :follower,

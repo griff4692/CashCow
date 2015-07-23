@@ -11,7 +11,7 @@
 #
 
 class Backing < ActiveRecord::Base
-  validates :backer, :project, :amount, presence: true
+  validates :project_id, :user_id, :amount, presence: true
   validates :amount, numericality: { only_integer: true }
 
   belongs_to :backer,

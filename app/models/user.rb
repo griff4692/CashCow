@@ -101,7 +101,7 @@ class User < ActiveRecord::Base
 		self.save!
 		self.session_token
 	end
-	
+
 	protected
 
 	def ensure_session_token

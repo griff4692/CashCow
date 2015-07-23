@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'kaminari'
 gem 'pg_search'
 
+gem 'faker', '~> 1.4.3'
+
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'newrelic_rpm'
