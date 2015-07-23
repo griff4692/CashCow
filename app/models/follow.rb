@@ -22,5 +22,4 @@ class Follow < ActiveRecord::Base
     foreign_key: :project_id,
     primary_key: :id,
     inverse_of: :follows
-
 end

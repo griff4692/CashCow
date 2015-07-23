@@ -5,7 +5,7 @@ lnames = ["Hewes", "Valentine", "Amus", "Adams", "Jones", "Porzingis"]
 	user = User.create!(
 		fname: fnames.sample,
 		lname: lnames.sample,
-		email: "griff4692" + i.to_s,
+		email: "griff04692" + i.to_s,
 		password: 'pablo40b')
 
 	title = "title" + i.to_s

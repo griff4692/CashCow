@@ -1,6 +1,4 @@
 class Api::ProjectsController < ApplicationController
-	# wrap_parameters false
-
 	def index
 		@projects = Project.includes(follows: :follower, backings: :backer).all
 		render 'index'

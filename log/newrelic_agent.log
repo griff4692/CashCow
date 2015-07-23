@@ -2761,3 +2761,21 @@
 [07/23/15 09:09:00 -0400 Apps-Mac-mini-29.local (859)] INFO : Installing Rails 4 view instrumentation
 [07/23/15 09:09:00 -0400 Apps-Mac-mini-29.local (859)] INFO : Installing Rails 4 Error instrumentation
 [07/23/15 09:09:00 -0400 Apps-Mac-mini-29.local (859)] INFO : Finished instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Starting the New Relic agent in "development" environment.
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] WARN : No configuration file found. Working directory = /Users/appacademy/Desktop/CashCow
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] WARN : Looked in these locations (based on defaults): /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/Desktop/CashCow/config/newrelic.yml, /Users/appacademy/Desktop/CashCow/newrelic.yml, /Users/appacademy/.newrelic/newrelic.yml, /Users/appacademy/newrelic.yml
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Environment: development
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : No known dispatcher detected.
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Application: development
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing ActiveJob instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing ActiveRecord 4 instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Net instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing deferred Rack instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Rack::Builder middleware instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Rails 3+ middleware instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Rails 4 Controller instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Rails 4 view instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Installing Rails 4 Error instrumentation
+[07/23/15 09:12:53 -0400 Apps-Mac-mini-29.local (2129)] INFO : Finished instrumentation
