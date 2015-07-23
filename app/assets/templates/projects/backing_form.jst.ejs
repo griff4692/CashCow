@@ -1,28 +1,28 @@
-<h1>Fund <%= model.escape('title') %> Project</h1>
-<br>
-<label>Hypothetical Donation
-  <input id='hypo' type="text" name="backing[amount]" value=''>
-</label>
-<form>
-  <input type="text" name="backing[amount]" value=''>
-  <br>
-  <button class='button back-dat-up'>Back This Project!</button>
-  <br>
-</form>
-<br>
-<h3>
-  Here is a description of the Project
-</h3>
-<br>
-<p>
-  <%= model.escape('description') %>
-</p>
-
-  Here is an indication of how your contribution will help!
+<div class="hypothetical-header">
+  <div id="hypo-text">
+    Type Below to See!
+  </div>
+  <input id='hypo' type="text" name="backing[amount]" value='' placeholder='$...'>
   <div class="progress-container">
     <div class='meter'
      <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
     </div>
   </div>
+</div>
+
+
+
+<h1>Fund <%= model.escape('title') %> Project</h1>
+<br>
+
+<input id='hypo' type="text" name="backing[amount]" value=''>
+
+
+Here is an indication of how your contribution will help!
+<div class="progress-container">
+  <div class='meter'
+   <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
+  </div>
+</div>
 <br>
 <a href="/#/projects/<%= model.id %>">Go to Project Page</a>
