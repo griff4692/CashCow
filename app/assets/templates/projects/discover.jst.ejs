@@ -22,7 +22,7 @@
 
   <section class='modal-form group'>
     <div class="close-out">
-      &times
+      ●
     </div>
 
     <div class="selection group">
@@ -44,3 +44,14 @@
   </section>
 
 </div>
+<% if(bookEnd - offSet > 0) { %>
+  <div class="show-less">
+    ☝
+  </div>
+<% } %>
+
+<% if(length > bookEnd) { %>
+  <div class="show-more">
+    ☟
+  </div>
+<% } %>

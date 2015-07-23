@@ -10,7 +10,7 @@
     	<h1 class='form-header modal-form-header'>Sign In</h1>
     	<div class="input modal-input">
         <input id='email' type="email" name="user[email]"
-               placeholder="Email">
+               placeholder="Email" value='<%= emailValue %>'>
     	</div>
       <% if (wrongCombo) { %>
         <div class="sign-in-error">
@@ -30,9 +30,10 @@
     <div class='twitter-sign-in'>
     	<a href="/auth/twitter"> Sign In with Twitter</a>
     </div>
-    <div class="guest-log-in">
+    <div class="guest-log-in group">
       <button id='guest-log-in'>
         Take A Guest Tour
       </button>
+      <a id='sign-up-from-sign-in' href='/#/users/new'>Sign Up</a>
     </div>
   </section>

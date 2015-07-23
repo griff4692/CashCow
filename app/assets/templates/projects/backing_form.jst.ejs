@@ -1,5 +1,8 @@
 <h1>Fund <%= model.escape('title') %> Project</h1>
 <br>
+<label>Hypothetical Donation
+  <input id='hypo' type="text" name="backing[amount]" value=''>
+</label>
 <form>
   <input type="text" name="backing[amount]" value=''>
   <br>
@@ -15,10 +18,10 @@
   <%= model.escape('description') %>
 </p>
 
-  Here is an indication of how your contribution will help!  
+  Here is an indication of how your contribution will help!
   <div class="progress-container">
     <div class='meter'
-     <span style='width:<%= Math.min(parseInt(model.fundedStatus()), 100) %>%'></span>
+     <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
     </div>
   </div>
 <br>

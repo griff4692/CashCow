@@ -3,8 +3,8 @@ json.(user, :id, :fname, :lname, :email)
 json.followedProjects user.followed_projects do |project|
 	json.(project, :id, :user_id, :category,
 	  :title, :description, :goal, :deadline,
-	  :created_at, :updated_at)
-	
+	  :created_at, :updated_at, :days_left)
+
 	json.image_url asset_path(project.image.url)
 	json.image_url_thumbnail asset_path(project.image.url(:thumbnail))
 end
@@ -12,7 +12,7 @@ end
 json.backedProjects user.backed_projects do |project|
 	json.(project, :id, :user_id, :category,
 		:title, :description, :goal, :deadline,
-		:created_at, :updated_at)
+		:created_at, :updated_at, :days_left)
 
 	json.image_url asset_path(project.image.url)
 	json.image_url_thumbnail asset_path(project.image.url(:thumbnail))
@@ -21,7 +21,7 @@ end
 json.createdProjects user.projects do |project|
 	json.(project, :id, :user_id, :category,
 		:title, :description, :goal, :deadline,
-		:created_at, :updated_at)
+		:created_at, :days_left, :updated_at)
 
 	json.image_url asset_path(project.image.url)
 	json.image_url_thumbnail asset_path(project.image.url(:thumbnail))

@@ -2,16 +2,25 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 	template: JST["projects/backing_form"],
 
   events: {
-    "submit form": "submitBack"
+    "submit form": "submitBack",
+		"change #hypo": "showProgress"
   },
 
-  initialize: function (options) {
-    this.listenTo(this.model, "sync", this.render);
-  },
+	initialize: function (options) {
+		this.listenTo(this.model, "sync", this.render);
+		this.hypothetical = 0;
+	},
+
+	showProgress: function (event) {
+		event.preventDefault();
+		this.hypothetical = $(event.currentTarget).val();
+		this.render();
+	},
 
   render: function () {
     var content = this.template({
-      model: this.model
+      model: this.model,
+			hypothetical: this.hypothetical
     });
 
     this.$el.html(content);

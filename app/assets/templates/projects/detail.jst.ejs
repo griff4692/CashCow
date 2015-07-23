@@ -1,7 +1,7 @@
 <div class='proj-header'>
   <h1 class='proj-title'><%= model.escape('title') %>
   </h1>
-  <h4>by <%= creator.fullName() %></h4>
+  <h4>by <strong id='creator-name'><%= creator.fullName() %></strong></h4>
 </div>
 
 <section class='proj-main group'>
@@ -20,7 +20,7 @@
         <%= model.pledged().toLocaleString() %>
       </div>
       <div class="description">
-        pledged of <strong>
+        pledged of <strong id='goal'>
         $<%= (model.get('goal')*100/100).toLocaleString() %>
         </strong>goal
       </div>

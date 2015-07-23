@@ -63,6 +63,7 @@ http://mcdlr.com/8/
  button {
    -webkit-appearance: none;
    display: inline-block;
+   text-decoration: none;
    box-sizing: content-box;
    margin: 0;
    padding: 0;
@@ -106,7 +107,9 @@ http://mcdlr.com/8/
    display: inline;
    background: white;
    padding: 0px 10px 0px 10px;
+    color: #2E5C8A;
    position: relative;
+   font-style: italic;
    left: 45%;
    top: 8px;
  }
@@ -127,9 +130,11 @@ http://mcdlr.com/8/
  }
 
  .form .form-header {
-   padding: 15px 0px 5px 25px;
+   padding: 15px 0px 5px 0px;
    font-size: 32px;
-   color: #6e6e6e;
+   text-align: center;
+   color: #2E5C8A;
+   letter-spacing: 5px;
    font-weight: bold;
    line-height: 1.0;
  }
@@ -143,17 +148,42 @@ http://mcdlr.com/8/
   display: block;
  }
 
+ #profile-upload {
+   width: 300px;
+   margin: 20px 0px;
+   border-top: 2px solid #eee;
+   border-bottom: 2px solid #eee;
+   margin: auto;
+ }
+
+ #profile-upload > h5 {
+   display: block;
+   width: 150px;
+   float: left;
+   color: #2E5C8A;
+ }
+
+ #user-profile-pic {
+   display: block;
+   float: right;
+   width: 150px;
+   padding-top: 22px;
+ }
+
  .form button {
-   margin-top: 20px;
-   margin-bottom: 20px;
+   margin: 20px auto;
    padding-top: 10px;
    padding-bottom: 10px;
-   border: 1px solid #2bde73;
-   background: #2bde73;
+   background: #3caf6a;
+   width: 200px;
    color: white;
    font-size: 20px;
    text-align: center;
-   font-weight: 900;
+   font-weight: 700;
+ }
+
+ .form button:hover {
+   color: black;
  }
 
  .input > input:focus {
@@ -168,10 +198,11 @@ http://mcdlr.com/8/
    padding: 25px;
    text-align: center;
    font-weight: bold;
+  color: #2E5C8A;
  }
 
  .twitter-sign-in:hover {
-   color: #3caf6a;
+   color: black;
    cursor: pointer;
  }
 
@@ -301,7 +332,7 @@ ul.user-menu img:active {
    border-top: none;
    border-bottom: none;
    margin: auto;
-   overflow:hidden;
+   overflow: hidden;
    background: #f9fafb;
    position: relative;
  }
@@ -360,6 +391,10 @@ ul.user-menu img:active {
   border: 3px solid #eee;
   border-radius: 15px;
   box-shadow: 0 3px 0 0 #eee;
+}
+
+.thumbnail > img {
+  height: 200px;
 }
 
 .thumbnail:nth-child(3n + 2) {
@@ -462,6 +497,28 @@ ul.user-menu img:active {
 
 span {
   border: 1px solid black;
+}
+
+.show-more,
+.show-less {
+  text-align: center;
+  position: relative;
+  font-size: 100px;
+  text-shadow: 0px 0px 10px 0px #ccc;
+  padding-bottom: 10px;
+  margin-top: -40px;
+}
+
+.show-more:hover,
+.show-less:hover {
+  color: #3caf6a;
+  cursor: pointer;
+}
+
+.show-more:active,
+.show-less:active {
+  text-shadow: none;
+  top: 5px;
 }
 
 /*

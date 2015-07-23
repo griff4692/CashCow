@@ -20,7 +20,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 			this.catToHighlight = options.orderCategory;
 			this.highlightTitle = options.highlightTitle;
 		};
-
+		
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
 

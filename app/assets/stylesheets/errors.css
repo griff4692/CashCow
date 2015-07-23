@@ -2,19 +2,16 @@
 	color: #f00;
 	letter-spacing: 3px;
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 	z-index: 4;
-	top: 60px;
+	left: 5px;
+	top: 150px;
+	width: 290px;
 	background: white;
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	border-radius: 10px;
-
-	font-size: 16px;
+	box-shadow: 0px 0px 25px #ccc;
+	font-size: 12px;
 	font-weight: 300;
-}
-
-.proj-errors {
 }
 
 .proj-errors > li {

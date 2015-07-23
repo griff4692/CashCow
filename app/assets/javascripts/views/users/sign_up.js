@@ -40,6 +40,11 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
 
     var that = this;
 
+    if (image===undefined) {
+      that.renderFormErrors(["Must Upload A Profile Picture"]);
+      return;
+    }
+
     this.model.saveFormData(formData, {
       success: function() {
         CashCow.currentUser.fetch();
@@ -47,7 +52,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
         Backbone.history.navigate('', { trigger: true } );
       },
       error: function (model, error, options) {
-        that.renderFormErrors([error.responseText]);
+        that.renderFormErrors(error.responseJSON);
       }
     });
   },
@@ -77,12 +82,16 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
     $errorsList.addClass('proj-errors');
     errors.forEach(function (error) {
       var $newLi = $('<li>');
-      if(error.length > 20) {
-        $newLi.text(error.slice(0,20) + "...");
+      if(error.slice(0,5) === "Paper") {
+        $newLi.text("You must upload a profile image!")
       } else {
-        $newLi.text(error)
+        if(error.length > 75) {
+          $newLi.text(error.slice(0,75) + "...");
+        } else {
+          $newLi.text(error)
+        }
+        $errorsList.append($newLi);
       }
-      $errorsList.append($newLi);
     });
 
     this.$formErrors.html($errorsList);

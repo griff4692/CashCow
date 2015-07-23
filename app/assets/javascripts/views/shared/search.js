@@ -7,7 +7,8 @@ CashCow.Views.Search = Backbone.View.extend({
 	},
 
 	events: {
-		"change #query": "search"
+		"change #query": "search",
+		"active #query": "search",
 	},
 
 	template: JST['shared/search'],
@@ -22,9 +23,8 @@ CashCow.Views.Search = Backbone.View.extend({
 	},
 
 	search: function (event) {
-		debugger;
 		event.preventDefault();
-    this.searchResults.query = this.$(".query").val();
+    this.searchResults.query = this.$("#query").val();
 
 		this.searchResults.fetch({
 			data: {

@@ -5,12 +5,14 @@ root page
 .featured-projects {
  width: 4800px;
  overflow: hidden;
+ height: 770px;
  transition: margin 1000ms;
 }
 
 .featured-projects > li {
  position: relative;
  width: 960px;
+ height: 770px;
  float: left;
  display: block;
 }
@@ -23,6 +25,7 @@ div.carousel {
  position: absolute;
  z-index: 2;
  font-size: 150px;
+ font-weight: 300;
  color: black;
  top: 225px;
  display: none;
@@ -43,6 +46,7 @@ div.carousel {
 
 .carousel:hover .slide-left {
  display: block;
+ color: black;
  cursor: pointer;
 }
 
@@ -58,7 +62,7 @@ div.carousel {
  position: absolute;
  text-align: center;
  width: 960px;
- background: black;
+ background: #000;
  opacity: 0.65;
  top: 0%;
  z-index: 3;
@@ -67,8 +71,8 @@ div.carousel {
 }
 
 .featured-projects .visit-button {
-  top: 78%;
-  padding: 40px;
+  top: 80.8%;
+  padding: 40px 0px;
   margin: auto;
   display: block;
   transition: opacity 500;
@@ -76,7 +80,8 @@ div.carousel {
 
 .featured-projects .visit-button:hover {
   font-weight: 900;
-  opacity: 1;
+  opacity: 0.95;
+  font-size: 72px;
 }
 
 .featured-projects h1 {
@@ -111,8 +116,7 @@ strong:hover {
  display: block;
  text-align: center;
  padding: 5px 25px;
- background: #2bde73;
- border: 1px solid #2bde73;
+ background: #3caf6a;
  border-radius: 7.5px;
  font-size: 24px;
  width: 250px;
@@ -123,8 +127,7 @@ strong:hover {
 }
 
 .featured-projects .submit:hover {
- background: #3caf6a;
- border: 1px solid #3caf6a;
+ background: #2bde73;
  font-weight: 900;
 }
 

@@ -1,20 +1,25 @@
 .proj-header {
 	text-align: center;
 	padding: 12px 0px 25px 0px;
-	color: black;
+	color: #2E5C8A;
 	position: relative;
 }
 
 .proj-header > h1 {
-	letter-spacing: 5px;
+	letter-spacing: 10px;
 	padding-bottom: 5px;
 	font-weight: 300;
 	font-size: 72px;
 }
 
+.proj-header > h4 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
 .proj-main {
 	display: block;
-	margin-left: 30px;
+	margin-left: 50px;
 	margin-top: -10px;
 }
 
@@ -29,10 +34,10 @@
 
 .proj-main .proj-stats {
 	display: block;
-	width: 350px;
+	width: 300px;
+	color: #2E5C8A;
 	float: right;
-	padding-left: 25px;
-	color: black;
+	padding-left: 50px;
 	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -79,6 +84,7 @@
 	font-weight: 900;
 	color: white;
 	border-radius: 10px;
+	margin-top: -3px;
 	box-shadow: 0 2px 0 0 #070;
 	transition: box-shadow 100ms;
 	transition: top 1000ms;
@@ -93,6 +99,19 @@
 	color: black;
 }
 
-.tab-content {
-	
+#goal {
+	font-weight: 900;
+}
+
+#goal:hover {
+	color: #2E5C8A;
+}
+
+#creator-name {
+	padding-left: 15px;
+	font-weight: 900;
+}
+
+#creator-name:hover {
+		color: #2E5C8A;
 }

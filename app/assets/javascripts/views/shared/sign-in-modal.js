@@ -13,6 +13,7 @@ CashCow.Views.SignInModal = Backbone.View.extend({
       this.returnToCallback = options.callback;
     }
     this.wrongCombo = false;
+    this.emailValue = '';
 
     var that = this;
     this.callback = function () {
@@ -40,9 +41,11 @@ CashCow.Views.SignInModal = Backbone.View.extend({
 
   render: function () {
     var content = this.template({
-      wrongCombo: this.wrongCombo
+      wrongCombo: this.wrongCombo,
+      emailValue: this.emailValue,
     });
     this.$el.html(content);
+    this.$('#email').focus();
     return this;
   },
 
@@ -60,6 +63,7 @@ CashCow.Views.SignInModal = Backbone.View.extend({
       success: function () { return that.signInCallback() },
       error: function () {
         that.wrongCombo = true;
+        that.emailValue = $form.find('#email').val();
         that.render();
       }
     });

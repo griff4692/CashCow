@@ -4,18 +4,14 @@
 
 		<div class="input">
 				<input id='fname' type="text" name="user[fname]"
-							 placeholder="First Name">
+					placeholder="First Name">
 		</div>
 
-		<div class="input">
-			<input id='lname' type="text" name="user[lname]"
-							 placeholder="Last Name">
-			</label>
-		</div>
-
-		<div class='input'>
-				<input id='user-profile-pic' type="file" name="user[image]">
-		</div>
+	<div class="input">
+		<input id='lname' type="text" name="user[lname]"
+						 placeholder="Last Name">
+		</label>
+	</div>
 
 	<div class="input">
     <input id='email' type="email" name="user[email]"
@@ -25,7 +21,11 @@
 	<div class="input">
 	    <input id='password' type="password" name="user[password]"
 	           placeholder="Password">
-	  </label>
+	</div>
+
+	<div id='profile-upload' class='group'>
+		<h5>Upload A Profile Picture</h5>
+		<input id='user-profile-pic' type="file" name="user[image]">
 	</div>
 
 	<button class='submit'>
