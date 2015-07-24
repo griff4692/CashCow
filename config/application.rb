@@ -27,6 +27,7 @@ module CashCow
     config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
+        :s3_host_name => ENV["s3_host_name"],
         :bucket => ENV["s3_bucket"],
         :access_key_id => ENV["AWS_ACCESS_KEY"],
         :secret_access_key => ENV["AWS_SECRET_ACCESS_ID"]

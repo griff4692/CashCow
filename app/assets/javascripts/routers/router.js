@@ -125,8 +125,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
   },
 
   projectNew: function () {
-    var callback = this.projectNew.bind(this);
-    if(!this._requireSignedIn(callback)) { return; }
+    // var callback = this.projectNew.bind(this);
+    // if(!this._requireSignedIn(callback)) { return; }
 
     var newProj = new CashCow.Models.Project();
     var newProjView = new CashCow.Views.ProjectForm ({

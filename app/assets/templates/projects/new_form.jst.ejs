@@ -25,14 +25,12 @@
 			<input id='deadline' type="date" class='date' name="deadline">
 		</div>
 		<div class='group'>
-			<h6 class='funding-goal group'>Funding Goal:</h6>
+			<h6 class='funding-goal'>Funding Goal:</h6>
 			<input id='goal' type="integer" name="goal">
 		</div>
 		<div class='group'>
 			<h6>Description:</h5>
-			<textarea id='description' name="description" rows="3" cols="40">
-				<%= model.escape('description') %>
-			</textarea>
+			<textarea id='description' name="description" placeholder="What are you seeking funding for?"></textarea>
 		</div>
 
 		<div class='group'>

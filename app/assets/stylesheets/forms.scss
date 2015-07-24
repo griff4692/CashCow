@@ -105,6 +105,10 @@ input#title {
   float: right;
 }
 
+.main-form {
+  margin-top: 50px;
+}
+
 #project-form {
   display: block;
   width: 450px;
@@ -136,4 +140,39 @@ input#title {
   margin-top: 10px;
   width: 200px;
   padding: 5px 0px 5px 5px;
+}
+
+#description {
+  padding: 5px;
+  height: 100px;
+  width: 285px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#project-form textarea:active {
+  border: #3caf6a;
+}
+
+#goal {
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#goal:hover {
+  color: black;
+  font-weight: 700;
+}
+
+#funding-goal:active {
+  color: black;
+  border: 10px solid black;
+}
+
+#project-form:last-child h6 {
+  margin-top: -15px;
 }
