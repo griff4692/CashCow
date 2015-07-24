@@ -13,11 +13,11 @@ CashCow.Carousel = function (el) {
   setInterval(function () {
     if (that.activeIdx === that.length - 1) {
       that.direction = -1;
-    } else if (that.activeId === 0) {
+    } else if (that.activeIdx === 0) {
       that.direction = 1;
     }
     that.slide(that.direction)
-    } ,4000);
+    }, 4000);
 };
 
 CashCow.Carousel.prototype.bindHandlers = function() {

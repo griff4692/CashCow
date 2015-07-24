@@ -9,19 +9,20 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 	initialize: function (options) {
 		this.listenTo(this.model, "sync", this.render);
 		this.hypothetical = 0;
-		this.stripeKey = 'sk_test_I3OBn2uH5hzSn4uSeHi62PIn';
+		// this.stripeKey = 'sk_test_I3OBn2uH5hzSn4uSeHi62PIn';
 	},
 
 	showProgress: function (event) {
 		event.preventDefault();
-		this.hypothetical = $(event.currentTarget).val();
+		this.hypothetical = this.$('#hypo').val();
 		this.render();
 	},
 
   render: function () {
-    var content = this.template({
+
+		var content = this.template({
       model: this.model,
-			hypothetical: this.hypothetical
+			hypothetical: Math.min(this.model.hypoFundedStatus(this.hypothetical), 1)
     });
 
     this.$el.html(content);
@@ -29,7 +30,7 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
   },
 
   submitBack: function(event) {
-    event.preventDefault();
+		event.preventDefault();
 
 		if(this.$('#real-donation').val() !== this.$('#fake-donation').val()) {
 			var paymentError = "<li id='payment-error'>The numbers don't match --></li>"

@@ -70,7 +70,8 @@ CashCow.Models.Project = Backbone.Model.extend({
 	},
 
 	hypoFundedStatus: function(number) {
-		return Math.floor(this.pledged() + number / this.get('goal') * 100);
+		var newAmount = this.pledged() + number;
+		return newAmount / this.get('goal');
 	},
 
 	blurb: function (len) {

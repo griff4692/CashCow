@@ -33,8 +33,8 @@ CashCow.Views.Header = Backbone.View.extend({
 
       this.$el.html(content);
       this.$el.addClass('nav');
-      var searchBarView = new CashCow.Views.Search();
-      this.$('#search-bar').html(searchBarView.render().$el);
+      // var searchBarView = new CashCow.Views.Search();
+      // this.$('#search-bar').html(searchBarView.render().$el);
       return this;
     },
 

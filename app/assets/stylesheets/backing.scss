@@ -77,12 +77,13 @@
 
 #project-form {
   height: 500px;
+  margin-top: 25px;
 }
 
 .money-one {
   position: absolute;
   left: 48px;
-  top: 220px;
+  top: 215px;
 }
 
 input.money {
@@ -93,7 +94,7 @@ input.money {
 .money-two {
   position: absolute;
   left: 48px;
-  top: 273px;
+  top: 268px;
 }
 
 #project-form:after {
@@ -101,8 +102,7 @@ input.money {
 }
 
 #payment-submit {
-  margin-top: -5px;
-  margin-bottom: 25px;
+  margin-top: 40px;
   padding: 10px 25px;
   font-size: 16px;
   letter-spacing: 4px;

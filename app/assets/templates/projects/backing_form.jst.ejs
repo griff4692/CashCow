@@ -8,14 +8,14 @@
     <h1>Here is an indication of how your contribution will help!</h1>
     <div class="progress-container" id='feature-progress'>
       <div class='meter'
-       <span style='width:<%= Math.min(parseInt(model.hypoFundedStatus(hypothetical)), 100) %>%'></span>
+       <span style='width:<%= hypothetical*100 %>%'></span>
       </div>
     </div>
   </div>
 </div>
 
 <section class='backing-form'>
-  <form class='form' id='project-form'>
+  <form class='form' id='project-form' style='margin-top:23px'>
 
   	<h1 class='form-header'>Back this Project</h1>
 

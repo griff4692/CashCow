@@ -417,16 +417,17 @@ footer
 .footer-nav-bar img {
   display: block;
   float: left;
-  height: 55px;
-  width: 100px;
-  padding: 3px;
-  border-radius: 5px;
+  height: 45px;
+  width: 115px;
+  padding: 2px;
+  border-right: 1px solid white;
 }
 
 .footer-nav-bar > div {
   float: right;
   display: block;
-  padding: 20px 30px;
+  padding: 15px 30px;
+  border-left: 1px solid white;
 }
 
 .footer-nav-bar > div:hover {
