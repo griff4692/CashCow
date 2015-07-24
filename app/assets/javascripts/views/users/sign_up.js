@@ -80,7 +80,7 @@ CashCow.Views.SignUp = Backbone.CompositeView.extend({
 
   renderFormErrors: function (errors) {
     var $errorsList = $('<ul>');
-    $errorsList.addClass('proj-errors');
+    $errorsList.addClass('user-errors');
     errors.forEach(function (error) {
       var $newLi = $('<li>');
       if(error.slice(0,5) === "Paper") {

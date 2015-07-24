@@ -9,7 +9,15 @@ User.create!(
 	image: Faker::Avatar.image
 )
 
-50.times do |i|
+User.create!(
+	fname: "Carmelo",
+	lname: "Anthony",
+	email: 'guest@cash-cow.io',
+	password: 'password',
+	image: asset_path('logo_multiple')
+)
+
+25.times do |i|
 	user = User.create!(
 		fname: fnames.sample,
 		lname: lnames.sample,
@@ -26,7 +34,7 @@ User.create!(
 
 		Project.create!(
 			user_id: user.id,
-			title:  Faker::Team.name,
+			title:  Faker::Team.name + i + j,
 			description: Faker::Lorem.paragraph,
 			category: category,
 			goal: rand(2500000),
