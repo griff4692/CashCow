@@ -72,7 +72,8 @@ input#title {
   display: block;
   width: 477px;
   border-right: 2px dashed #ccc;
-  height: 395px;
+  height: 415px;
+  margin: 90px auto;
   text-align: center;
 }
 
@@ -105,15 +106,10 @@ input#title {
   float: right;
 }
 
-.main-form {
-  margin-top: 50px;
-}
-
 #project-form {
   display: block;
   width: 450px;
-  margin-top: 25px;
-  height: 340px;
+  height: 425px;
   margin-right: 10px;
 }
 
@@ -129,9 +125,9 @@ input#title {
 #project-form > .group > h6 {
   float: left;
   display: block;
-  margin: 0px;
-  font-size: 16px;
-  padding: 10px;
+  color: #2E5C8A;
+  font-size: 14px;
+  padding-top: 35px;
   width: 100px;
 }
 

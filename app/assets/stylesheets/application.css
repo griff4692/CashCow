@@ -308,15 +308,6 @@ ul.user-menu img:active {
   cursor: pointer;
 }
 
-#thumbnail-title {
-  padding-top: 5px;
-  font-size: 20px;
-  font-weight: 900px;
-  color: black;
-  margin-bottom: 3px;
-  letter-spacing: 6px;
-}
-
 #name {
   font-size: 12px;
   padding-bottom: 10px;
@@ -326,6 +317,18 @@ ul.user-menu img:active {
   padding-bottom: 5px;
   opacity: 0.5;
 }
+
+#thumbnail-title {
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: 900px;
+  color: black;
+  margin-bottom: 3px;
+  letter-spacing: 6px;
+  display: block;
+  margin-right: 28px;
+}
+
 
 .thumbnail-stats {
   position: absolute;
@@ -408,35 +411,59 @@ footer
   border-bottom: 0;
   display: block;
   color: white;
+  position:relative;
 }
 
-.footer-menu {
+.footer-nav-bar img {
   display: block;
   float: left;
+  height: 55px;
+  width: 100px;
+  padding: 3px;
+  border-radius: 5px;
 }
 
-.footer-menu li:hover
- {
-  color: black;
-}
-
-
-.footer-nav-bar a:hover
- {
-  color: black;
-}
-
-.footer-menu > * {
-  border-right: 1px solid white;
-  float: left;
-  padding: 10px 20px;
-}
-
-.footer-nav-bar > a {
+.footer-nav-bar > div {
   float: right;
-  border-left: 1px solid white;
-  padding: 10px 20px;
   display: block;
+  padding: 20px 30px;
+}
+
+.footer-nav-bar > div:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#contact-modal {
+  position: absolute;
+  display: none;
+  color: #2E5C8A;
+  width: 200px;
+  left: 72%;
+  top: -169%;
+  z-index: 100000;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 3px #ccc;
+  background: white;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300px;
+}
+
+#contact-modal.active {
+  display: block;
+}
+
+#close-contact {
+  position: absolute;
+  color: black;
+  left: 230px;
+  top: -5px;
+  font-size: 28px;
+}
+
+#close-contact:hover {
+  font-weight: 900;
 }
 
 .submit {

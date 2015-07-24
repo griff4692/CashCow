@@ -6,7 +6,7 @@ root page
  width: 4800px;
  overflow: hidden;
  height: 770px;
- transition: margin 1000ms;
+ transition: margin 1800ms;
 }
 
 .featured-projects > li {

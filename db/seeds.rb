@@ -1,14 +1,6 @@
 fnames = ["Bertha", "Patty", "Seamus", "Angelika", "Nelson", "Pablo", "Quincy", "Carmelo", "Peter", "Pam" "Kristaps"]
 lnames = ["Hewes", "Valentine", "Heaney", "Houston", "Jones", "Mandela", "Porzingis", "Anthony", "Pan", "DeLaPieu"]
 
-User.create!(
-	fname: "Griffin",
-	lname: "Adams",
-	email: 'griff4692@gmail.com',
-	password: 'pablo40b',
-	image: Faker::Avatar.image
-)
-
 25.times do |i|
 	user = User.create!(
 		fname: fnames.sample,
