@@ -59,7 +59,7 @@
   border: 2px solid #ccc;
   border-radius: 5px;
   top: 50%;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
 }
 
@@ -106,12 +106,4 @@ input.money {
   padding: 10px 25px;
   font-size: 16px;
   letter-spacing: 4px;
-}
-
-.payment-error {
-  position: absolute;
-  width: 350px;
-  top: 440px;
-  left: 165px;
-  font-weight: 900;
 }

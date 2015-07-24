@@ -32,7 +32,7 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
     event.preventDefault();
 
 		if(this.$('#real-donation').val() !== this.$('#fake-donation').val()) {
-			var paymentError = "<li class='payment-error'>The numbers don't match --></li>"
+			var paymentError = "<li id='payment-error'>The numbers don't match --></li>"
 			$('#errors').html(paymentError);
 			return;
 		};

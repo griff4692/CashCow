@@ -51,3 +51,11 @@
 	padding: 10px;
 	font-weight: 900;
 }
+
+#payment-error {
+	top: 440px;
+	position: absolute;
+	width: 295px;
+	font-weight: 900;
+	left: 223px;
+}
