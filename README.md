@@ -19,6 +19,25 @@ Users:
 - Can browse projects via discovery page by category and sub-criteria (with pagination)
   - Full screen modal allows user to easily select from available filters and orders
 
+Features:
+
+- Session management
+- Single page app with dynamic content refreshing
+- Password and cookie encryption
+- Pagination
+- OmniAuth with Twitter
+- Modal, carousel, and tab content
+- Dynamic responses to user interactions via Javascript and CSS
+
+Features to Add:
+
+- Investment funds
+- Suggested donations and suggested projects (personalized)
+- Line charts for each project plotting funded status over time
+- Multiple session management
+- Dynamic querying across project titles / descriptions and usernames
+- Using Google Maps Api to scan projects by proximity
+
 ## Design Docs
 * [View Wireframes][views]
 * [DB schema][schema]
