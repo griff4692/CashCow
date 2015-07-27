@@ -7,19 +7,16 @@ gem 'pg'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 
-gem 'stripe'
-
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'kaminari'
-gem 'pg_search'
 
 gem 'faker', '~> 1.4.3'
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails', '~> 5.0.5'
+
 gem 'jbuilder', '~> 2.0'
 gem 'newrelic_rpm'
 

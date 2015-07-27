@@ -6,6 +6,17 @@ CashCow.Views.Search = Backbone.View.extend({
 		this.query = '';
 		// this.$('.search-results').addClass('hidden');
 		this.listenTo(this.projects, "sync", this.search);
+
+		$("#query").autocomplete({
+			appendTo: '.search-results',
+			delay: 500,
+			autoFocus: true,
+			minLength: 2,
+			source: function(request, response) {
+
+			}
+		});
+
 		this.render();
 	},
 

@@ -27,17 +27,16 @@ CashCow.Views.Header = Backbone.View.extend({
     template: JST['shared/header'],
 
     render: function(){
-      console.log('render')
       var content = this.template({
           currentUser: CashCow.currentUser
     });
 
       this.$el.html(content);
       this.$el.addClass('nav');
-      var searchBarView = new CashCow.Views.Search({
-        projects: this.projects
-      });
-      this.$('#search-bar').html(searchBarView.render().$el);
+      // var searchBarView = new CashCow.Views.Search({
+      //   projects: this.projects
+      // });
+      // this.$('#search-bar').html(searchBarView.render().$el);
       return this;
     },
 

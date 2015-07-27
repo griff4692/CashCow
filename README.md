@@ -1,22 +1,23 @@
 # CashCow
 
-[Heroku link][heroku]
+[link][link]
 
-[heroku]: http://cash-cow.herokuapp.com
+[link]: http://www.cash-cow.io
 
-## Minimum Viable Product
-CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
+## Summary description
+CashCow is a clone of Kickstarter built on Rails and Backbone.  CashCow is fully a one page app, accessing the Rails server via Ajax requests.
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
+Users:
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create projects
-- [ ] Back projects
-- [ ] Follow projects
-- [ ] Navigate to profile to view created, backed, and starred projects
-- [ ] Dynamic querying
-- [ ] Browse projects by category and sub-criteria (with scrolling feature)
+- Can create and delete accounts
+- Can create projects
+- Can back projects
+- Can follow projects
+- Can create sessions (log-in)
+  - Are prompted to sign in via full screen modal if attempting to do any of the above CRUD actions without an active session
+- Can navigate to profile view to view created, backed, and starred project tabs
+- Can browse projects via discovery page by category and sub-criteria (with pagination)
+  - Full screen modal allows user to easily select from available filters and orders
 
 ## Design Docs
 * [View Wireframes][views]
@@ -24,80 +25,3 @@ CashCow is a clone of Kickstarter built on Rails and Backbone. Users can:
 
 [views]: ./docs/views.md
 [schema]: ./docs/schema.md
-
-## Implementation Timeline
-
-### Phase 1: User Authentication, Project Creation: models and collections (~1 day)
-I will create Rails models for users and projects, the latter of which will have functions to handle search criteria.  Require sign in validations in place.
-
-Sign in and sign up will both be rails views on separate pages.
-
-Successful sign in / sign up takes users back to the root Backbone Page.
-
-Before moving on to backbone, I will create a Rails ProjectsController with actions for create, show, and index (based on query criteria).
-
-Start link will take user to a backbone new project form.
-
-Next, I will create backbone project model and projects collection which will leverage the Rails projects controller.
-
-Will ensure that I can create projects in backbone that persist on the database.  Deploy to Heroku!
-
-[Details][phase-one]
-
-### Phase 2: Home Page View galore: homepage with new form and projects by category (1 day)
-
-I will design the homepage to show the top projects by criteria (most popular and best funded for right now).  There will be tabs to toggle between those 2 criteria among each category (movies, art, etc.)
-
-Changing categories on the left will fire off a new request to the index action in the rails projects controller, resulting in swapping subviews based on the results of the query.
-
-In the afternoon, I will write a JQUERY plug-in to handle the search bar in the header. These will be populated dynamically with direct links to the matched projects.
-
-[Details][phase-two]
-
-### Phase 3: Discover and individual project pages (~2 days)
-
-I will create a route called #discover which will house links to all the projects BY category. Clicking on a category link will take add a subview that shows all the projects by that category. #/discover.
-
-The subviews will very simply contain an array of the show subviews for each project (nicely formatted).
-
-To recap: clicking discover creates a new composite view which houses the search criteria, and an index view (which in turn serves as the composite view for the show pages that match the criteria).
-
-Day 2 of phase 3, write a JQUERY plug in to handle scrolling through the thumbnails.  Make sure to leave a full day for this as it must be like silk.
-
-Changing query will change query url string - so if a refresh page happens, backbone will know which index view to display.
-
-[Details][phase-three]
-
-### Phase 4: Backing / Liking Projects (1 day)
-
-I'll start on the Rails side by creating models backing and follow which will represent join tables between users and projects.  Complete associations in Rails.
-
-Next, in the backbone show view, add buttons for pledging and following.  Pledging will be a dynamic form on the page with just an input tag.  Hitting enter will fire off an alert confirming submission as well as a refresh of the project stats on page.
-
-[Details][phase-four]
-
-### Phase 5: Profile Page (1 day)
-
-Now that users can back, create, and follow projects, I can create a complete profile page.  Use toggle plug-in again this time to toggle between backed, created, and followed projects.
-
-[Details][phase-five]
-
-### Phase 6: CSS (2-3 days)
-- [ ] Improve and fine-tune CSS
-- [ ] Fine tune everything before moving on to bonus features
-
-### Bonus Features (4-5 Days ~ no priority to ordering)
-- [ ] Implement rewards and suggested donations (based on rewards)
-- [ ] Add Omni Auth (3rd party sign in - ie 'sign in with Google')
-- [ ] Creation of 'funds' based on investment criteria (likely too ambitious)
-- [ ] Implement funding timeline chart on project show pages!
-- [ ] Multiple sessions/session management
-- [ ] Custom project urls
-- [ ] Provide tools for project owners to issue email / page updates to followers and backers
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
-[phase-six]: Bonus features TBD

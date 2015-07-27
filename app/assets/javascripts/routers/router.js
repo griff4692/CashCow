@@ -12,8 +12,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
 
     this.users = options.users;
 
-    // $('.spin').spin('hide');
-
     this.$errors = $('#errors');
   },
 

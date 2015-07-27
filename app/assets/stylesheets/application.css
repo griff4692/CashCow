@@ -12,18 +12,9 @@
  *
  *= require_tree .
  *= require_self
- *= require jquery-ui/autocomplete
  */
 
  /* Reset */
-/*
-characters to use 🔍
-❱ ❰
-❭
-❬
-http://mcdlr.com/8/
-*/
-
 
  html, body, header, nav, h1, a,
  ul, li, strong, main, button, i,
