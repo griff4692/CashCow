@@ -1,8 +1,8 @@
 # CashCow
 
-[link][link]
+[link][Cash Cow]
 
-[link]: http://www.cash-cow.io
+[Cash Cow]: http://www.cash-cow.io
 
 ## Summary description
 CashCow is a clone of Kickstarter built on Rails and Backbone.  CashCow is fully a one page app, accessing the Rails server via Ajax requests.
