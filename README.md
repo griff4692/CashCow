@@ -1,6 +1,6 @@
 # CashCow
 
-[link][Cash Cow]
+[Cash Cow][Cash Cow]
 
 [Cash Cow]: http://www.cash-cow.io
 
