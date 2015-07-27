@@ -19,6 +19,7 @@ gem 'pg_search'
 gem 'faker', '~> 1.4.3'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'jbuilder', '~> 2.0'
 gem 'newrelic_rpm'
 

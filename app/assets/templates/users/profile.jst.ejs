@@ -1,6 +1,7 @@
 <header class='profile-header group'>
    <div class="profile-picture">
      <img src="<%= user.escape('image_url_profile') %>" alt="PROFPIC">
+    <button id='delete-user' class='delete-account'>Delete This Account</button>
    </div>
    <div class="profile-info">
      <h1> <%= user.fullName() %> </h1>
@@ -11,8 +12,6 @@
       <ul>
    </div>
 </header>
-
-<button id='delete-user' class='delete-account'>Delete This Account</button>
 
 <ul class='user-stats'>
   <li></li>

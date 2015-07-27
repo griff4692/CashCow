@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui/autocomplete
  */
 
  /* Reset */
@@ -136,7 +137,6 @@ http://mcdlr.com/8/
  ul.sign-up-menu {
    display: block;
    float: right;
-   overflow: hidden;
  }
 
  ul.sign-up-menu > a {
@@ -149,7 +149,6 @@ http://mcdlr.com/8/
  ul.user-menu {
    display: block;
    float: right;
-   overflow: hidden;
  }
 
  ul.user-menu > li {
@@ -165,7 +164,6 @@ http://mcdlr.com/8/
 
  ul.user-menu img {
    display: block;
-   overflow: hidden;
    width: 20px;
    height: 20px;
    border: 1.5px solid white;
@@ -203,7 +201,6 @@ ul.user-menu img:active {
    margin: auto;
    overflow: hidden;
    background: #f9fafb;
-   position: relative;
  }
 
 .modal-vehicle {

@@ -7,11 +7,11 @@
   margin-left: 12px;
   border-radius: 10px;
   background: white;
-  overflow: hidden;
 }
 
 #query {
   display: block;
+  position: relative;
   width: 230px;
   color: black;
   font-size: 12px;
@@ -22,4 +22,35 @@
 
 #search-bar {
   border: none;
+}
+
+.search-results {
+  position: absolute;
+  display: block;
+  top: 8.5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 100000;
+}
+
+.search-results > li {
+  padding: 10px;
+  display: block;
+  position: relative;
+  color: black;
+  border-top: 1px solid #ccc;
+  background: #f9fafb;
+}
+
+.search-results > li:nth-child(odd) {
+  background: #eee;
+}
+
+.search-results a:hover {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.search-results.hidden {
+  display: none;
 }

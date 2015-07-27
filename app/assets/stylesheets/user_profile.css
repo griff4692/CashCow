@@ -1,10 +1,11 @@
 .profile-header {
 	background: white;
-	position: relative;
+	/*position: relative;*/
 }
 .profile-picture {
 	padding: 5px;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	position: relative;
 	float: left;
 }
 
@@ -38,12 +39,13 @@
 
 #delete-user {
 	position: absolute;
+	z-index: 20;
+	color: black;
 	font-size: 14px;
 	font-weight: 300;
+	width: 300px;
 	letter-spacing: 3px;
 	padding-top: 9px;
-	left: 4px;
-	top: 165px;
 }
 
 #delete-user:hover {

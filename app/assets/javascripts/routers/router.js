@@ -2,7 +2,6 @@ CashCow.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.root$el = options.root$el;
     this.collection = options.collection;
-    this.collection.fetch();
     this.projCategories = ["Art", "Music", "Philanthropy"];
     this.orderCategories = {
       num_followers: ['desc', "Most Popular"],
@@ -12,6 +11,8 @@ CashCow.Routers.Router = Backbone.Router.extend({
     };
 
     this.users = options.users;
+
+    // $('.spin').spin('hide');
 
     this.$errors = $('#errors');
   },

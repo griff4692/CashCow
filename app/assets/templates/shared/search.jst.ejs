@@ -1,11 +1,11 @@
 <div class='query'>
-	<input id='query' type="text" placeholder='Search For Project'>
+	<input id='query' type="text" placeholder='Search For Project' value='<%= query %>'>
 </div>
 
-<section class="results">
-	<% results.each(function (result) { %>
-		<article>
-			<%= result.escape('title') %>
-		</article>
+<ul class="search-results">
+	<% results.forEach(function (result) { %>
+		<li>
+			<a href="#/projects/<%= result.id %>"><%= result.escape('title') %></a>
+		</li>
 	<% }) %>
-</section>
+</ul>

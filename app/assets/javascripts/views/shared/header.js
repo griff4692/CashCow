@@ -5,6 +5,7 @@ CashCow.Views.Header = Backbone.View.extend({
         "signIn signOut",
         this.render);
 
+      this.projects = options.projects
       this.render();
     },
 
@@ -33,8 +34,10 @@ CashCow.Views.Header = Backbone.View.extend({
 
       this.$el.html(content);
       this.$el.addClass('nav');
-      // var searchBarView = new CashCow.Views.Search();
-      // this.$('#search-bar').html(searchBarView.render().$el);
+      var searchBarView = new CashCow.Views.Search({
+        projects: this.projects
+      });
+      this.$('#search-bar').html(searchBarView.render().$el);
       return this;
     },
 

@@ -9,7 +9,6 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 	initialize: function (options) {
 		this.listenTo(this.model, "sync", this.render);
 		this.hypothetical = 0;
-		// this.stripeKey = 'sk_test_I3OBn2uH5hzSn4uSeHi62PIn';
 	},
 
 	showProgress: function (event) {
@@ -19,7 +18,6 @@ CashCow.Views.BackingForm = Backbone.CompositeView.extend({
 	},
 
   render: function () {
-
 		var content = this.template({
       model: this.model,
 			hypothetical: Math.min(this.model.hypoFundedStatus(this.hypothetical), 1)

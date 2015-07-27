@@ -2948,3 +2948,86 @@ DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
 [07/24/15 11:04:39 -0400 Apps-Mac-mini-18.local (52098)] INFO : Installing Rails 4 view instrumentation
 [07/24/15 11:04:39 -0400 Apps-Mac-mini-18.local (52098)] INFO : Installing Rails 4 Error instrumentation
 [07/24/15 11:04:39 -0400 Apps-Mac-mini-18.local (52098)] INFO : Finished instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Starting the New Relic agent in "development" environment.
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Environment: development
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : No known dispatcher detected.
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Application: development
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing ActiveJob instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing ActiveRecord 4 instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Net instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing deferred Rack instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Rack::Builder middleware instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Rails 3+ middleware instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Rails 4 Controller instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Rails 4 view instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Installing Rails 4 Error instrumentation
+[07/27/15 12:05:47 -0400 Griffincbookpro (16018)] INFO : Finished instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Starting the New Relic agent in "development" environment.
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Environment: development
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Dispatcher: webrick
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Application: development
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing ActiveJob instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing ActiveRecord 4 instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Net instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing deferred Rack instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Rack::Builder middleware instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Rails 3+ middleware instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Rails 4 Controller instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Rails 4 view instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Installing Rails 4 Error instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Finished instrumentation
+[07/27/15 12:06:47 -0400 Griffincbookpro (17338)] INFO : Doing deferred dependency-detection before Rack startup
+[07/27/15 12:06:55 -0400 Griffincbookpro (17338)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/27/15 12:06:55 -0400 Griffincbookpro (17338)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/27/15 12:40:57 -0400 Griffincbookpro (17338)] INFO : Starting Agent shutdown
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Starting the New Relic agent in "development" environment.
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Environment: development
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Dispatcher: webrick
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Application: development
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing ActiveJob instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing ActiveRecord 4 instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Net instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing deferred Rack instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Rack::Builder middleware instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Rails 3+ middleware instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Rails 4 Controller instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Rails 4 view instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Installing Rails 4 Error instrumentation
+[07/27/15 12:41:00 -0400 Griffincbookpro (18711)] INFO : Finished instrumentation
+[07/27/15 12:41:01 -0400 Griffincbookpro (18711)] INFO : Doing deferred dependency-detection before Rack startup
+[07/27/15 12:41:03 -0400 Griffincbookpro (18711)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/27/15 12:41:03 -0400 Griffincbookpro (18711)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/27/15 14:35:05 -0400 Griffincbookpro (18711)] INFO : Starting Agent shutdown
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Starting the New Relic agent in "development" environment.
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Environment: development
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Dispatcher: webrick
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Application: development
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing ActiveJob instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing ActiveRecord 4 instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Net instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing deferred Rack instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Rack::Builder middleware instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Rails 3+ middleware instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Rails 4 Controller instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Rails 4 view instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Installing Rails 4 Error instrumentation
+[07/27/15 14:35:10 -0400 Griffincbookpro (19622)] INFO : Finished instrumentation
+[07/27/15 14:35:11 -0400 Griffincbookpro (19622)] INFO : Doing deferred dependency-detection before Rack startup
+[07/27/15 14:35:22 -0400 Griffincbookpro (19622)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/27/15 14:35:22 -0400 Griffincbookpro (19622)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

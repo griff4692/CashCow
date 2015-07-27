@@ -8,6 +8,14 @@ CashCow.Collections.Projects = Backbone.Collection.extend({
 		});
 	},
 
+	searchResults: function(query) {
+		var query = query.toLowerCase();
+
+		return _.filter(this.models, function (project) {
+			return project.get('title').toLowerCase().indexOf(query) >= 0;
+		})
+	},
+
 	page: function (num, offset) {
 		return this.models.slice((num - 1) * offset, ((num - 1) * offset + offset));
 	},
