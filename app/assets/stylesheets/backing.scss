@@ -4,6 +4,7 @@
   width: 958px;
   background-image: image_url('logo_stencil.png');
   background-blend-mode: darken;
+  position: relative;
 }
 
 #hypo {
@@ -73,11 +74,6 @@
 #project-form input {
   width: 300px;
   margin-left: 60px;
-}
-
-#project-form {
-  height: 500px;
-  margin-top: 25px;
 }
 
 .money-one {
