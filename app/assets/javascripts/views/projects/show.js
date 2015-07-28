@@ -2,28 +2,24 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 	initialize: function (options) {
 		this.resetSubviews();
 
-		this.model = options.model;
 		if(this.model.get('user_id') === CashCow.currentUser.id) {
 			this.creator = CashCow.currentUser;
 		} else {
 			this.creator = CashCow.Collections.users.getOrFetch(this.model.get('user_id'));
 		}
 
+		this.listenTo(this.creator, "sync", this.render);
+		this.listenTo(this.model, "sync", this.render);
+
 		this.collection = options.collection;
 		this.format = options.format;
 		this.catToHighlight = "";
 		this.highlightTitle = "";
 
-		var model = this.model;
-
 		if (this.format === 'highlight' || this.format=== 'thumbnail') {
 			this.catToHighlight = options.orderCategory;
 			this.highlightTitle = options.highlightTitle;
 		};
-
-		this.listenTo(this.creator, "sync", this.render);
-		this.listenTo(this.model, "sync", this.render);
-
 		this.currentTabId = 'a';
 		this.generateUserList();
 
@@ -32,7 +28,6 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 		} else {
 			this.showStats = true;
 		}
-
 		this.justUnfunded = false;
 	},
 

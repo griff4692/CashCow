@@ -5,12 +5,30 @@ CashCow.Carousel = function (el) {
   this.$prev = this.$el.find('.slide-right');
   this.$next = this.$el.find('.slide-left');
   this.bindHandlers();
-
+  this.start();
   this.direction = 1;
+};
 
+CashCow.Carousel.prototype.bindHandlers = function() {
+  // restart interval on click
+
+  this.$prev.on('click', function(event){
+    this.slide(1);
+    clearInterval(this.carouselInterval);
+    this.start();
+  }.bind(this));
+
+  this.$next.on('click', function(event) {
+    this.slide(-1);
+    clearInterval(this.carouselInterval);
+    this.start();
+  }.bind(this));
+};
+
+CashCow.Carousel.prototype.start = function () {
   var that = this;
 
-  setInterval(function () {
+  this.carouselInterval = setInterval(function () {
     if (that.activeIdx === that.length - 1) {
       that.direction = -1;
     } else if (that.activeIdx === 0) {
@@ -18,14 +36,6 @@ CashCow.Carousel = function (el) {
     }
     that.slide(that.direction)
   }, 5000);
-};
-
-CashCow.Carousel.prototype.bindHandlers = function() {
-  this.$prev.on('click', function(event){
-    this.slide(1)}.bind(this));
-
-  this.$next.on('click', function(event){
-    this.slide(-1)}.bind(this));
 };
 
 CashCow.Carousel.prototype.slide = function (dir) {

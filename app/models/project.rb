@@ -30,7 +30,7 @@ class Project < ActiveRecord::Base
 	has_attached_file :image,
 		styles: {
 			thumbnail:'280x200>',
-			highlight: {geometry: '960x770>', quality: 900 } ,
+			highlight: '960x770>',
 			detail: '550x390>'
 		},
 		default_url: 'logo.png'
