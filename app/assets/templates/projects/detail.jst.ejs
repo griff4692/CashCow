@@ -51,7 +51,10 @@
               </a>
         <% } else { %>
           <a class='fund' id='unfund'>
-            Remove Funding $<%= (model.backers().findWhere({id: CashCow.currentUser.id}).get('amount')*100/100).toLocaleString() %>
+            Remove Funding
+            <% if (model.backers().findWhere({id: CashCow.currentUser.id})) { %>
+              $<%= (model.backers().findWhere({id: CashCow.currentUser.id}).get('amount')*100/100).toLocaleString() %>
+            <% } %>
           </a>
           <br>
         <% } %>

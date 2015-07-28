@@ -17,7 +17,7 @@ CashCow.Carousel = function (el) {
       that.direction = 1;
     }
     that.slide(that.direction)
-    }, 4000);
+  }, 5000);
 };
 
 CashCow.Carousel.prototype.bindHandlers = function() {

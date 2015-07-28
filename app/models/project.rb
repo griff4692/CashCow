@@ -27,11 +27,14 @@ class Project < ActiveRecord::Base
 	validates :category, inclusion: { in: PROJ_CATEGORIES, message: "Must choose a provided category" }
 	validate :deadline_must_be_in_future
 
-	has_attached_file :image, styles: {
-		thumbnail: '280x200>',
-		highlight: '960x770>',
-		detail: '550x390>'
-		}, default_url: 'logo.png'
+	has_attached_file :image,
+		styles: {
+			thumbnail:'280x200>',
+			highlight: {geometry: '960x770>', quality: 900 } ,
+			detail: '550x390>'
+		},
+		default_url: 'logo.png'
+
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	belongs_to :user,

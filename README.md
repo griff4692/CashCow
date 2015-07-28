@@ -5,7 +5,7 @@
 [Cash Cow]: http://www.cash-cow.io
 
 ## Summary description
-CashCow is a clone of Kickstarter built on Rails and Backbone.  CashCow is fully a one page app, accessing the Rails server via Ajax requests.
+CashCow is a clone of Kickstarter built on Rails and Backbone.  CashCow is a one page app, only accessing the Rails server through Ajax requests.
 
 Users:
 
@@ -21,13 +21,14 @@ Users:
 
 Features:
 
-- Session management
-- Single page app with dynamic content refreshing
-- Password and cookie encryption
-- Pagination
-- OmniAuth with Twitter
-- Modal, carousel, and tab content
-- Dynamic responses to user interactions via Javascript and CSS
+- Session management via cookies
+- Custom authentication which uses BCrypt to store only a secret hash of password by overriding User#password= method
+- Third party log-in via Twitter
+- Image uploads stored on Amazon S3
+- Custom Composite view class extends Backbone's view class to DRY up code and enable dynamic refreshing of content
+- Custom parse method in Backbone pre-loads associations to avoid excessive hits to Rails server
+- Dynamic user interface with modal, carousel, and tab views, as well as pagination
+- Responsive feedback to user mouse events and requests
 
 Features to Add:
 
@@ -39,8 +40,6 @@ Features to Add:
 - Using Google Maps Api to scan projects by proximity
 
 ## Design Docs
-* [View Wireframes][views]
 * [DB schema][schema]
 
-[views]: ./docs/views.md
 [schema]: ./docs/schema.md
