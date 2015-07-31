@@ -80,7 +80,7 @@
    font-size: 24px;
    font-weight: 700;
    color: #6e6e6e;
-   -webkit-font-smoothing: antialiased;
+   -webkit-font-smoothing: subpixel-antialiased;
    background: #f9fafb;
  }
 
@@ -200,6 +200,7 @@ ul.user-menu img:active {
   margin-left: 20px;
   width: 750px;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   color:white;
 }
 
@@ -593,4 +594,5 @@ footer
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }

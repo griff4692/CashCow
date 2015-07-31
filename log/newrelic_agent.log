@@ -3058,3 +3058,39 @@ DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
 [07/28/15 16:30:37 -0400 192.168.1.86 (26534)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 245245246323 is out of range for ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Integer with limit 4
 [07/28/15 16:34:17 -0400 192.168.1.86 (26534)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 9999999999 is out of range for ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Integer with limit 4
 [07/28/15 16:34:41 -0400 192.168.1.86 (26534)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 9999999999 is out of range for ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Integer with limit 4
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Starting the New Relic agent in "development" environment.
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Environment: development
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : No known dispatcher detected.
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Application: development
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing ActiveJob instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing ActiveRecord 4 instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Net instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing deferred Rack instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Rack::Builder middleware instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Rails 3+ middleware instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Rails 4 Controller instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Rails 4 view instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Installing Rails 4 Error instrumentation
+[07/31/15 11:05:53 -0400 192.168.1.86 (14868)] INFO : Finished instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Starting the New Relic agent in "development" environment.
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Environment: development
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : No known dispatcher detected.
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Application: development
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing ActiveJob instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing ActiveRecord 4 instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Net instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing deferred Rack instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rack::Builder middleware instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 3+ middleware instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 4 Controller instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 4 view instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 4 Error instrumentation
+[07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Finished instrumentation

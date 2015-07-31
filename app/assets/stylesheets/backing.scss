@@ -38,6 +38,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   background: #f9fafb;;
   color: black;
   border-radius: 10px;
@@ -62,6 +63,7 @@
   top: 50%;
   left: 45%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .backing-form {
