@@ -3094,3 +3094,24 @@ DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
 [07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 4 view instrumentation
 [07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Installing Rails 4 Error instrumentation
 [07/31/15 11:06:39 -0400 192.168.1.86 (14917)] INFO : Finished instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Starting the New Relic agent in "development" environment.
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Environment: development
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Dispatcher: webrick
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Application: development
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing ActiveJob instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing ActiveRecord 4 instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing Net instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing deferred Rack instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing Rack::Builder middleware instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing Rails 3+ middleware instrumentation
+[07/31/15 15:19:40 -0400 192.168.1.86 (21823)] INFO : Installing Rails 4 Controller instrumentation
+[07/31/15 15:19:41 -0400 192.168.1.86 (21823)] INFO : Installing Rails 4 view instrumentation
+[07/31/15 15:19:41 -0400 192.168.1.86 (21823)] INFO : Installing Rails 4 Error instrumentation
+[07/31/15 15:19:41 -0400 192.168.1.86 (21823)] INFO : Finished instrumentation
+[07/31/15 15:19:41 -0400 192.168.1.86 (21823)] INFO : Doing deferred dependency-detection before Rack startup
+[07/31/15 15:20:42 -0400 192.168.1.86 (21823)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/31/15 15:20:42 -0400 192.168.1.86 (21823)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

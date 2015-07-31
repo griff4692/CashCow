@@ -110,6 +110,7 @@ strong:hover {
 
 .featured-projects img {
  display: block;
+ height: 770px;
 }
 
 .featured-projects .submit {
