@@ -3115,3 +3115,80 @@ DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
 [07/31/15 15:19:41 -0400 192.168.1.86 (21823)] INFO : Doing deferred dependency-detection before Rack startup
 [07/31/15 15:20:42 -0400 192.168.1.86 (21823)] ERROR : Invalid license key, please contact support@newrelic.com
 [07/31/15 15:20:42 -0400 192.168.1.86 (21823)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Environment: development
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : No known dispatcher detected.
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Application: development
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing ActiveJob instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing ActiveRecord 4 instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Net instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing deferred Rack instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Rails 3+ middleware instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Rails 4 Controller instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Rails 4 view instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Installing Rails 4 Error instrumentation
+[08/01/15 12:13:22 -0400 Griffin-Adams-macbookpro.local (30613)] INFO : Finished instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Environment: development
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : No known dispatcher detected.
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Application: development
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing ActiveJob instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing ActiveRecord 4 instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Net instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing deferred Rack instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Rails 3+ middleware instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Rails 4 Controller instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Rails 4 view instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Installing Rails 4 Error instrumentation
+[08/01/15 12:31:58 -0400 Griffin-Adams-macbookpro.local (31473)] INFO : Finished instrumentation
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=12
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=13
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=15
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=8
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=11
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=6
+[08/01/15 12:32:25 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=14
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=7
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=10
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=4
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=9
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=5
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=12
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=13
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=15
+[08/01/15 12:32:26 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=8
+[08/01/15 12:32:27 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=7
+[08/01/15 12:32:27 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=10
+[08/01/15 12:32:27 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=4
+[08/01/15 12:32:27 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=9
+[08/01/15 12:32:34 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=7
+[08/01/15 12:32:34 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=10
+[08/01/15 12:32:34 -0400 192.168.1.86 (21823)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=9
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Environment: development
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : No known dispatcher detected.
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Application: development
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing ActiveJob instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing ActiveRecord 4 instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Net instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing deferred Rack instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 3+ middleware instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 4 Controller instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 4 view instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 4 Error instrumentation
+[08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Finished instrumentation
