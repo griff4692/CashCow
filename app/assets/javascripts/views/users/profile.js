@@ -6,6 +6,8 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.createdProjects = this.model.createdProjects();
 
     this.listenTo(this.model, "sync change", this.render);
+    this.listenTo(this.backedProjects, "sync change", this.render);
+    this.listenTo(this.followedProjects, "sync change", this.render);
 
     this.tabs = {
       "a": this.createdProjects,

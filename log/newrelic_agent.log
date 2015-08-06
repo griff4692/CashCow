@@ -3192,3 +3192,21 @@ DETAIL:  Key (user_id, project_id)=(16, 12) already exists.
 [08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 4 view instrumentation
 [08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Installing Rails 4 Error instrumentation
 [08/01/15 12:37:38 -0400 Griffin-Adams-macbookpro.local (32064)] INFO : Finished instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] WARN : No configuration file found. Working directory = /Users/griffinadams/Desktop/CashCow
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] WARN : Looked in these locations (based on defaults): /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/Desktop/CashCow/config/newrelic.yml, /Users/griffinadams/Desktop/CashCow/newrelic.yml, /Users/griffinadams/.newrelic/newrelic.yml, /Users/griffinadams/newrelic.yml
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Environment: development
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : No known dispatcher detected.
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Application: development
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing ActiveJob instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing ActiveRecord 4 instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Net instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing deferred Rack instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Rails 3+ middleware instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Rails 4 Controller instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Rails 4 view instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Installing Rails 4 Error instrumentation
+[08/01/15 13:51:35 -0400 Griffin-Adams-macbookpro.local (33052)] INFO : Finished instrumentation
