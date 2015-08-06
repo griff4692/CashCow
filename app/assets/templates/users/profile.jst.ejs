@@ -6,9 +6,9 @@
    <div class="profile-info">
      <h1> <%= user.fullName() %> </h1>
      <ul class='user-stats'>
-       <li><%= user.createdProjects().length %> Created Projects</li>
-       <li><%= user.backedProjects().length %> Funded Projects</li>
-       <li><%= user.followedProjects().length %> Followed Projects</li>
+       <li><%= CashCow.currentUser.createdProjects().length %> Created Projects</li>
+       <li><%= CashCow.currentUser.backedProjects().length %> Funded Projects</li>
+       <li><%= CashCow.currentUser.followedProjects().length %> Followed Projects</li>
       <ul>
    </div>
 </header>
@@ -21,13 +21,13 @@
   <ul class='tab-titles group' id='profile-tab-titles'>
      <li class='tab a' data-id='a'>
        Created
-       (<%= user.createdProjects().length %>)
+       (<%= CashCow.currentUser.createdProjects().length %>)
      </li>
      <li class='tab b' data-id='b'>
-      Backed (<%= user.backedProjects().length %>)
+      Backed (<%= CashCow.currentUser.backedProjects().length %>)
     </li>
      <li class='tab c' data-id='c'>
-       Followed (<%= user.followedProjects().length %>)
+       Followed (<%= CashCow.currentUser.followedProjects().length %>)
      </li>
   </ul>
 </section>

@@ -9,6 +9,7 @@ window.CashCow = {
     CashCow.Collections.users = new CashCow.Collections.Users();
 
     this.currentUser = new CashCow.Models.CurrentUser();
+    var that = this;
     this.currentUser.fetch();
 
     this.header = new CashCow.Views.Header({

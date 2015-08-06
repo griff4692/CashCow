@@ -5,9 +5,7 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.followedProjects = this.model.followedProjects();
     this.createdProjects = this.model.createdProjects();
 
-    this.listenTo(this.model, "sync change", this.render);
-    // this.listenTo(this.backedProjects, "sync change", this.render);
-    // this.listenTo(this.followedProjects, "sync change", this.render);
+    this.listenTo(this.model, "sync change", this.attachListeners);
 
     this.tabs = {
       "a": this.createdProjects,
@@ -19,6 +17,12 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
     this.offSet = 3;
     this.currentTab = this.backedProjects;
     this.currentTabId = 'b';
+  },
+
+  attachListeners: function () {
+    this.listenTo(CashCow.currentUser.backedProjects(), "sync add remove change", this.render);
+    this.listenTo(CashCow.currentUser.followedProjects(), "sync add remove change", this.render);
+    this.render();
   },
 
   events: {
@@ -53,7 +57,6 @@ CashCow.Views.UserProfile = Backbone.CompositeView.extend({
   template: JST['users/profile'],
 
   render: function(){
-
     var that = this;
     that.resetSubviews();
 
