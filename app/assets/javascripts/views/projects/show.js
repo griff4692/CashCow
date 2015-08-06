@@ -10,7 +10,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
-		this.listenTo(CashCow.currentUser.followedProjects, "sync change", this.render);
+		// this.listenTo(CashCow.currentUser.followedProjects, "sync change", this.render);
 
 		this.collection = options.collection;
 		this.format = options.format;
