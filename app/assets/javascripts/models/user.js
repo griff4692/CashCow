@@ -94,6 +94,10 @@ CashCow.Models.CurrentUser = CashCow.Models.User.extend({
   },
 
   follows: function(proj) {
+    if (this.get('followedProjects') && this.get('followedProjects').length > 0) {
+      this.followedProjects().set(this.get('followedProjects'));
+      this.followedProjects.delete;
+    }
     return (this.followedProjects().pluck('id').indexOf(proj.id) !== -1);
   },
 

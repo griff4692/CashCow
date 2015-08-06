@@ -31,8 +31,7 @@
   <br>
   <% if (CashCow.currentUser.isSignedIn() &&
     CashCow.currentUser.id !== model.user_id) { %>
-      <% if (CashCow.currentUser.followedProjects().where
-          ({id: model.id}).length===0) { %>
+      <% if (! CashCow.currentUser.follows(model)) { %>
           <button class='follow' data-id='<%= model.id %>'>
             Follow This Project
           </button>

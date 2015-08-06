@@ -10,6 +10,7 @@ CashCow.Views.ProjectShow = Backbone.CompositeView.extend({
 
 		this.listenTo(this.creator, "sync", this.render);
 		this.listenTo(this.model, "sync", this.render);
+		CashCow.currentUser.isSignedIn() && this.listenTo(CashCow.currentUser, "sync", this.render);
 		CashCow.currentUser.isSignedIn() && this.listenTo(CashCow.currentUser.followedProjects(), "sync change", this.render);
 		CashCow.currentUser.isSignedIn() && this.listenTo(CashCow.currentUser.backedProjects(), "sync change", this.render);
 
